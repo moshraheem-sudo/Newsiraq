@@ -22,7 +22,8 @@ class NewsRepository(private val context: Context) {
       val trimmed = remoteJsonUrl.trim()
       if (trimmed.startsWith("https://") && !trimmed.contains("USERNAME")) {
         try {
-          val request = Request.Builder().url(trimmed).build()
+          val bustUrl = "$trimmed?t=${System.currentTimeMillis()}"
+          val request = Request.Builder().url(bustUrl).build()
           client.newCall(request).execute().use { response ->
             if (response.isSuccessful) {
               val body = response.body?.string()
@@ -74,10 +75,13 @@ class NewsRepository(private val context: Context) {
           updatedAt = obj.optString("updated_at"),
           originalUrl = obj.optString("original_url"),
           images = jsonArrayToList(obj.optJSONArray("images")),
+          media = parseMediaArray(obj.optJSONArray("media")),
           links = jsonArrayToList(obj.optJSONArray("links")),
           isEdited = obj.optBoolean("is_edited", false),
         )
-      }
+      }.sortedWith(
+        compareByDescending<NewsArticle> { it.publishedAt }.thenByDescending { it.messageId }
+      )
 
     return NewsFeedPayload(
       appVersion = root.optString("app_version", "1.0.0"),
@@ -87,6 +91,19 @@ class NewsRepository(private val context: Context) {
       items = articles,
       loadedFromRemote = loadedFromRemote,
     )
+  }
+
+  private fun parseMediaArray(arr: JSONArray?): List<MediaAttachment> {
+    if (arr == null) return emptyList()
+    return List(arr.length()) { idx ->
+      val obj = arr.optJSONObject(idx) ?: return@List null
+      MediaAttachment(
+        type = obj.optString("type"),
+        url = obj.optString("url"),
+        thumbnail = obj.optString("thumbnail"),
+        title = obj.optString("title"),
+      )
+    }.filterNotNull()
   }
 
   private fun jsonArrayToList(arr: JSONArray?): List<String> {

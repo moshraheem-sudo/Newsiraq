@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "project": "Iraq News Hub",
   "app_version": "1.0.0",
-  "generated_at": "2026-11-21T04:39:31.318390Z",
-  "last_successful_update": "2026-11-21T04:39:31.318390Z",
-  "total_count": 40,
+  "generated_at": "2026-11-21T05:07:30.771299Z",
+  "last_successful_update": "2026-11-21T05:07:30.771299Z",
+  "total_count": 41,
   "sources": [
     {
       "id": "ina",
@@ -27,6 +27,34 @@
   ],
   "items": [
     {
+      "id": "SabrenNewss_232164",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232164,
+      "category": "أخبار عاجلة",
+      "title": "إصابات بشرية وأضرار مادية طالت عدداً من المنازل والسيارات جراء الحريق في محطة كهرباء الهارثة بمحافظة البصرة.",
+      "content": "إصابات بشرية وأضرار مادية طالت عدداً من المنازل والسيارات جراء الحريق في محطة كهرباء الهارثة بمحافظة البصرة.",
+      "published_at": "2026-11-21T04:46:37Z",
+      "fetched_at": "2026-11-21T05:07:30.771299Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
+      "original_url": "https://t.me/SabrenNewss/232164",
+      "images": [
+        "https://cdn4.telesco.pe/file/TKcCBoGTgPZyuBJC3DVji1TerADmyZgIEKeGsqBb_4OnW8ZHvZ8rQt7PTUGXPTmManuHkNslJ9_Yzh-sSDyreHe0HeC17zdQwS0v6mOm9uEl2hpqI3_OQTb5mudsKnJaN8UconHrRM5pq9OSf_6YGl-ysW7tFYTiiplwMWenK6CyxJHalaHZEPWlYOlMc0rCAivNbnxWV4iu-4C3ReVohZzossTX_H9L0ncJEAtPScDRFbXfhi4BxlaBtGG87EHG7Z7kiFzZD8vz3_HJGMHbDnEobMZ4Jr3kg9DTpIP_bXCLDxzivjqJyTGBkljNaR9v9DSB2lXXs2slJ9D3DossbQ"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://cdn4.telesco.pe/file/854f2eae61.mp4?token=eTnjY_JWnrTMabNoPx9_bdIXjbP6e9FwBgSHVes38U0Ihcyu-4kCo1QVM63mL9zPKM6I2btEQ40_zMab1c3z0E0xBsxKMexSxel-xeKqnWq6fFUWMkjRDUaJcsTm0Fg2BLWuDOhGJJMEm92iWNkuMK-3UY0tw4d4enQcbDmGB_AEOvNPNwe-LAiDUrbrqc5Ksb6DWDZLMEKfd3dJsZC2Jw3NsAH2pFMc3BtHcGUXUv_LT9CdKyt9f1Yws9b9WSf5aO1BUB8ZDSfrEwjtFKAou39iQJHeTSp8PU5sYlg8dwlhKrPC7I_f1myK4O9XaAVeLu-JIMNsAVa6ICPrZY39-Q",
+          "thumbnail": "https://cdn4.telesco.pe/file/TKcCBoGTgPZyuBJC3DVji1TerADmyZgIEKeGsqBb_4OnW8ZHvZ8rQt7PTUGXPTmManuHkNslJ9_Yzh-sSDyreHe0HeC17zdQwS0v6mOm9uEl2hpqI3_OQTb5mudsKnJaN8UconHrRM5pq9OSf_6YGl-ysW7tFYTiiplwMWenK6CyxJHalaHZEPWlYOlMc0rCAivNbnxWV4iu-4C3ReVohZzossTX_H9L0ncJEAtPScDRFbXfhi4BxlaBtGG87EHG7Z7kiFzZD8vz3_HJGMHbDnEobMZ4Jr3kg9DTpIP_bXCLDxzivjqJyTGBkljNaR9v9DSB2lXXs2slJ9D3DossbQ",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "7bff6217697d35eaf1d1eb68518549faf30e26ccd14237704bad1ebfc87fa3a0"
+    },
+    {
       "id": "SabrenNewss_232162",
       "source_id": "sabereen",
       "source_name": "صابرين نيوز",
@@ -37,26 +65,29 @@
       "content": "حريق في محطة كهرباء الهارثة في البصرة جنوب العراق",
       "published_at": "2026-11-21T04:19:56Z",
       "fetched_at": "2026-11-21T04:39:31.318390Z",
-      "updated_at": "2026-11-21T04:39:31.318390Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
       "original_url": "https://t.me/SabrenNewss/232162",
-      "images": [],
+      "images": [
+        "https://cdn4.telesco.pe/file/RssR5BP5MtT5g5v5LVOcqAcgVcwEXY1Y4by3yKPXsURfdid07xFE0nbWhaJ2iyhrX32FNMGTr5Z5_DDMcKRtp2yE10rPBmZpK7844pezNwzaRp12TrXjUt3IZwSF1a-UppfHAfAQmR5Q0bw4uioLabTMNmJAvMlVUTeLksoPb3MBSW4u3zivOazi_dkf11PpoLnPyDqMRdVCOzWQntKBlJ511quxkyhC0GV4TbEZiDL4OIGAtlBxFJ17GZwg3VIkGyNsjzV3y9gDStqDPvUHPy9TQNmypwKLwA8IfjI9NTBwOB8D8PcnpqsE7A0Nr1ePeJHnRodQLZ4HkXYmyaQ2aQ",
+        "https://cdn4.telesco.pe/file/ZDrdynNZ9fvASrgLXPR9ArK1qzfvJUgR0Ir_raw14uB0jMFw_eC42lQ4XjhEnw0kMoIc__-uX2csnXVNIwQnw0_SSHAtgKsNPYFpY2ulNFzVLb91YyI8eUaH7NoVQsXvseM6490xPj1og__FYSiPDsuqnfn_IIwV92-D6rnn6EW_rhRvkoT22yJq5C-QA5vgcLKZAEs_BZ6Zp6RRQjNm6P15VA3HaaQ29wB5SWC83y14ZHH-qO3qfp8_J7EbAdc12OICUlo0s4WTI44j6v1w5drx7rLO0Hpm-rTkhKGOZ7NrYGXz4x56AoeZMRKAvnXjqhcWcyzDnuaOEFuj4xPkEQ"
+      ],
       "media": [
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/2a5f202eeb.mp4?token=HJrK5z_U4vW9_TdiSnVLjBqEwS8N5AO1D9Q0fCeCe4icVaQ5H_-qcxmyFi5IZ8hMI7uuwl_jxFGfrSve-oqUv32RYCFlzfXdroMMB7hz2kh7V4WAVTyT-2-MByCD3MHy1CKHEi18C7B5u3wFHTh9X6aRma5ddFa1BL6hW60TtuUTyeXalfNCYNQGGjDIVdTvlHeIrJoLqa6dIc-iC5RXOmQBYynl1P3YmtI0ERUghlUdtfWQ_VTgH9PxYEuGHUT0So6S10NZk2iKc9ARJ6aKNdk5Wr490kFmQ_00q-CmM0IamnVSk38BqGM1m158v7h0iWvaEj4t1pa8HOQQHgCNJQ",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/RssR5BP5MtT5g5v5LVOcqAcgVcwEXY1Y4by3yKPXsURfdid07xFE0nbWhaJ2iyhrX32FNMGTr5Z5_DDMcKRtp2yE10rPBmZpK7844pezNwzaRp12TrXjUt3IZwSF1a-UppfHAfAQmR5Q0bw4uioLabTMNmJAvMlVUTeLksoPb3MBSW4u3zivOazi_dkf11PpoLnPyDqMRdVCOzWQntKBlJ511quxkyhC0GV4TbEZiDL4OIGAtlBxFJ17GZwg3VIkGyNsjzV3y9gDStqDPvUHPy9TQNmypwKLwA8IfjI9NTBwOB8D8PcnpqsE7A0Nr1ePeJHnRodQLZ4HkXYmyaQ2aQ",
           "title": ""
         },
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/5661f5a57f.mp4?token=DlYrl50UYH34jMy_T8aN-J9yVObit9iXAUxGG0tTifPWs8QkbyCBZ5OE0SVFrivPAAyjuKQP-ScNzixYedZkPbZYzayQNhFRkugLHI4u9fUimxfLDcQsJpO125fkKVYGFXsiHtLVCuNtzln5QsuQwrfzjU3GW5nKwKOZ2NH3_2r5gmF_O5WR-3bYl5ipqadVfBxznPrQ3fOKul1aCOYihrCW8IbQsXgUofU-5u6RwtKIe2xfVknv1bQyRord8w95YoEBTbU9RFpACx2Q9DqRh7wgcVAsf00hSwKilr3l8utxbncITFFwitbTcwF-cuD4uAaNxkfDSPYhEw39zAyT0w",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/ZDrdynNZ9fvASrgLXPR9ArK1qzfvJUgR0Ir_raw14uB0jMFw_eC42lQ4XjhEnw0kMoIc__-uX2csnXVNIwQnw0_SSHAtgKsNPYFpY2ulNFzVLb91YyI8eUaH7NoVQsXvseM6490xPj1og__FYSiPDsuqnfn_IIwV92-D6rnn6EW_rhRvkoT22yJq5C-QA5vgcLKZAEs_BZ6Zp6RRQjNm6P15VA3HaaQ29wB5SWC83y14ZHH-qO3qfp8_J7EbAdc12OICUlo0s4WTI44j6v1w5drx7rLO0Hpm-rTkhKGOZ7NrYGXz4x56AoeZMRKAvnXjqhcWcyzDnuaOEFuj4xPkEQ",
           "title": ""
         }
       ],
       "links": [],
-      "is_edited": false,
-      "content_hash": "bf1e1785d093fd93cca2a4d0b49bc96148b9be16bdd76e88d21c23a1d8fea2a1"
+      "is_edited": true,
+      "content_hash": "1a2bf464937580f28a4b6e6641f55cab9adc129b794d86606cafe938b248af3f"
     },
     {
       "id": "SabrenNewss_232161",
@@ -69,20 +100,22 @@
       "content": "حريق في محطة كهرباء الهارثة في البصرة جنوب العراق",
       "published_at": "2026-11-21T04:10:46Z",
       "fetched_at": "2026-11-21T04:17:20.935375Z",
-      "updated_at": "2026-11-21T04:17:20.935375Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
       "original_url": "https://t.me/SabrenNewss/232161",
-      "images": [],
+      "images": [
+        "https://cdn4.telesco.pe/file/KNmeBGSOfaF4ep58VpyCjccm-NqUd5wu1dbT9GhzeN7QKPes1luPdZH-oo6kce1DQs4QYEXK63Si7SAWADpD9Eh4HP2R6kDS20abkJBrZzQTwwrA1XP1Cc5ofRIKFZPntB3eNxtXYGQ0uTRUuskP1Jy2SxGG7J4AM2AmnP9obcl6kE500IKYQGQ3HjGRJ2tJeLm363qAzBCH2jOmHzNEEWg5hqQ1ZRymf3kB4rYgUg2TA-84SKG_a2VV8Q9-KYX5ts4opKy0jhX2xbqhXhHwkNBUA-mvLW42rPHtxpyfmKLv2TMinV9_i151SJm7ESXfYWHkQarrbYOyzympseQfFQ"
+      ],
       "media": [
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/8b14b47a71.mp4?token=EYYf1w78kE7bbu2CAD01sbpuMKDa12pJYhAkxw6ZGxODwflUdvky6jOc1B9Qp3AM-O3aKjcRIKBdt4AqLgXYOMbvjh5dSnM5LMALn95p2-jTcxFYBT5fwkRS0xL4ViNPXe62ZStXpyLHnZLdw0B-V8_e_ovW8MmPiuxvvG_UM-gHQpxhSuo1mUB2JJ1y-NeYxPDqbzmL53VixrQe7gMhpL1eSisCzsBWre2HbHw8QlNn8rBz6gkj1waFkx6TWyBnCi9SF02srUylHyjuD2co61xBNxeSI-Iir7qeAhYhacKHyQb2pI060xFbxtRleUptpIJhdhyc-xqjg5FctwDV2Q",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/KNmeBGSOfaF4ep58VpyCjccm-NqUd5wu1dbT9GhzeN7QKPes1luPdZH-oo6kce1DQs4QYEXK63Si7SAWADpD9Eh4HP2R6kDS20abkJBrZzQTwwrA1XP1Cc5ofRIKFZPntB3eNxtXYGQ0uTRUuskP1Jy2SxGG7J4AM2AmnP9obcl6kE500IKYQGQ3HjGRJ2tJeLm363qAzBCH2jOmHzNEEWg5hqQ1ZRymf3kB4rYgUg2TA-84SKG_a2VV8Q9-KYX5ts4opKy0jhX2xbqhXhHwkNBUA-mvLW42rPHtxpyfmKLv2TMinV9_i151SJm7ESXfYWHkQarrbYOyzympseQfFQ",
           "title": ""
         }
       ],
       "links": [],
       "is_edited": true,
-      "content_hash": "6abd59d938fa62c0389661b4251ee5952960252a0f9c595bd74d98721a5946e2"
+      "content_hash": "cc5ee8faa34c728fd3683d25539c68836dbe601fdba640c8997782fc01699fa0"
     },
     {
       "id": "SabrenNewss_232160",
@@ -95,20 +128,22 @@
       "content": "حريق في محطة كهرباء الهارثة في البصرة جنوب العراق",
       "published_at": "2026-11-21T03:59:56Z",
       "fetched_at": "2026-11-21T04:17:20.935375Z",
-      "updated_at": "2026-11-21T04:17:20.935375Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
       "original_url": "https://t.me/SabrenNewss/232160",
-      "images": [],
+      "images": [
+        "https://cdn4.telesco.pe/file/Iq8aJaFaZ4EqNtezmoCc1ibQOqddcgVzksTUCvToCpZvAYtQM2f_FTECG7QJrVUHN3V71msgnO2TWeI79vL5jZbDL140e1XgpROI5VYeuk9L7UdwJOQu9l9OFqUmu1r0BiNigCGzw3Do4yPd1-39xKFF1e4EzI45R90D8sIH-QkmPN2DqCBkv0MIt97ILAd4oWUMS8E62mWGBn8Xf0df6xcWTC8Pjx7vv_mq8x_YMUJsH-GFCkJv6RyjORZuB5xDUn6JTgY-RhZOXdxQj-RogYvHnPeyGSMt5czWLyX1Zc5d6N86DcfUw6W_slVTGl34WMAbAal8cuKPz3d5ytm8WQ"
+      ],
       "media": [
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/1e44e09d1e.mp4?token=ohPF9fZtjMiCK_8a2MNQETcRKMOLZzR3t0F_D1OuWPqDMugJ6xJLDVMMEXc3sXYHee2IlL1eVBjsyh0ZEa-HuTlsDcsR2RS7BPqhKOESJi9tbuKL1QgAkobDyX4ACtoxrIWBCLOIQUCDfzjRIJ7yJAp69OJsGEsLi365lAaESg4VazbqaR02hw9eSoPCHB6PqOelcaRqbVVQ8X0LqR6EE0VJp4oejGS5L1Yd71e7aRch_XQbDFNLcFH6-Mc7TXm8yPFmLQd1K8GGhC5XtJHkanY0SFv3YC2j9gP2EU8zDXfzUPOBWQ1yJzmTL_IjeQdBUOPE5XgBlaTe3ZXbx14NQQ",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/Iq8aJaFaZ4EqNtezmoCc1ibQOqddcgVzksTUCvToCpZvAYtQM2f_FTECG7QJrVUHN3V71msgnO2TWeI79vL5jZbDL140e1XgpROI5VYeuk9L7UdwJOQu9l9OFqUmu1r0BiNigCGzw3Do4yPd1-39xKFF1e4EzI45R90D8sIH-QkmPN2DqCBkv0MIt97ILAd4oWUMS8E62mWGBn8Xf0df6xcWTC8Pjx7vv_mq8x_YMUJsH-GFCkJv6RyjORZuB5xDUn6JTgY-RhZOXdxQj-RogYvHnPeyGSMt5czWLyX1Zc5d6N86DcfUw6W_slVTGl34WMAbAal8cuKPz3d5ytm8WQ",
           "title": ""
         }
       ],
       "links": [],
       "is_edited": true,
-      "content_hash": "15876afda0f20e1f4df95fb0bc085d23b6d9b8ac760539771f923968503a4e4c"
+      "content_hash": "27a396f6c028a5bf6d98ffc9992ff30ab926d262183b076799a8d3cea485830c"
     },
     {
       "id": "SabrenNewss_232159",
@@ -159,20 +194,22 @@
       "content": "جماهير أربيل تضرم النار في مخزن ملعب دهوك عقب اشتباكات بين جمهورَي الفريقين.",
       "published_at": "2026-11-20T21:29:35Z",
       "fetched_at": "2026-11-21T04:17:20.935375Z",
-      "updated_at": "2026-11-21T04:17:20.935375Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
       "original_url": "https://t.me/SabrenNewss/232157",
-      "images": [],
+      "images": [
+        "https://cdn4.telesco.pe/file/XMI8Gq2qz218vgD4T34m3ubbxkqfyEWDEB-pRTW_upYmjn8R9ACsnPzj8C4DqEku9NdxlAsLyXy3YzpZpVXzBEALvT0LeLnrFVNpjSsaKrw81ohArpEE1desTQiqfyaLxwdJFJvakpuXZ6-A8bnuCAqzWGPp87PJMYZzmX_me7l41fOCiLktUsRzIbvRZxccN80Fjep9ltYjDMRENlnYEnf5RjassxKBzcs4O1ov2Y-xPMGDtUeG-mgyoVxxukj_9W8cmDmAHQgRZr8GM6eQ1IMrzLwpdD7L9_wCiio7YIeRZPoWpEhW9tZcY-cJOvFtOaO2crM0Ga2YWXdVTfzJUQ"
+      ],
       "media": [
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/b4c394a5d4.mp4?token=qTvCKwhmnJRJ2ZODHobOpR5ZU-RmeSghKZt1scH1Bs7BpBaZBRIwHWMHL5pj867Vu-IYPXcJxc9djiPzNe6ckS32U3JTq3s5uvQgdu-2JUQify5VlN_NoolZTKvevk5OddIwpSwke7iWvxcvwbNtATRSnVcHHj-_l0s-3jQRPTjNqPuAU3X-yVYEJW39-3513wGDo7F7ziXJhyb4WhJLcO5QLgFsr816Q-WRsOR5qKfVsO7lRiShtbPWOmGI5259JLU-o_VSkN-AzRyzgXX1r_YGate2zcaI-4Wzq-6RRyyG4tig0qrFiGXv0K8ORHMMCSs1bZLhZDVzRP0MSWrFWw",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/XMI8Gq2qz218vgD4T34m3ubbxkqfyEWDEB-pRTW_upYmjn8R9ACsnPzj8C4DqEku9NdxlAsLyXy3YzpZpVXzBEALvT0LeLnrFVNpjSsaKrw81ohArpEE1desTQiqfyaLxwdJFJvakpuXZ6-A8bnuCAqzWGPp87PJMYZzmX_me7l41fOCiLktUsRzIbvRZxccN80Fjep9ltYjDMRENlnYEnf5RjassxKBzcs4O1ov2Y-xPMGDtUeG-mgyoVxxukj_9W8cmDmAHQgRZr8GM6eQ1IMrzLwpdD7L9_wCiio7YIeRZPoWpEhW9tZcY-cJOvFtOaO2crM0Ga2YWXdVTfzJUQ",
           "title": ""
         }
       ],
       "links": [],
-      "is_edited": false,
-      "content_hash": "ffe504fc9afcd1c4c52838e5d8d980fed28514723230f5bf0d3767b84720c798"
+      "is_edited": true,
+      "content_hash": "6548afbd13e6285a81539051a078d24703b5be6c89562a1a5e22019be2d7cb13"
     },
     {
       "id": "SabrenNewss_232156",
@@ -327,20 +364,22 @@
       "content": "اصابات بالجملة في احداث شغب ملعب اربيل",
       "published_at": "2026-11-20T20:02:39Z",
       "fetched_at": "2026-11-21T04:17:20.935375Z",
-      "updated_at": "2026-11-21T04:17:20.935375Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
       "original_url": "https://t.me/SabrenNewss/232149",
-      "images": [],
+      "images": [
+        "https://cdn4.telesco.pe/file/twTHyzbmXnliGKBn0aA23KIPpkKIcE_FBQ1CSGFP3KQ5yWimEsxJyqXp0oU6KP2axkMloEgnerCxxVqGRxJb7XCd6nqhA7m9QkA8OlsSvPfTTJrX2iAmo3R6ZMlzBm69eYcI8XU1iiI_xq4TcTlX1B8entSWT4AkI7RelWydnw9IJpy4gwc9RQxdRy55Q7yUMuB9lBSrj41vJMkrHp-ZpfHzrnF_QN76a6EKVV77hSvDLYU73f9Q5y1WZYrdtAjoRFJjiY3IuLPDuPkeWV_D1auNNUeU2yufzcdT50PGGtrS1feFuE2eYvGcFv_UNrMXksidH7YHJExTgXZ2kmXLJw"
+      ],
       "media": [
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/f4ccf48309.mp4?token=CjRtFT_4JsD1YSs1Qu3fwQOl_Q45DKxtYAkUq6JsydgW4r4I2_X0RLq6U-C72LcFtZjnPatmd4icP0g--qSIK5dfBibHbhiOuYNSi1fL_o895nU6MszSIh8dmNCRcuOsECamsSZ7jvTtIchvRrI32wHhSnHhpuFU71H_Zcs1zmnCmhp_9nz4ruGz_FcplPaCn76rXOkLtt39Ql5qykJeULd3-KPMmnYuzYsVcO7ThRvyFVxdS0X_U_mhpBnEnuLng5SFNM7O4UmcXkyaI2ApsGVSBYZ5m6Acv_fbhtea97i9GoQ8JP9bx64FSakuqgGVneTHXDhHqLRy4KRNHc4Pow",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/twTHyzbmXnliGKBn0aA23KIPpkKIcE_FBQ1CSGFP3KQ5yWimEsxJyqXp0oU6KP2axkMloEgnerCxxVqGRxJb7XCd6nqhA7m9QkA8OlsSvPfTTJrX2iAmo3R6ZMlzBm69eYcI8XU1iiI_xq4TcTlX1B8entSWT4AkI7RelWydnw9IJpy4gwc9RQxdRy55Q7yUMuB9lBSrj41vJMkrHp-ZpfHzrnF_QN76a6EKVV77hSvDLYU73f9Q5y1WZYrdtAjoRFJjiY3IuLPDuPkeWV_D1auNNUeU2yufzcdT50PGGtrS1feFuE2eYvGcFv_UNrMXksidH7YHJExTgXZ2kmXLJw",
           "title": ""
         }
       ],
       "links": [],
-      "is_edited": false,
-      "content_hash": "39449eafedeed2cf858abb79496364923849f6cfb193df808862cfbf0b2d06ae"
+      "is_edited": true,
+      "content_hash": "a40cd76bfd643542517df5daea1312b6a9236f8c0c6eabf1ac1e75b6c253a501"
     },
     {
       "id": "SabrenNewss_232148",
@@ -372,20 +411,22 @@
       "content": "اندلاع اشتباكات بين جماهير نادي دهوك و جماهير نادي أربيل في ملعب دهوك نقل على اثرها عدد من جماهير نادي أربيل للمستشفيات بسبب الإصابة",
       "published_at": "2026-11-20T19:45:30Z",
       "fetched_at": "2026-11-21T04:17:20.935375Z",
-      "updated_at": "2026-11-21T04:17:20.935375Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
       "original_url": "https://t.me/SabrenNewss/232147",
-      "images": [],
+      "images": [
+        "https://cdn4.telesco.pe/file/omKlBK0_EMnIPo0OL_nRP_S3MIu43H6K_waRi1EgD1830poAUg69Q4Hb7Xyy6D_OJ8_g_PTIBxxAjqYP9QDuj1ikEFnOC0coGP-5eLfz-RZGfCB5TUbP2zh-bjwmP6vbZtQ9FWK_n2Cub_KhJDh3tZRPtebSo5t3j1CVfJ-vPsWkLm-z9VVNfYs4pJd40iRc1gLZwr6bvf7KZo3N6ydkSAUqtDwysrk82-yFvcQeWQTyrnmO9LqAdDvYpCQBNtZdHsxwghj0gUPHjh_1l0wWp52g4P2KZY0LMbSyhZnpOnCRpNcOKN-RzVWqLbVN9rtVuKPutRc-d0p1dn6c56oH8g"
+      ],
       "media": [
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/dcf2bf87c6.mp4?token=bqh3qLg7nxmKiA4xDBcJ454wmBGtY8RjuLmsNEnrb4r2z2ZclC8GGVu5N-4IxsfF4jVSeiyF8Hyi4AWEZDJJ08Zd8mu6vpvQhnuPwsZlWYt5iWwdzmmYgy_1yhDLUGduNPQCsgcbJuPRWWsh8REnB52hd8e-Jq7C_K4uuOrrJUX-OHiryuHyoNo2Sbx0hZKMXHYKuQnrCpBTP3C2Acr8j2GtVOn-1obeVKDmR2TMrMNruTJZmM1ADXzxYZU83YaQFRo_Iq7A82eipa4Qs4SvylKig6GNcvzYjz2h6YW13Gk1mYPWUsTlJq1UOxxGd2Lnh8BW3vgceckhzHfZF3BpXQ",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/omKlBK0_EMnIPo0OL_nRP_S3MIu43H6K_waRi1EgD1830poAUg69Q4Hb7Xyy6D_OJ8_g_PTIBxxAjqYP9QDuj1ikEFnOC0coGP-5eLfz-RZGfCB5TUbP2zh-bjwmP6vbZtQ9FWK_n2Cub_KhJDh3tZRPtebSo5t3j1CVfJ-vPsWkLm-z9VVNfYs4pJd40iRc1gLZwr6bvf7KZo3N6ydkSAUqtDwysrk82-yFvcQeWQTyrnmO9LqAdDvYpCQBNtZdHsxwghj0gUPHjh_1l0wWp52g4P2KZY0LMbSyhZnpOnCRpNcOKN-RzVWqLbVN9rtVuKPutRc-d0p1dn6c56oH8g",
           "title": ""
         }
       ],
       "links": [],
-      "is_edited": false,
-      "content_hash": "79439b94c1e9ee1e6074e38520ece4d9e6a15e13a17b6d975950f2a787174607"
+      "is_edited": true,
+      "content_hash": "c3b5d8a0d0e177f7c2276b3b0b4755c2c078090e45b81483d465ea8ba806656f"
     },
     {
       "id": "SabrenNewss_232146",
@@ -398,20 +439,22 @@
       "content": "اندلاع اشتباكات بين جماهير نادي دهوك و جماهير نادي أربيل في ملعب دهوك نقل على اثرها عدد من جماهير نادي أربيل للمستشفيات بسبب الإصابة",
       "published_at": "2026-11-20T19:44:20Z",
       "fetched_at": "2026-11-21T04:17:20.935375Z",
-      "updated_at": "2026-11-21T04:17:20.935375Z",
+      "updated_at": "2026-11-21T05:07:30.771299Z",
       "original_url": "https://t.me/SabrenNewss/232146",
-      "images": [],
+      "images": [
+        "https://cdn4.telesco.pe/file/fd-xeOcBzsY-GJQFkGiWFdR0EAXGhOT7ffxcTALv-PsNK7CFWtb9-nD1wlmqhU53icQL6dBQeZmraSEMePqouqNqaouEUcao6ROZdUMTmfPJKjqZogew5aWFo7t4_EgukqpYJHfZg0shjD1y4pgfJ7YQxBaSmvafXqFlgFAMsUopilUwt_nUPMxs05cNIZ72fPEFAqM0OG8GwQ4pbXx2ABDKpFvmHCdxBH-PwOAmP-y5QqDs9B6EKyVd6tS6nUcwvntyxAeB4L148Y9sItwiyQGzAKVQkzfWz4UvLSrJy7Jo3YKjNbQQxQhZZpHSJx_eR5JeuBpPXEDnLQpuC6v2KA"
+      ],
       "media": [
         {
           "type": "video",
           "url": "https://cdn4.telesco.pe/file/8f1a0e28b7.mp4?token=DHs6DiQc_VMonpXWiW77Gc_jwerOnECpMKB97sye4W3ZBWLoKsF6LSrBsIL0pBqVKRQAdmvmymSWSL4hJWY-wG5WY6-iZJXdCjF81ujTbJB7MmurpC5k9Nr8luPeB7Z1TR1jVhYo4qh-UGfYN8_5DwFBHlxO-1Q9fGm4k_ozfXDcOnO6kvBSlVILBDkHjEjlArW9GYjPsOVLQvWQnsQFesG54ds4FVRjpsrBPydJuA8OH2QxMFwOSJFUSQHN-1ij7uWu-Q21KtJxi2hlfXeg169aIXEUeli9gNbSuFlqgS2k7z6guRXmVTXeG2e0F-Z8QFXfna8J8544sa_MkNCFCw",
-          "thumbnail": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/fd-xeOcBzsY-GJQFkGiWFdR0EAXGhOT7ffxcTALv-PsNK7CFWtb9-nD1wlmqhU53icQL6dBQeZmraSEMePqouqNqaouEUcao6ROZdUMTmfPJKjqZogew5aWFo7t4_EgukqpYJHfZg0shjD1y4pgfJ7YQxBaSmvafXqFlgFAMsUopilUwt_nUPMxs05cNIZ72fPEFAqM0OG8GwQ4pbXx2ABDKpFvmHCdxBH-PwOAmP-y5QqDs9B6EKyVd6tS6nUcwvntyxAeB4L148Y9sItwiyQGzAKVQkzfWz4UvLSrJy7Jo3YKjNbQQxQhZZpHSJx_eR5JeuBpPXEDnLQpuC6v2KA",
           "title": ""
         }
       ],
       "links": [],
-      "is_edited": false,
-      "content_hash": "c712c43e7410362111cbc18fc21372bf0433f6c55b7ee2163c4f635dd91e2d7d"
+      "is_edited": true,
+      "content_hash": "f8118d87b6772a18c3add63751854e63c6e07153dd311ba00b73cfb64972ecd2"
     },
     {
       "id": "SabrenNewss_232145",

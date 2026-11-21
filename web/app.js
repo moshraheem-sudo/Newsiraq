@@ -309,17 +309,31 @@
 
   function renderNewsCard(item) {
     const images = item.images || [];
+    const media = item.media || [];
+    const videos = media.filter((m) => m.type === "video" && m.url);
+    const firstVideo = videos[0] || null;
     const firstImage = images[0] || "";
     const titleText = item.title || "منشور وسائط بدون نص";
     const contentText = item.content || "";
     const editedBadge = item.is_edited ? `<span class="edited-badge">معدّل</span>` : "";
 
-    const mediaHtml = firstImage
-      ? `<a href="#/news/${encodeURIComponent(item.id)}" class="card-media">
-           <img src="${escapeHtml(firstImage)}" alt="${escapeHtml(titleText)}" loading="lazy" />
-           ${images.length > 1 ? `<span class="media-count-badge">+${images.length} صور</span>` : ""}
-         </a>`
-      : "";
+    let mediaHtml = "";
+    if (firstVideo) {
+      const posterAttr = firstVideo.thumbnail ? `poster="${escapeHtml(firstVideo.thumbnail)}"` : "";
+      mediaHtml = `
+        <div class="card-media">
+          <video controls preload="metadata" playsinline ${posterAttr} style="width:100%;height:100%;object-fit:cover;display:block;">
+            <source src="${escapeHtml(firstVideo.url)}" />
+          </video>
+          <span class="media-count-badge">${videos.length > 1 ? `▶ ${videos.length} فيديو` : "▶ فيديو"}</span>
+        </div>`;
+    } else if (firstImage) {
+      mediaHtml = `
+        <a href="#/news/${encodeURIComponent(item.id)}" class="card-media">
+          <img src="${escapeHtml(firstImage)}" alt="${escapeHtml(titleText)}" loading="lazy" />
+          ${images.length > 1 ? `<span class="media-count-badge">+${images.length} صور</span>` : ""}
+        </a>`;
+    }
 
     return `
       <article class="news-card">

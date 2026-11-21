@@ -3,9 +3,13 @@ package com.example.ui
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.data.AppLanguage
+import com.example.data.AppSettings
 import com.example.data.NewsArticle
 import com.example.data.NewsRepository
 import com.example.data.NewsSourceInfo
+import com.example.data.SettingsPreferences
+import com.example.data.ThemeMode
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -21,8 +25,9 @@ data class NewsUiState(
   val searchQuery: String = "",
   val lastSuccessfulUpdate: String = "",
   val loadedFromRemote: Boolean = false,
-  val webUrl: String = DEFAULT_WEB_URL,
-  val jsonUrl: String = DEFAULT_JSON_URL,
+  val activeVideoUrl: String? = null,
+  val newArticlesAlertCount: Int? = null,
+  val settings: AppSettings = AppSettings(),
 ) {
   val filteredArticles: List<NewsArticle>
     get() {
@@ -40,15 +45,15 @@ data class NewsUiState(
     }
 
   companion object {
-    const val DEFAULT_WEB_URL = "https://moshraheem-sudo.github.io/Newsiraq/"
     const val DEFAULT_JSON_URL = "https://moshraheem-sudo.github.io/Newsiraq/news.json"
   }
 }
 
 class NewsViewModel(application: Application) : AndroidViewModel(application) {
   private val repository = NewsRepository(application.applicationContext)
+  private val settingsPrefs = SettingsPreferences(application.applicationContext)
 
-  private val _uiState = MutableStateFlow(NewsUiState())
+  private val _uiState = MutableStateFlow(NewsUiState(settings = settingsPrefs.load()))
   val uiState: StateFlow<NewsUiState> = _uiState.asStateFlow()
 
   init {
@@ -57,9 +62,17 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
 
   fun refresh() {
     viewModelScope.launch {
-      _uiState.update { it.copy(isLoading = true, errorMessage = null) }
+      val previousIds = _uiState.value.articles.map { it.id }.toSet()
+      _uiState.update { it.copy(isLoading = it.articles.isEmpty(), errorMessage = null) }
       try {
-        val payload = repository.fetchNews(_uiState.value.jsonUrl)
+        val payload = repository.fetchNews(NewsUiState.DEFAULT_JSON_URL)
+        val newCount =
+          if (previousIds.isNotEmpty()) {
+            payload.items.count { it.id !in previousIds }
+          } else {
+            0
+          }
+        val shouldAlert = newCount > 0 && !_uiState.value.settings.muteNotifications
         _uiState.update {
           it.copy(
             isLoading = false,
@@ -67,6 +80,7 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
             sources = payload.sources,
             lastSuccessfulUpdate = payload.lastSuccessfulUpdate,
             loadedFromRemote = payload.loadedFromRemote,
+            newArticlesAlertCount = if (shouldAlert) newCount else null,
           )
         }
       } catch (e: Exception) {
@@ -80,6 +94,10 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
     }
   }
 
+  fun dismissAlert() {
+    _uiState.update { it.copy(newArticlesAlertCount = null) }
+  }
+
   fun updateSearchQuery(query: String) {
     _uiState.update { it.copy(searchQuery = query) }
   }
@@ -88,8 +106,30 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
     _uiState.update { it.copy(selectedSource = username) }
   }
 
-  fun updateEndpoints(webUrl: String, jsonUrl: String) {
-    _uiState.update { it.copy(webUrl = webUrl, jsonUrl = jsonUrl) }
-    refresh()
+  fun togglePlayVideo(videoUrl: String?) {
+    _uiState.update { state ->
+      val next = if (state.activeVideoUrl == videoUrl) null else videoUrl
+      state.copy(activeVideoUrl = next)
+    }
+  }
+
+  fun setMuteNotifications(muted: Boolean) {
+    settingsPrefs.saveMuteNotifications(muted)
+    _uiState.update {
+      it.copy(
+        settings = it.settings.copy(muteNotifications = muted),
+        newArticlesAlertCount = if (muted) null else it.newArticlesAlertCount,
+      )
+    }
+  }
+
+  fun setThemeMode(mode: ThemeMode) {
+    settingsPrefs.saveThemeMode(mode)
+    _uiState.update { it.copy(settings = it.settings.copy(themeMode = mode)) }
+  }
+
+  fun setLanguage(language: AppLanguage) {
+    settingsPrefs.saveLanguage(language)
+    _uiState.update { it.copy(settings = it.settings.copy(language = language)) }
   }
 }

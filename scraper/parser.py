@@ -140,12 +140,16 @@ def _extract_media(message_el: Tag, links: list[str]) -> tuple[list[str], list[d
             add_image(img_url)
             media.append({"type": "photo", "url": img_url, "thumbnail": img_url, "title": ""})
 
-    # Videos & video thumbnails
+    # Videos & video thumbnails (handle both single and grouped video players)
     seen_video_urls: set[str] = set()
-    for video_wrap in message_el.select(".tgme_widget_message_video_wrap, .tgme_widget_message_roundvideo_wrap"):
-        thumb_el = video_wrap.select_one(".tgme_widget_message_video_thumb, .tgme_widget_message_roundvideo_thumb")
+    for player_el in message_el.select(
+        ".tgme_widget_message_video_player, .tgme_widget_message_video_wrap, .tgme_widget_message_roundvideo_wrap"
+    ):
+        thumb_el = player_el.select_one(
+            ".tgme_widget_message_video_thumb, .tgme_widget_message_roundvideo_thumb"
+        )
         thumb_url = _extract_bg_url(thumb_el.get("style") if thumb_el else None) or ""
-        video_el = video_wrap.select_one("video")
+        video_el = player_el.select_one(".tgme_widget_message_video_wrap video, video")
         video_src = (video_el.get("src") or "").strip() if video_el else ""
         if video_src.startswith("//"):
             video_src = "https:" + video_src
@@ -163,7 +167,7 @@ def _extract_media(message_el: Tag, links: list[str]) -> tuple[list[str], list[d
             if thumb_url:
                 add_image(thumb_url)
 
-    # Standalone <video> tags not inside video_wrap
+    # Standalone <video> tags not inside player/wrap
     for video_el in message_el.select("video"):
         video_src = (video_el.get("src") or "").strip()
         if video_src.startswith("//"):

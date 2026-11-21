@@ -9,6 +9,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import com.example.data.ThemeMode
 
 private val DarkColorScheme = darkColorScheme(
   primary = EmeraldPrimaryDark,
@@ -37,10 +38,18 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun MyApplicationTheme(
-  darkTheme: Boolean = isSystemInDarkTheme(),
+  themeMode: ThemeMode = ThemeMode.SYSTEM,
   dynamicColor: Boolean = false,
   content: @Composable () -> Unit,
 ) {
+  val systemDark = isSystemInDarkTheme()
+  val darkTheme =
+    when (themeMode) {
+      ThemeMode.SYSTEM -> systemDark
+      ThemeMode.LIGHT -> false
+      ThemeMode.DARK -> true
+    }
+
   val colorScheme =
     when {
       dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {

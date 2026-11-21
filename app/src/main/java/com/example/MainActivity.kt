@@ -1,15 +1,17 @@
 package com.example
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.widget.MediaController
+import android.widget.VideoView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,21 +22,32 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
-import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.Newspaper
-import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.NotificationsOff
+import androidx.compose.material.icons.filled.NotificationsActive
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.SettingsBrightness
+import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -42,6 +55,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -50,12 +64,17 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -76,9 +95,15 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
+import com.example.data.AppLanguage
+import com.example.data.MediaAttachment
 import com.example.data.NewsArticle
+import com.example.data.ThemeMode
+import com.example.ui.AppStrings
+import com.example.ui.DateFormatter
 import com.example.ui.NewsUiState
 import com.example.ui.NewsViewModel
+import com.example.ui.stringsFor
 import com.example.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -86,9 +111,18 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     enableEdgeToEdge()
     setContent {
-      MyApplicationTheme {
-        CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-          IraqNewsHubApp()
+      val viewModel: NewsViewModel = viewModel()
+      val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+      val layoutDirection =
+        if (uiState.settings.language == AppLanguage.ARABIC) {
+          LayoutDirection.Rtl
+        } else {
+          LayoutDirection.Ltr
+        }
+
+      MyApplicationTheme(themeMode = uiState.settings.themeMode) {
+        CompositionLocalProvider(LocalLayoutDirection provides layoutDirection) {
+          IraqNewsHubApp(viewModel = viewModel, uiState = uiState)
         }
       }
     }
@@ -97,36 +131,56 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun IraqNewsHubApp(viewModel: NewsViewModel = viewModel()) {
-  val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+fun IraqNewsHubApp(viewModel: NewsViewModel, uiState: NewsUiState) {
+  val strings = remember(uiState.settings.language) { stringsFor(uiState.settings.language) }
   var selectedTab by remember { mutableIntStateOf(0) }
   var selectedArticle by remember { mutableStateOf<NewsArticle?>(null) }
+  val snackbarHostState = remember { SnackbarHostState() }
+
+  LaunchedEffect(uiState.newArticlesAlertCount) {
+    val count = uiState.newArticlesAlertCount
+    if (count != null && count > 0) {
+      snackbarHostState.showSnackbar(strings.newNewsBanner(count))
+      viewModel.dismissAlert()
+    }
+  }
 
   if (selectedArticle != null) {
-    BackHandler { selectedArticle = null }
+    BackHandler {
+      viewModel.togglePlayVideo(null)
+      selectedArticle = null
+    }
     ArticleDetailScreen(
       article = selectedArticle!!,
-      onBack = { selectedArticle = null },
+      strings = strings,
+      language = uiState.settings.language,
+      activeVideoUrl = uiState.activeVideoUrl,
+      onTogglePlayVideo = viewModel::togglePlayVideo,
+      onBack = {
+        viewModel.togglePlayVideo(null)
+        selectedArticle = null
+      },
     )
     return
   }
 
   Scaffold(
+    snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
     topBar = {
       TopAppBar(
         title = {
-          Column {
+          Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
             Text(
-              text = "مركز أخبار العراق",
+              text = strings.appTitle,
               style = MaterialTheme.typography.titleLarge,
-              fontWeight = FontWeight.Bold,
+              maxLines = 1,
+              overflow = TextOverflow.Ellipsis,
             )
             Text(
               text =
-                if (uiState.loadedFromRemote) "متصل بالبث المباشر (GitHub Pages)"
-                else "عرض أحدث الأخبار المحفوظة",
+                if (uiState.loadedFromRemote) strings.liveConnected else strings.offlineSnapshot,
               style = MaterialTheme.typography.labelSmall,
-              color = MaterialTheme.colorScheme.onSurfaceVariant,
+              color = MaterialTheme.colorScheme.primary,
             )
           }
         },
@@ -135,13 +189,10 @@ fun IraqNewsHubApp(viewModel: NewsViewModel = viewModel()) {
             onClick = { viewModel.refresh() },
             modifier = Modifier.testTag("refresh_button"),
           ) {
-            Icon(Icons.Default.Refresh, contentDescription = "تحديث الأخبار")
+            Icon(Icons.Default.Refresh, contentDescription = strings.refreshAction)
           }
         },
-        colors =
-          TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.surface,
-          ),
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.surface),
       )
     },
     bottomBar = {
@@ -150,45 +201,47 @@ fun IraqNewsHubApp(viewModel: NewsViewModel = viewModel()) {
           selected = selectedTab == 0,
           onClick = { selectedTab = 0 },
           icon = { Icon(Icons.Default.Newspaper, contentDescription = null) },
-          label = { Text("الأخبار") },
+          label = { Text(strings.navNews, style = MaterialTheme.typography.labelMedium) },
           modifier = Modifier.testTag("nav_feed_tab"),
         )
         NavigationBarItem(
           selected = selectedTab == 1,
-          onClick = { selectedTab = 1 },
-          icon = { Icon(Icons.Default.Public, contentDescription = null) },
-          label = { Text("الموقع") },
-          modifier = Modifier.testTag("nav_webview_tab"),
-        )
-        NavigationBarItem(
-          selected = selectedTab == 2,
-          onClick = { selectedTab = 2 },
-          icon = { Icon(Icons.Default.Info, contentDescription = null) },
-          label = { Text("حول") },
-          modifier = Modifier.testTag("nav_about_tab"),
+          onClick = {
+            viewModel.togglePlayVideo(null)
+            selectedTab = 1
+          },
+          icon = { Icon(Icons.Default.Settings, contentDescription = null) },
+          label = { Text(strings.navSettings, style = MaterialTheme.typography.labelMedium) },
+          modifier = Modifier.testTag("nav_settings_tab"),
         )
       }
     },
   ) { innerPadding ->
     Box(
-      modifier =
-        Modifier.fillMaxSize()
-          .padding(innerPadding),
+      modifier = Modifier.fillMaxSize().padding(innerPadding),
       contentAlignment = Alignment.TopCenter,
     ) {
       when (selectedTab) {
         0 ->
           NewsFeedScreen(
             uiState = uiState,
+            strings = strings,
             onSearchChange = viewModel::updateSearchQuery,
             onSelectSource = viewModel::selectSource,
-            onArticleClick = { selectedArticle = it },
+            onTogglePlayVideo = viewModel::togglePlayVideo,
+            onArticleClick = {
+              viewModel.togglePlayVideo(null)
+              selectedArticle = it
+            },
           )
-        1 -> WebPortalScreen(webUrl = uiState.webUrl)
-        2 ->
-          AboutAndIntegrationScreen(
+        1 ->
+          SettingsScreen(
             uiState = uiState,
-            onApplyEndpoints = viewModel::updateEndpoints,
+            strings = strings,
+            onMuteChange = viewModel::setMuteNotifications,
+            onThemeChange = viewModel::setThemeMode,
+            onLanguageChange = viewModel::setLanguage,
+            onSyncNow = viewModel::refresh,
           )
       }
     }
@@ -198,8 +251,10 @@ fun IraqNewsHubApp(viewModel: NewsViewModel = viewModel()) {
 @Composable
 fun NewsFeedScreen(
   uiState: NewsUiState,
+  strings: AppStrings,
   onSearchChange: (String) -> Unit,
   onSelectSource: (String) -> Unit,
+  onTogglePlayVideo: (String?) -> Unit,
   onArticleClick: (NewsArticle) -> Unit,
 ) {
   Column(
@@ -211,13 +266,14 @@ fun NewsFeedScreen(
     OutlinedTextField(
       value = uiState.searchQuery,
       onValueChange = onSearchChange,
-      placeholder = { Text("ابحث في العناوين والمحتوى والمصادر...") },
+      placeholder = { Text(strings.searchHint, style = MaterialTheme.typography.bodyMedium) },
       leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
       singleLine = true,
       shape = RoundedCornerShape(14.dp),
+      textStyle = MaterialTheme.typography.bodyMedium,
       modifier =
         Modifier.fillMaxWidth()
-          .padding(top = 8.dp)
+          .padding(top = 10.dp)
           .testTag("search_input"),
     )
 
@@ -229,14 +285,19 @@ fun NewsFeedScreen(
         FilterChip(
           selected = uiState.selectedSource == "all",
           onClick = { onSelectSource("all") },
-          label = { Text("الكل (${uiState.articles.size})") },
+          label = {
+            Text(
+              "${strings.allSources} (${uiState.articles.size})",
+              style = MaterialTheme.typography.labelMedium,
+            )
+          },
         )
       }
       items(uiState.sources, key = { it.username }) { src ->
         FilterChip(
           selected = uiState.selectedSource == src.username,
           onClick = { onSelectSource(src.username) },
-          label = { Text(src.name) },
+          label = { Text(src.name, style = MaterialTheme.typography.labelMedium) },
         )
       }
     }
@@ -248,18 +309,25 @@ fun NewsFeedScreen(
     } else if (uiState.filteredArticles.isEmpty()) {
       Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Text(
-          text = uiState.errorMessage ?: "لا توجد أخبار مطابقة للبحث الحالي.",
+          text = uiState.errorMessage ?: strings.emptyNews,
           style = MaterialTheme.typography.bodyLarge,
           color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
       }
     } else {
       LazyColumn(
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-        contentPadding = PaddingValues(bottom = 20.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp),
+        contentPadding = PaddingValues(bottom = 24.dp),
       ) {
         items(uiState.filteredArticles, key = { it.id }) { article ->
-          NewsArticleCard(article = article, onClick = { onArticleClick(article) })
+          NewsArticleCard(
+            article = article,
+            strings = strings,
+            language = uiState.settings.language,
+            activeVideoUrl = uiState.activeVideoUrl,
+            onTogglePlayVideo = onTogglePlayVideo,
+            onClick = { onArticleClick(article) },
+          )
         }
       }
     }
@@ -267,63 +335,297 @@ fun NewsFeedScreen(
 }
 
 @Composable
-fun NewsArticleCard(article: NewsArticle, onClick: () -> Unit) {
+fun NewsArticleCard(
+  article: NewsArticle,
+  strings: AppStrings,
+  language: AppLanguage,
+  activeVideoUrl: String?,
+  onTogglePlayVideo: (String?) -> Unit,
+  onClick: () -> Unit,
+) {
+  val context = LocalContext.current
+  val videos = article.videos
+  val photos = article.displayImages
+  val formattedDate = remember(article.publishedAt, language) {
+    DateFormatter.formatBaghdadDateTime(article.publishedAt, language)
+  }
+
   Card(
     onClick = onClick,
-    shape = RoundedCornerShape(16.dp),
+    shape = RoundedCornerShape(18.dp),
     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.55f)),
+    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
     modifier = Modifier.fillMaxWidth().testTag("news_item_card_${article.id}"),
   ) {
-    Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-      if (article.images.isNotEmpty()) {
-        AsyncImage(
-          model = article.images.first(),
-          contentDescription = article.title.ifBlank { "صورة الخبر" },
-          contentScale = ContentScale.Crop,
-          modifier =
-            Modifier.fillMaxWidth()
-              .height(180.dp)
-              .clip(RoundedCornerShape(12.dp)),
-        )
-      }
+    Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+      // Top metadata row: Source badge + Date
       Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
       ) {
-        Surface(
-          color = MaterialTheme.colorScheme.primaryContainer,
-          shape = RoundedCornerShape(999.dp),
+        Row(
+          horizontalArrangement = Arrangement.spacedBy(6.dp),
+          verticalAlignment = Alignment.CenterVertically,
+          modifier = Modifier.weight(1f, fill = false),
         ) {
-          Text(
-            text = article.sourceName,
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onPrimaryContainer,
-            modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-          )
+          Surface(
+            color = MaterialTheme.colorScheme.primaryContainer,
+            shape = RoundedCornerShape(999.dp),
+          ) {
+            Text(
+              text = article.sourceName,
+              style = MaterialTheme.typography.labelMedium,
+              fontWeight = FontWeight.Bold,
+              color = MaterialTheme.colorScheme.onPrimaryContainer,
+              maxLines = 1,
+              overflow = TextOverflow.Ellipsis,
+              modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+            )
+          }
+          if (article.isEdited) {
+            Surface(
+              color = MaterialTheme.colorScheme.secondaryContainer,
+              shape = RoundedCornerShape(999.dp),
+            ) {
+              Text(
+                text = strings.editedBadge,
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
+              )
+            }
+          }
         }
+        Spacer(modifier = Modifier.width(8.dp))
         Text(
-          text = article.publishedAt.take(16).replace("T", " "),
+          text = formattedDate,
           style = MaterialTheme.typography.labelSmall,
           color = MaterialTheme.colorScheme.onSurfaceVariant,
+          maxLines = 1,
         )
       }
+
+      // Headline
       Text(
-        text = article.title.ifBlank { "منشور وسائط" },
+        text = article.title.ifBlank { strings.mediaOnlyPost },
         style = MaterialTheme.typography.titleMedium,
-        fontWeight = FontWeight.Bold,
-        maxLines = 2,
+        color = MaterialTheme.colorScheme.onSurface,
+        maxLines = 3,
         overflow = TextOverflow.Ellipsis,
       )
-      if (article.content.isNotBlank()) {
+
+      // Attached Video (priority inline player) and/or Photo
+      if (videos.isNotEmpty()) {
+        val primaryVideo = videos.first()
+        InlineVideoAttachment(
+          video = primaryVideo,
+          videoCount = videos.size,
+          isPlaying = activeVideoUrl == primaryVideo.url,
+          strings = strings,
+          onTogglePlay = { onTogglePlayVideo(primaryVideo.url) },
+          onOpenExternal = {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(primaryVideo.url)))
+          },
+        )
+      }
+
+      if (photos.isNotEmpty() && (videos.isEmpty() || photos.first() != videos.first().thumbnail)) {
+        Box(
+          modifier =
+            Modifier.fillMaxWidth()
+              .height(200.dp)
+              .clip(RoundedCornerShape(14.dp))
+              .background(MaterialTheme.colorScheme.surfaceVariant),
+        ) {
+          AsyncImage(
+            model = photos.first(),
+            contentDescription = article.title.ifBlank { strings.mediaOnlyPost },
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize(),
+          )
+          if (photos.size > 1) {
+            Surface(
+              color = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
+              shape = RoundedCornerShape(999.dp),
+              modifier = Modifier.align(Alignment.BottomEnd).padding(10.dp),
+            ) {
+              Text(
+                text = "+${photos.size}",
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+              )
+            }
+          }
+        }
+      }
+
+      // Body excerpt
+      if (article.content.isNotBlank() && article.content != article.title) {
         Text(
           text = article.content,
           style = MaterialTheme.typography.bodyMedium,
           color = MaterialTheme.colorScheme.onSurfaceVariant,
-          maxLines = 3,
+          maxLines = 4,
           overflow = TextOverflow.Ellipsis,
         )
+      }
+
+      HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.45f))
+
+      // Footer row
+      Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically,
+      ) {
+        Text(
+          text = article.category,
+          style = MaterialTheme.typography.labelMedium,
+          color = MaterialTheme.colorScheme.secondary,
+        )
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+          Text(
+            text = strings.readMore,
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.primary,
+          )
+        }
+      }
+    }
+  }
+}
+
+@Composable
+fun InlineVideoAttachment(
+  video: MediaAttachment,
+  videoCount: Int,
+  isPlaying: Boolean,
+  strings: AppStrings,
+  onTogglePlay: () -> Unit,
+  onOpenExternal: () -> Unit,
+) {
+  Box(
+    modifier =
+      Modifier.fillMaxWidth()
+        .height(210.dp)
+        .clip(RoundedCornerShape(14.dp))
+        .background(MaterialTheme.colorScheme.surfaceVariant),
+  ) {
+    if (isPlaying) {
+      var videoViewRef by remember { mutableStateOf<VideoView?>(null) }
+      DisposableEffect(video.url) {
+        onDispose {
+          try {
+            videoViewRef?.stopPlayback()
+          } catch (_: Exception) {}
+        }
+      }
+      AndroidView(
+        factory = { ctx ->
+          VideoView(ctx).apply {
+            val controller = MediaController(ctx)
+            controller.setAnchorView(this)
+            setMediaController(controller)
+            setVideoURI(Uri.parse(video.url))
+            setOnPreparedListener { mp ->
+              mp.isLooping = false
+              start()
+            }
+            videoViewRef = this
+          }
+        },
+        modifier = Modifier.fillMaxSize(),
+      )
+      Surface(
+        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
+        shape = CircleShape,
+        modifier =
+          Modifier.align(Alignment.TopEnd)
+            .padding(8.dp)
+            .size(36.dp)
+            .clickable { onTogglePlay() },
+      ) {
+        Box(contentAlignment = Alignment.Center) {
+          Icon(
+            Icons.Default.Close,
+            contentDescription = strings.closeVideo,
+            modifier = Modifier.size(20.dp),
+          )
+        }
+      }
+    } else {
+      Box(
+        modifier = Modifier.fillMaxSize().clickable { onTogglePlay() },
+        contentAlignment = Alignment.Center,
+      ) {
+        if (video.thumbnail.isNotBlank()) {
+          AsyncImage(
+            model = video.thumbnail,
+            contentDescription = strings.videoBadge,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize(),
+          )
+        }
+        Box(
+          modifier =
+            Modifier.fillMaxSize()
+              .background(MaterialTheme.colorScheme.scrim.copy(alpha = 0.35f)),
+        )
+        Surface(
+          color = MaterialTheme.colorScheme.primary,
+          shape = CircleShape,
+          shadowElevation = 4.dp,
+          modifier = Modifier.size(58.dp),
+        ) {
+          Box(contentAlignment = Alignment.Center) {
+            Icon(
+              Icons.Default.PlayArrow,
+              contentDescription = strings.playVideo,
+              tint = MaterialTheme.colorScheme.onPrimary,
+              modifier = Modifier.size(34.dp),
+            )
+          }
+        }
+        Surface(
+          color = MaterialTheme.colorScheme.surface.copy(alpha = 0.9f),
+          shape = RoundedCornerShape(999.dp),
+          modifier = Modifier.align(Alignment.TopStart).padding(10.dp),
+        ) {
+          Row(
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+          ) {
+            Icon(
+              Icons.Default.Videocam,
+              contentDescription = null,
+              tint = MaterialTheme.colorScheme.primary,
+              modifier = Modifier.size(16.dp),
+            )
+            Text(
+              text = if (videoCount > 1) "${strings.videoBadge} ($videoCount)" else strings.videoBadge,
+              style = MaterialTheme.typography.labelMedium,
+            )
+          }
+        }
+        Surface(
+          color = MaterialTheme.colorScheme.surface.copy(alpha = 0.9f),
+          shape = RoundedCornerShape(999.dp),
+          modifier =
+            Modifier.align(Alignment.BottomEnd)
+              .padding(10.dp)
+              .clickable { onOpenExternal() },
+        ) {
+          Text(
+            text = strings.openVideoExternal,
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
+          )
+        }
       }
     }
   }
@@ -331,15 +633,33 @@ fun NewsArticleCard(article: NewsArticle, onClick: () -> Unit) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ArticleDetailScreen(article: NewsArticle, onBack: () -> Unit) {
+fun ArticleDetailScreen(
+  article: NewsArticle,
+  strings: AppStrings,
+  language: AppLanguage,
+  activeVideoUrl: String?,
+  onTogglePlayVideo: (String?) -> Unit,
+  onBack: () -> Unit,
+) {
   val context = LocalContext.current
+  val formattedDate = remember(article.publishedAt, language) {
+    DateFormatter.formatBaghdadDateTime(article.publishedAt, language)
+  }
+
   Scaffold(
     topBar = {
       TopAppBar(
-        title = { Text(article.sourceName, maxLines = 1, overflow = TextOverflow.Ellipsis) },
+        title = {
+          Text(
+            text = article.sourceName,
+            style = MaterialTheme.typography.titleMedium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+          )
+        },
         navigationIcon = {
           IconButton(onClick = onBack, modifier = Modifier.testTag("back_button")) {
-            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "رجوع")
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = strings.backAction)
           }
         },
       )
@@ -349,133 +669,329 @@ fun ArticleDetailScreen(article: NewsArticle, onBack: () -> Unit) {
       modifier =
         Modifier.fillMaxSize()
           .padding(innerPadding)
-          .padding(16.dp)
+          .widthIn(max = 720.dp)
+          .padding(horizontal = 18.dp, vertical = 12.dp)
           .verticalScroll(rememberScrollState()),
-      verticalArrangement = Arrangement.spacedBy(12.dp),
+      verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
-      Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        AssistChip(onClick = {}, label = { Text(article.category.ifBlank { "أخبار" }) })
+      Row(
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+      ) {
+        AssistChip(
+          onClick = {},
+          label = { Text(article.category.ifBlank { strings.navNews }, style = MaterialTheme.typography.labelMedium) },
+        )
         if (article.isEdited) {
-          AssistChip(onClick = {}, label = { Text("معدّل") })
+          AssistChip(
+            onClick = {},
+            label = { Text(strings.editedBadge, style = MaterialTheme.typography.labelMedium) },
+          )
         }
       }
+
       Text(
-        text = article.title.ifBlank { "منشور وسائط" },
+        text = article.title.ifBlank { strings.mediaOnlyPost },
         style = MaterialTheme.typography.headlineSmall,
-        fontWeight = FontWeight.Bold,
+        color = MaterialTheme.colorScheme.onSurface,
       )
+
       Text(
-        text = "تاريخ النشر: ${article.publishedAt.take(19).replace("T", " ")} UTC",
+        text = "${strings.publishedAtLabel}: $formattedDate",
         style = MaterialTheme.typography.labelMedium,
         color = MaterialTheme.colorScheme.onSurfaceVariant,
       )
-      article.images.forEach { imageUrl ->
-        AsyncImage(
-          model = imageUrl,
-          contentDescription = "صورة مرفقة",
-          contentScale = ContentScale.FillWidth,
-          modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)),
+
+      // All attached videos
+      article.videos.forEach { video ->
+        InlineVideoAttachment(
+          video = video,
+          videoCount = 1,
+          isPlaying = activeVideoUrl == video.url,
+          strings = strings,
+          onTogglePlay = { onTogglePlayVideo(video.url) },
+          onOpenExternal = {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(video.url)))
+          },
         )
       }
+
+      // All attached photos
+      article.displayImages.forEach { imageUrl ->
+        AsyncImage(
+          model = imageUrl,
+          contentDescription = article.title.ifBlank { strings.mediaOnlyPost },
+          contentScale = ContentScale.FillWidth,
+          modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)),
+        )
+      }
+
       Text(
-        text = article.content.ifBlank { "لا يوجد نص إضافي في المصدر." },
+        text = article.content.ifBlank { strings.noAdditionalText },
         style = MaterialTheme.typography.bodyLarge,
+        color = MaterialTheme.colorScheme.onSurface,
       )
-      Spacer(modifier = Modifier.height(8.dp))
+
+      Spacer(modifier = Modifier.height(6.dp))
+
       Button(
         onClick = {
-          val intent = Intent(Intent.ACTION_VIEW, Uri.parse(article.originalUrl))
-          context.startActivity(intent)
+          context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(article.originalUrl)))
         },
-        modifier = Modifier.fillMaxWidth().testTag("open_original_button"),
+        shape = RoundedCornerShape(14.dp),
+        modifier =
+          Modifier.fillMaxWidth()
+            .height(50.dp)
+            .testTag("open_original_button"),
       ) {
         Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = null)
-        Spacer(modifier = Modifier.padding(horizontal = 4.dp))
-        Text("فتح المنشور الأصلي على تلغرام")
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(strings.openOriginal, style = MaterialTheme.typography.labelLarge)
       }
+
+      Spacer(modifier = Modifier.height(16.dp))
     }
   }
 }
 
-@SuppressLint("SetJavaScriptEnabled")
 @Composable
-fun WebPortalScreen(webUrl: String) {
-  if (webUrl.isBlank() || webUrl.contains("USERNAME")) {
-    Box(
-      modifier = Modifier.fillMaxSize().padding(24.dp),
-      contentAlignment = Alignment.Center,
-    ) {
-      Text(
-        text = "سيتم فتح رابط موقع GitHub Pages تلقائياً فور اكتمال النشر وتعيين اسم المستخدم.",
-        style = MaterialTheme.typography.bodyLarge,
-      )
-    }
-    return
-  }
-
-  AndroidView(
-    factory = { context ->
-      WebView(context).apply {
-        webViewClient = WebViewClient()
-        settings.javaScriptEnabled = true
-        settings.domStorageEnabled = true
-        loadUrl(webUrl)
-      }
-    },
-    modifier = Modifier.fillMaxSize(),
-  )
-}
-
-@Composable
-fun AboutAndIntegrationScreen(
+fun SettingsScreen(
   uiState: NewsUiState,
-  onApplyEndpoints: (String, String) -> Unit,
+  strings: AppStrings,
+  onMuteChange: (Boolean) -> Unit,
+  onThemeChange: (ThemeMode) -> Unit,
+  onLanguageChange: (AppLanguage) -> Unit,
+  onSyncNow: () -> Unit,
 ) {
-  var webInput by remember(uiState.webUrl) { mutableStateOf(uiState.webUrl) }
-  var jsonInput by remember(uiState.jsonUrl) { mutableStateOf(uiState.jsonUrl) }
+  val settings = uiState.settings
+  val formattedSync = remember(uiState.lastSuccessfulUpdate, settings.language) {
+    DateFormatter.formatBaghdadDateTime(uiState.lastSuccessfulUpdate, settings.language)
+  }
 
   Column(
     modifier =
       Modifier.fillMaxSize()
         .widthIn(max = 680.dp)
-        .padding(16.dp)
+        .padding(horizontal = 16.dp, vertical = 14.dp)
         .verticalScroll(rememberScrollState()),
-    verticalArrangement = Arrangement.spacedBy(12.dp),
+    verticalArrangement = Arrangement.spacedBy(16.dp),
   ) {
     Text(
-      text = "Iraq News Hub — مركز أخبار العراق",
-      style = MaterialTheme.typography.titleLarge,
-      fontWeight = FontWeight.Bold,
+      text = strings.settingsTitle,
+      style = MaterialTheme.typography.headlineSmall,
+      color = MaterialTheme.colorScheme.onSurface,
     )
-    Text(
-      text =
-        "تطبيق متكامل متصل بمجمع الأخبار العراقي عبر GitHub Pages وملف news.json، مع نسخة احتياطية مدمجة للعمل الفوري.",
-      style = MaterialTheme.typography.bodyMedium,
-      color = MaterialTheme.colorScheme.onSurfaceVariant,
-    )
-    Text(
-      text = "آخر تحديث ناجح: ${uiState.lastSuccessfulUpdate.ifBlank { "محلي" }}",
-      style = MaterialTheme.typography.labelLarge,
-    )
-    OutlinedTextField(
-      value = webInput,
-      onValueChange = { webInput = it },
-      label = { Text("رابط الموقع (WebView)") },
-      singleLine = true,
-      modifier = Modifier.fillMaxWidth(),
-    )
-    OutlinedTextField(
-      value = jsonInput,
-      onValueChange = { jsonInput = it },
-      label = { Text("رابط ملف JSON") },
-      singleLine = true,
-      modifier = Modifier.fillMaxWidth(),
-    )
-    OutlinedButton(
-      onClick = { onApplyEndpoints(webInput, jsonInput) },
-      modifier = Modifier.fillMaxWidth(),
+
+    // 1. Mute Notifications Card
+    Card(
+      shape = RoundedCornerShape(16.dp),
+      colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+      border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)),
     ) {
-      Text("حفظ وتحديث المصدر")
+      Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        Text(
+          text = strings.notificationsSection,
+          style = MaterialTheme.typography.labelLarge,
+          color = MaterialTheme.colorScheme.primary,
+        )
+        Row(
+          modifier = Modifier.fillMaxWidth(),
+          horizontalArrangement = Arrangement.SpaceBetween,
+          verticalAlignment = Alignment.CenterVertically,
+        ) {
+          Row(
+            modifier = Modifier.weight(1f).padding(end = 12.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+          ) {
+            Icon(
+              imageVector =
+                if (settings.muteNotifications) Icons.Default.NotificationsOff
+                else Icons.Default.NotificationsActive,
+              contentDescription = null,
+              tint = MaterialTheme.colorScheme.primary,
+            )
+            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+              Text(
+                text = strings.muteNotificationsTitle,
+                style = MaterialTheme.typography.titleSmall,
+              )
+              Text(
+                text =
+                  if (settings.muteNotifications) strings.muteNotificationsDescOn
+                  else strings.muteNotificationsDescOff,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+              )
+            }
+          }
+          Switch(
+            checked = settings.muteNotifications,
+            onCheckedChange = onMuteChange,
+            modifier = Modifier.testTag("mute_notifications_switch"),
+          )
+        }
+      }
     }
+
+    // 2. Theme Selector Card
+    Card(
+      shape = RoundedCornerShape(16.dp),
+      colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+      border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)),
+    ) {
+      Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Text(
+          text = strings.appearanceSection,
+          style = MaterialTheme.typography.labelLarge,
+          color = MaterialTheme.colorScheme.primary,
+        )
+        Row(
+          modifier = Modifier.fillMaxWidth(),
+          horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+          ThemeOptionChip(
+            label = strings.themeSystem,
+            icon = Icons.Default.SettingsBrightness,
+            selected = settings.themeMode == ThemeMode.SYSTEM,
+            onClick = { onThemeChange(ThemeMode.SYSTEM) },
+            modifier = Modifier.weight(1f).testTag("theme_system_chip"),
+          )
+          ThemeOptionChip(
+            label = strings.themeLight,
+            icon = Icons.Default.LightMode,
+            selected = settings.themeMode == ThemeMode.LIGHT,
+            onClick = { onThemeChange(ThemeMode.LIGHT) },
+            modifier = Modifier.weight(1f).testTag("theme_light_chip"),
+          )
+          ThemeOptionChip(
+            label = strings.themeDark,
+            icon = Icons.Default.DarkMode,
+            selected = settings.themeMode == ThemeMode.DARK,
+            onClick = { onThemeChange(ThemeMode.DARK) },
+            modifier = Modifier.weight(1f).testTag("theme_dark_chip"),
+          )
+        }
+      }
+    }
+
+    // 3. Language Selector Card
+    Card(
+      shape = RoundedCornerShape(16.dp),
+      colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+      border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)),
+    ) {
+      Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Row(
+          horizontalArrangement = Arrangement.spacedBy(8.dp),
+          verticalAlignment = Alignment.CenterVertically,
+        ) {
+          Icon(
+            Icons.Default.Language,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.size(18.dp),
+          )
+          Text(
+            text = strings.languageSection,
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.primary,
+          )
+        }
+        Row(
+          modifier = Modifier.fillMaxWidth(),
+          horizontalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+          FilterChip(
+            selected = settings.language == AppLanguage.ARABIC,
+            onClick = { onLanguageChange(AppLanguage.ARABIC) },
+            label = {
+              Text(
+                strings.languageArabic,
+                style = MaterialTheme.typography.labelLarge,
+                modifier = Modifier.padding(vertical = 6.dp),
+              )
+            },
+            modifier = Modifier.weight(1f).testTag("lang_ar_chip"),
+          )
+          FilterChip(
+            selected = settings.language == AppLanguage.ENGLISH,
+            onClick = { onLanguageChange(AppLanguage.ENGLISH) },
+            label = {
+              Text(
+                strings.languageEnglish,
+                style = MaterialTheme.typography.labelLarge,
+                modifier = Modifier.padding(vertical = 6.dp),
+              )
+            },
+            modifier = Modifier.weight(1f).testTag("lang_en_chip"),
+          )
+        }
+      }
+    }
+
+    // 4. Clean Data Status & Sync Card
+    Card(
+      shape = RoundedCornerShape(16.dp),
+      colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+      border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)),
+    ) {
+      Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        Text(
+          text = strings.dataStatusSection,
+          style = MaterialTheme.typography.labelLarge,
+          color = MaterialTheme.colorScheme.primary,
+        )
+        Row(
+          modifier = Modifier.fillMaxWidth(),
+          horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+          Text(strings.lastSyncLabel, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+          Text(formattedSync, style = MaterialTheme.typography.labelLarge)
+        }
+        Row(
+          modifier = Modifier.fillMaxWidth(),
+          horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+          Text(strings.storedNewsCountLabel, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+          Text("${uiState.articles.size}", style = MaterialTheme.typography.labelLarge)
+        }
+        OutlinedButton(
+          onClick = onSyncNow,
+          shape = RoundedCornerShape(12.dp),
+          modifier = Modifier.fillMaxWidth().height(48.dp).testTag("sync_now_button"),
+        ) {
+          Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(18.dp))
+          Spacer(modifier = Modifier.width(8.dp))
+          Text(strings.syncNowButton, style = MaterialTheme.typography.labelLarge)
+        }
+      }
+    }
+
+    Spacer(modifier = Modifier.height(12.dp))
   }
+}
+
+@Composable
+private fun ThemeOptionChip(
+  label: String,
+  icon: androidx.compose.ui.graphics.vector.ImageVector,
+  selected: Boolean,
+  onClick: () -> Unit,
+  modifier: Modifier = Modifier,
+) {
+  FilterChip(
+    selected = selected,
+    onClick = onClick,
+    leadingIcon = { Icon(icon, contentDescription = null, modifier = Modifier.size(18.dp)) },
+    label = {
+      Text(
+        text = label,
+        style = MaterialTheme.typography.labelMedium,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+      )
+    },
+    modifier = modifier.height(44.dp),
+  )
 }
