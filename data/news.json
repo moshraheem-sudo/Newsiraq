@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "project": "Iraq News",
   "app_version": "1.5.0",
-  "generated_at": "2026-11-21T06:03:56.887161Z",
-  "last_successful_update": "2026-11-21T06:03:56.887161Z",
-  "total_count": 1111,
+  "generated_at": "2026-11-21T06:08:36.856777Z",
+  "last_successful_update": "2026-11-21T06:08:36.856777Z",
+  "total_count": 1122,
   "sources": [
     {
       "id": "ina",
@@ -233,6 +233,265 @@
     }
   ],
   "items": [
+    {
+      "id": "list_1763642433328279733_2124022080081375734",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124022080081375734,
+      "category": "أخبار منوعة (X)",
+      "title": "عاجل| مليشيات المستوطنين تهاجم مركبات الفلسطينيين على الشارع الالتفافي قرب \"وادي شنار\" شمال الخليل، وإصابة أحد سائقي المركبات.",
+      "content": "@qudsn (شبكة قدس الإخبارية)\nعاجل| مليشيات المستوطنين تهاجم مركبات الفلسطينيين على الشارع الالتفافي قرب \"وادي شنار\" شمال الخليل، وإصابة أحد سائقي المركبات.",
+      "published_at": "2026-11-21T06:08:20Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/qudsn/status/2124022080081375734",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124022059126722561/img/_y4Ew7-Zz8RAPpim.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124022059126722561/vid/avc1/464x832/sEH3TXyIPkVwmVCx.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124022059126722561/img/_y4Ew7-Zz8RAPpim.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "1c020ba3938ec3cd32bd8e2ee2d6e4c90499723dc7c8e81e1ac5270843268858"
+    },
+    {
+      "id": "list_1763642433328279733_2124021790816997689",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021790816997689,
+      "category": "أخبار منوعة (X)",
+      "title": "صحة البصرة: حالتا وفاة و28 مصاباً حصيلة أولية لحادثة حريق الهارثة في البصرة",
+      "content": "@iraqmedianet (شبكة الإعلام العراقي)\nصحة البصرة: حالتا وفاة و28 مصاباً حصيلة أولية لحادثة حريق الهارثة في البصرة",
+      "published_at": "2026-11-21T06:07:12Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/iraqmedianet/status/2124021790816997689",
+      "images": [
+        "https://pbs.twimg.com/media/HXoKi_kWAAAFk3C.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoKi_kWAAAFk3C.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoKi_kWAAAFk3C.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "4962697f60ffc0d6d4d537745aa5f2f31260ca69b7c20b9bde8cea95a5f2a9ae"
+    },
+    {
+      "id": "list_1763642433328279733_2124021704364020188",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021704364020188,
+      "category": "أخبار منوعة (X)",
+      "title": "العالم... نهاية الأحادية أم بداية نظام دولي أكثر اضطراباً؟…",
+      "content": "@aawsat_News (صحيفة الشرق الأوسط)\nالعالم... نهاية الأحادية أم بداية نظام دولي أكثر اضطراباً؟ https://aawsat.com/%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85/5343844-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%86%D9%87%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%A9-%D8%A3%D9%85-%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9-%D9%86%D8%B8%D8%A7%D9%85-%D8%AF%D9%88%D9%84%D9%8A-%D8%A3%D9%83%D8%AB%D8%B1-%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8%D8%A7%D9%8B%D8%9F?utm_term=Autofeed&utm_campaign=ebx-main&utm_medium=Social&utm_source=Twitter#Echobox=1795239178",
+      "published_at": "2026-11-21T06:06:51Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/aawsat_News/status/2124021704364020188",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://aawsat.com/%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85/5343844-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%86%D9%87%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%AD%D8%A7%D8%AF%D9%8A%D8%A9-%D8%A3%D9%85-%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9-%D9%86%D8%B8%D8%A7%D9%85-%D8%AF%D9%88%D9%84%D9%8A-%D8%A3%D9%83%D8%AB%D8%B1-%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8%D8%A7%D9%8B%D8%9F?utm_term=Autofeed&utm_campaign=ebx-main&utm_medium=Social&utm_source=Twitter#Echobox=1795239178"
+      ],
+      "is_edited": false,
+      "content_hash": "6c8b34b0cc42515d5cfd21073355ef84140b0b38a901cf94c6afe963591fea92"
+    },
+    {
+      "id": "list_1763642433328279733_2124021602673209593",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021602673209593,
+      "category": "أخبار منوعة (X)",
+      "title": "في قلب قمة أببك وتحت أنظار ممثلي 20 اقتصاداً لم يكن الأمر مجرد عشاء عادي بل مائدة رسمية وطنية أعدتها الصين بـ20 طبقاً صُممت بدقة متناهية.",
+      "content": "@M0SC0W0 (موسكو | 🇷🇺 MOSCOW NEWS)\nفي قلب قمة أببك وتحت أنظار ممثلي 20 اقتصاداً لم يكن الأمر مجرد عشاء عادي بل مائدة رسمية وطنية أعدتها الصين بـ20 طبقاً صُممت بدقة متناهية.",
+      "published_at": "2026-11-21T06:06:27Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/M0SC0W0/status/2124021602673209593",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124021454295486464/img/inBu6XtORevw4JYU.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124021454295486464/vid/avc1/576x1024/xKQlzDhGpgKvb1nq.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124021454295486464/img/inBu6XtORevw4JYU.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "08222d7cd5093d80364c2f7b7d033fbca6ad6b280551bccf3869456ec6fdcc9a"
+    },
+    {
+      "id": "list_1763642433328279733_2124021426982175015",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021426982175015,
+      "category": "أخبار منوعة (X)",
+      "title": "بين مساعي الاتفاق والتهديد بالرد.. إيران تستبعد مذكرة إسلام آباد وتؤكد جاهزيتها القتالية",
+      "content": "@AlarabyTV (التلفزيون العربي)\nبين مساعي الاتفاق والتهديد بالرد.. إيران تستبعد مذكرة إسلام آباد وتؤكد جاهزيتها القتالية\nتفاصيل أكثر مع مراسلنا حسام دياب",
+      "published_at": "2026-11-21T06:05:45Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/AlarabyTV/status/2124021426982175015",
+      "images": [
+        "https://pbs.twimg.com/media/HXoKOmrWYAEILWh.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124020818170572800/vid/avc1/1920x1080/CZvpZ1aWCvCNObW2.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXoKOmrWYAEILWh.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "dde96c94838a722f232ccd9614a23f35db4c0644089339e423b4d3f2c3daaeb4"
+    },
+    {
+      "id": "list_1763642433328279733_2124021259709100176",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021259709100176,
+      "category": "أخبار منوعة (X)",
+      "title": "#الشرق_عاجل الوكالة العراقية: حالتا وفاة و28 مصابا جراء حريق في محطة \"كهرباء الهارثة\" بمحافظة البصرة",
+      "content": "@AsharqNewsBrk (الشرق عاجل Asharq Breaking)\n#الشرق_عاجل الوكالة العراقية: حالتا وفاة و28 مصابا جراء حريق في محطة \"كهرباء الهارثة\" بمحافظة البصرة",
+      "published_at": "2026-11-21T06:05:05Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/AsharqNewsBrk/status/2124021259709100176",
+      "images": [
+        "https://pbs.twimg.com/media/HXoKFFrWgAA7O4D.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoKFFrWgAA7O4D.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoKFFrWgAA7O4D.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "9eec17191ca52b7e24ac593c9d064e8f103b29b685484837c3bfa2e26751d087"
+    },
+    {
+      "id": "list_1763642433328279733_2124021240960561276",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021240960561276,
+      "category": "أخبار منوعة (X)",
+      "title": "اندلاع حريق في محطة كهرباء الهارثة شمال مدينة البصرة",
+      "content": "@arabick24 (Kurdistan24 عربية)\nاندلاع حريق في محطة كهرباء الهارثة شمال مدينة البصرة",
+      "published_at": "2026-11-21T06:05:00Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/arabick24/status/2124021240960561276",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124021116633018368/img/Ybr6-tNONdw_9Dqd.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124021116633018368/vid/avc1/720x1280/A1Ik0Rrn6YL9Vjnu.mp4?tag=14",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124021116633018368/img/Ybr6-tNONdw_9Dqd.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "95eb0dfadb5b027b85d9bdad1ea2d07cc4ed9917ba8d2c83765bab17355ca719"
+    },
+    {
+      "id": "list_1763642433328279733_2124021147666641395",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021147666641395,
+      "category": "أخبار منوعة (X)",
+      "title": "ضرب زلزال بقوة 6.8 درجة وسط بيرو، مما دفع بعض سكان العاصمة ليما للخروج إلى الشوارع.…",
+      "content": "@AsharqNews (Asharq News الشرق للأخبار)\nضرب زلزال بقوة 6.8 درجة وسط بيرو، مما دفع بعض سكان العاصمة ليما للخروج إلى الشوارع. https://asharq.com/reports/203881/%D8%A8%D9%8A%D8%B1%D9%88-%D8%B2%D9%84%D8%B2%D8%A7%D9%84-%D8%A8%D9%82%D9%88%D8%A9-6-8-%D8%AF%D8%B1%D8%AC%D8%A9-%D9%8A%D8%B6%D8%B1%D8%A8-%D9%85%D9%86%D8%B7%D9%82%D8%A9-%D8%AC%D8%A8%D8%A7%D9%84-%D8%A7%D9%84%D8%A3%D9%86%D8%AF%D9%8A%D8%B2/?utm_term=Autofeed&utm_campaign=ebx-main&utm_medium=Social&utm_source=Twitter&Echobox=1795240506",
+      "published_at": "2026-11-21T06:04:38Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/AsharqNews/status/2124021147666641395",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://asharq.com/reports/203881/%D8%A8%D9%8A%D8%B1%D9%88-%D8%B2%D9%84%D8%B2%D8%A7%D9%84-%D8%A8%D9%82%D9%88%D8%A9-6-8-%D8%AF%D8%B1%D8%AC%D8%A9-%D9%8A%D8%B6%D8%B1%D8%A8-%D9%85%D9%86%D8%B7%D9%82%D8%A9-%D8%AC%D8%A8%D8%A7%D9%84-%D8%A7%D9%84%D8%A3%D9%86%D8%AF%D9%8A%D8%B2/?utm_term=Autofeed&utm_campaign=ebx-main&utm_medium=Social&utm_source=Twitter&Echobox=1795240506"
+      ],
+      "is_edited": false,
+      "content_hash": "b7fc4d305320679e5469fac11c9f630ca6e466913e542ead00018fa946ce4298"
+    },
+    {
+      "id": "list_1763642433328279733_2124021114443538760",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021114443538760,
+      "category": "أخبار منوعة (X)",
+      "title": "مختص: ضرورة مراقبة الألعاب الإلكترونية والالتزام بالتصنيف العمري لحماية الأطفال",
+      "content": "@AlMamlakaTV (قناة المملكة)\nمختص: ضرورة مراقبة الألعاب الإلكترونية والالتزام بالتصنيف العمري لحماية الأطفال\n\n#الأردن #هنا_المملكة\nhttps://almamlakatv.com/ar/url/oLTslKpNA8",
+      "published_at": "2026-11-21T06:04:30Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/AlMamlakaTV/status/2124021114443538760",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://almamlakatv.com/ar/url/oLTslKpNA8"
+      ],
+      "is_edited": false,
+      "content_hash": "d6afdf6a36629b1dfe0a0dee1efd53f9d2aeb6c336fb0e4453584cbf1be284c4"
+    },
+    {
+      "id": "list_1763642433328279733_2124021015709667460",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124021015709667460,
+      "category": "أخبار منوعة (X)",
+      "title": "وصف الرئيس الأوكراني #فولوديمير_زيلينسكي نظيره الروسي #فلاديمير_بوتين بأنه \"قاتل\"، ردًا على وصف الرئيس الأميركي #دونالد_ترامب له بـ\"الصديق\".",
+      "content": "@shamsnewstv (Shams TV قناة شمس)\nوصف الرئيس الأوكراني #فولوديمير_زيلينسكي نظيره الروسي #فلاديمير_بوتين بأنه \"قاتل\"، ردًا على وصف الرئيس الأميركي #دونالد_ترامب له بـ\"الصديق\".\n\nوقال زيلينسكي، في مقابلة مع شبكة سي إن إن: \"بالنسبة لنا هو عدو، وبالطبع بالنسبة لنا هو قاتل\".\n\nوكان ترامب قد خاطب بوتين بعبارة \"صديقي\"",
+      "published_at": "2026-11-21T06:04:07Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://x.com/shamsnewstv/status/2124021015709667460",
+      "images": [
+        "https://pbs.twimg.com/media/HXoJ2MyW0AAVkfN.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoJ2MyW0AAVkfN.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoJ2MyW0AAVkfN.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "2d646820622f5fa80514c67fe735bc3e5806282f517eab15eb2847b17d8a55d8"
+    },
     {
       "id": "list_1763642433328279733_2124020985431285865",
       "source_id": "x_news_list",
@@ -1584,6 +1843,27 @@
       ],
       "is_edited": false,
       "content_hash": "e2b39eeee44ef2592922530740ef7b81ec4951c943cf5b47ffcafd1dfd994b14"
+    },
+    {
+      "id": "aljazeera_en_rss_996299520",
+      "source_id": "aljazeera_en_rss",
+      "source_name": "Al Jazeera Global",
+      "source_username": "aljazeera_en_rss",
+      "message_id": 996299520,
+      "category": "أخبار عالمية",
+      "title": "Can Israel’s opposition bloc stay united against Netanyahu?",
+      "content": "Eisenkot's fragile alliance must overcome deep ideological divisions to turn its opposition into a government.",
+      "published_at": "2026-11-21T05:46:29Z",
+      "fetched_at": "2026-11-21T06:08:36.856777Z",
+      "updated_at": "2026-11-21T06:08:36.856777Z",
+      "original_url": "https://www.aljazeera.com/news/2026/11/21/can-israels-opposition-bloc-stay-united-against-netanyahu?traffic_source=rss",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://www.aljazeera.com/news/2026/11/21/can-israels-opposition-bloc-stay-united-against-netanyahu?traffic_source=rss"
+      ],
+      "is_edited": false,
+      "content_hash": "9fc1cfddf8fdf9b33a4a65c7661b40017589ce36adb1833aaaf265129af70ada"
     },
     {
       "id": "skynewsarabia_rss_120437616",
