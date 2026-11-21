@@ -28,7 +28,7 @@ def load_news_store(news_path: Path) -> dict[str, Any]:
     if not news_path.exists():
         return {
             "schema_version": "1.0",
-            "project": "Iraq News Hub",
+            "project": "World News",
             "app_version": __version__,
             "generated_at": "",
             "last_successful_update": "",
@@ -40,7 +40,7 @@ def load_news_store(news_path: Path) -> dict[str, Any]:
     if isinstance(data, list):
         return {
             "schema_version": "1.0",
-            "project": "Iraq News Hub",
+            "project": "World News",
             "app_version": __version__,
             "generated_at": "",
             "last_successful_update": "",

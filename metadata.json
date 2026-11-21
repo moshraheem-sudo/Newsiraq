@@ -1,6 +1,8 @@
 {
-  "name": "أخبار العراق",
-  "description": "Automated Iraqi News Aggregator from Telegram public web channels with Python, GitHub Actions, GitHub Pages, and Android JSON/WebView client.",
+  "name": "أخبار العالم",
+  "description": "تطبيق ومنصة أخبار العالم لمتابعة الأخبار العراقية والعربية والعالمية مباشرة مع التحديث التلقائي عبر GitHub.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

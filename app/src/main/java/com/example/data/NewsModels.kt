@@ -22,7 +22,6 @@ enum class AppLanguage(val code: String) {
 }
 
 data class AppSettings(
-  val muteNotifications: Boolean = false,
   val themeMode: ThemeMode = ThemeMode.SYSTEM,
   val language: AppLanguage = AppLanguage.ARABIC,
 )
@@ -39,6 +38,17 @@ data class NewsSourceInfo(
   val name: String,
   val username: String,
   val category: String,
+)
+
+data class NewsSourceConfig(
+  val id: String,
+  val type: String,
+  val name: String,
+  val username: String,
+  val url: String,
+  val category: String,
+  val maxPosts: Int = 35,
+  val enabled: Boolean = true,
 )
 
 data class NewsArticle(

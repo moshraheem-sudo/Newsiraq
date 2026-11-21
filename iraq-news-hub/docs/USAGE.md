@@ -47,3 +47,11 @@ var json = await http.GetStringAsync("https://moshraheem-sudo.github.io/Newsiraq
 
 أو استخدام `WebView2` لعرض الواجهة مباشرة على الرابط:
 `https://moshraheem-sudo.github.io/Newsiraq/`
+
+## 5. التحديث الذاتي لتطبيق أندرويد عبر GitHub Releases
+
+- يفحص التطبيق تلقائياً عند التشغيل (وعبر زر **تحديث التطبيق** في الإعدادات) نقطة API:
+  `https://api.github.com/repos/moshraheem-sudo/Newsiraq/releases/latest`
+- عند وجود إصدار أحدث مرفق بملف `.apk`، يعرض التطبيق شريط التنزيل بالميغابايت مع خيار الإيقاف/الإلغاء ثم التثبيت عبر موافقة النظام.
+- لإصدار تحديث جديد تلقائياً عبر GitHub Actions، ادفع وسماً يبدأ بـ `v` (مثل `v1.8.0`) أو شغّل مسار `release-apk.yml` يدوياً من تبويب **Actions**.
+

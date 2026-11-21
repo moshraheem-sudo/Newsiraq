@@ -495,11 +495,11 @@
 
     appRoot.innerHTML = `
       <section class="info-card">
-        <h2 style="margin-top: 0;">عن مشروع مركز أخبار العراق (Iraq News Hub)</h2>
+        <h2 style="margin-top: 0;">عن مشروع أخبار العالم (World News)</h2>
         <p>
-          مشروع مفتوح المصدر لجمع الأخبار العراقية تلقائياً من صفحات العرض العام لقنوات تلغرام
-          (<code>t.me/s/</code>) باستخدام Python و GitHub Actions دون الحاجة إلى Bot API أو مفاتيح سرية،
-          مع تقديم واجهة ويب عربية سريعة متوافقة مع WebView وواجهة JSON جاهزة للتكامل مع تطبيقات أندرويد وويندوز.
+          مشروع مفتوح المصدر لجمع الأخبار العراقية والعربية والعالمية تلقائياً من صفحات العرض العام لقنوات تلغرام
+          (<code>t.me/s/</code>) وخلاصات RSS وقوائم X باستخدام Python و GitHub Actions دون الحاجة إلى Bot API،
+          مع تطبيق أندرويد أصيل يدعم التحديث الذاتي عبر GitHub وواجهة ويب سريعة وواجهة JSON جاهزة للتكامل.
         </p>
       </section>
 
@@ -573,7 +573,7 @@ Sources Status:    ${escapeHtml(statusUrl)}</div>
       appRoot.innerHTML = `
         <div class="loading-box">
           <div class="spinner" aria-hidden="true"></div>
-          <p>جاري تحميل أحدث الأخبار العراقية...</p>
+          <p>جاري تحميل أحدث أخبار العالم...</p>
         </div>
       `;
       return;

@@ -1,136 +1,80 @@
-# مركز أخبار العراق | Iraq News Hub
+# أخبار العالم | World News
 
-منصة مفتوحة المصدر لتجميع الأخبار العراقية تلقائياً من قنوات Telegram العامة عبر صفحات الويب (`https://t.me/s/` فقط)، وعرضها عبر موقع ويب عربي سريع بتصميم RTL قابل للعرض داخل WebView، مع توفير واجهة بيانات `JSON` منظمة للربط المباشر مع تطبيقات Android و Windows.
+تطبيق أندرويد ومنظومة مفتوحة المصدر لتجميع الأخبار العراقية والعربية والعالمية مباشرةً على مدار الساعة من 25 مصدراً (قنوات تلغرام العامة، خلاصات RSS العالمية، وقوائم X)، مع تحديث تلقائي عبر GitHub Releases وواجهة ويب سريعة على GitHub Pages.
 
-Automated Iraqi News Aggregator using Telegram Public Web Channels (`t.me/s/`), Python, GitHub Actions, and GitHub Pages.
+[![GitHub Repo](https://img.shields.io/badge/GitHub-moshraheem--sudo%2FNewsiraq-0f3d2e?logo=github)](https://github.com/moshraheem-sudo/Newsiraq)
+[![Live Portal](https://img.shields.io/badge/GitHub%20Pages-Live%20Feed-1b6b4f)](https://moshraheem-sudo.github.io/Newsiraq/)
 
 ---
 
 ## المميزات الرئيسية | Key Features
 
-- **استخراج آمن ومستقل بدون Bot API:** يعتمد المجمع على صفحات العرض العام `https://t.me/s/<username>` فقط دون توكنات بوت أو تسجيل دخول أو تجاوز لأي قيود تقنية.
-- **قابلية توسع غير محدودة:** أضف مئات القنوات العراقية بسهولة عبر ملف `config/sources.json` دون تعديل أي سطر برمجي.
-- **عزل الأعطال (Fault Isolation):** تعطل أي مصدر لا يوقف بقية المصادر، مع تسجيل آخر تحديث ناجح وآخر خطأ لكل مصدر في `data/sources_status.json`.
-- **منع التكرار وتوثيق التعديلات:** يعتمد على `(source_username, message_id)` وبصمة المحتوى `content_hash` (SHA-256) للاحتفاظ بالأرشيف التاريخي وتحديث المنشورات المعدلة دون تكرار.
-- **أتمتة كل 10 دقائق عبر GitHub Actions:** سحب تلقائي مجدول + تشغيل يدوي + منع التعارض عبر `concurrency` + نشر تلقائي إلى GitHub Pages دون إنشاء إصدارات برمجية عند تحديث الأخبار.
-- **واجهة ويب عربية RTL احترافية:** بحث فوري، فلترة حسب المصدر والتصنيف، صفحة تفاصيل كاملة للخبر، مؤشر آخر تحديث ناجح، وضع داكن وفاتح، وصفحة سجل الإصدارات ومعلومات الربط البرمجي.
+- **اسم وهوية موحّدة (أخبار العالم / World News):** واجهة عربية RTL وأخرى إنجليزية LTR قابلة للتبديل الفوري مع ثيم تلقائي وفاتح وداكن.
+- **التحديث عبر GitHub داخل التطبيق (GitHub Self-Updater):**
+  - فحص تلقائي للإصدار الجديد عند فتح التطبيق وتوفر الاتصال بالإنترنت عبر مقارنة الإصدار المنصّب مع أحدث إصدار على `github.com/moshraheem-sudo/Newsiraq`.
+  - زر مخصص داخل **الإعدادات ← تحديث التطبيق عبر GitHub**.
+  - تنزيل حزمة التحديث `.apk` داخل التطبيق مع شريط تقدم دقيق بالميغابايت (`MB`) وزر **إيقاف وإلغاء التنزيل** في أي لحظة.
+  - زر **تثبيت التحديث (Install)** مع التحقق التلقائي من موافقة النظام لتثبيت التطبيقات (`REQUEST_INSTALL_PACKAGES`).
+- **سحب الشاشة للأسفل للتحديث (Pull-to-Refresh):** سحب سلس في واجهة الأخبار لتحديث ملفات المصادر (`config/sources.json`) والمنشورات والبيانات الحية بدقة، مع تحديث دوري كل 10 دقائق.
+- **مجمع أخبار حي ومستقر:** سحب مباشر بالتوازي من 25 مصدراً (`LiveFeedFetcher`) مع دمج ذكي مع `news.json` المخزن على GitHub Pages ونسخة محلية سريعة للفتح الفوري بدون اتصال.
+- **تصفح وحفظ ووسائط متكاملة:** المفضلة الدائمة عبر Room، مشغل فيديو مدمج وبملء الشاشة، تنزيل الصور والفيديوهات، مشاركة ونسخ الأخبار، وعرض الروابط المذكورة داخل المنشور.
 
 ---
 
-## هيكل المشروع | Project Structure
+## الأتمتة على GitHub Actions
+
+يحتوي المستودع على مسارات عمل جاهزة في `.github/workflows/`:
+
+1. **`update-news.yml` (تحديث الأخبار والبيانات كل 10 دقائق):**
+   - يشغّل اختبارات المجمع (`scraper`)، ويجلب أحدث المنشورات من تلغرام وRSS وX.
+   - يحدّث ملفات `data/news.json` و`data/sources_status.json` ويرفعها تلقائياً إلى `main`.
+   - يبني بوابة الويب `_site` وينشرها تلقائياً على **GitHub Pages** (`https://moshraheem-sudo.github.io/Newsiraq/`).
+
+2. **`release-apk.yml` (بناء ونشر تحديثات التطبيق تلقائياً على Releases):**
+   - يعمل تلقائياً عند دفع وسم إصدار جديد مثل `v1.8.0` أو يدوياً عبر **Actions → Release Android APK → Run workflow**.
+   - يبني ملف `WorldNews-<tag>.apk` ويرفعه كمرفق رسمي في **GitHub Releases** بحيث يكتشفه تطبيق **أخبار العالم** تلقائياً ويبدأ بتنزيله وتثبيته للمستخدمين.
+
+### خطوات نشر تحديث جديد لمستخدمي التطبيق
+1. ارفع `versionCode` و`versionName` في `app/build.gradle.kts` (وحدّث `iraq-news-hub/web/releases.json` و`CHANGELOG.md`).
+2. ادفع التغييرات إلى فرع `main`.
+3. أنشئ وادفع وسماً جديداً (مثلاً `v1.8.0`):
+   ```bash
+   git tag v1.8.0
+   git push origin v1.8.0
+   ```
+   سيقوم مسار `release-apk.yml` ببناء ملف APK وإرفاقه بإصدار GitHub تلقائياً، وسيظهر التحديث لجميع المستخدمين فور فتح التطبيق.
+
+---
+
+## روابط البيانات والواجهة | API & Endpoints
+
+- **مستودع GitHub:** `https://github.com/moshraheem-sudo/Newsiraq`
+- **بوابة الويب:** `https://moshraheem-sudo.github.io/Newsiraq/`
+- **واجهة أخبار JSON:** `https://moshraheem-sudo.github.io/Newsiraq/news.json`
+- **حالة المصادر:** `https://moshraheem-sudo.github.io/Newsiraq/sources_status.json`
+- **سجل الإصدارات:** `https://moshraheem-sudo.github.io/Newsiraq/releases.json`
+
+---
+
+## هيكل المشروع | Repository Structure
 
 ```text
-iraq-news-hub/
-├── .github/
-│   └── workflows/
-│       ├── update-news.yml      # جلب الأخبار كل 10 دقائق + تحديث Pages
-│       └── deploy-pages.yml     # نشر الواجهة عند تعديل web أو data
-├── config/
-│   └── sources.json             # قائمة مصادر الأخبار القابلة للتوسع
-├── data/
-│   ├── news.json                # قاعدة بيانات الأخبار المجمعة
-│   └── sources_status.json      # حالة كل مصدر وآخر نجاح/خطأ
-├── docs/
-│   ├── ANNOUNCEMENTS.md         # منشور إطلاق المشروع لوسائل التواصل
-│   ├── UPDATES.md               # آلية وقالب منشورات التحديثات المستقبلية
-│   └── USAGE.md                 # دليل التشغيل والربط مع التطبيقات
-├── scraper/
-│   ├── __init__.py
-│   ├── config.py                # تحميل الإعدادات والتحقق من روابط t.me/s/
-│   ├── fetcher.py               # سحب HTML بشكل مستقل وآمن
-│   ├── parser.py                # استخراج النصوص والصور والوسائط والروابط
-│   ├── storage.py               # الدمج ومنع التكرار وحساب content_hash
-│   └── main.py                  # نقطة التشغيل الرئيسية
-├── scripts/
-│   └── build_site.py            # تجهيز مجلد _site للنشر على GitHub Pages
-├── tests/
-│   └── test_scraper.py          # اختبارات الوحدة للمحلل والدمج
-├── web/
-│   ├── index.html               # الواجهة العربية RTL
-│   ├── styles.css               # التصميم المتجاوب والداعم لـ WebView
-│   ├── app.js                   # منطق العرض والبحث والفلترة والتفاصيل
-│   └── releases.json            # سجل الإصدارات المعروض داخل الموقع
-├── CHANGELOG.md
-├── LICENSE
-├── README.md
-└── requirements.txt
+.
+├── .github/workflows/
+│   ├── update-news.yml          # سحب الأخبار كل 10 دقائق وتحديث GitHub Pages
+│   └── release-apk.yml          # بناء APK ونشر GitHub Release تلقائياً للتحديث الذاتي
+├── app/                         # تطبيق أندرويد (Kotlin + Jetpack Compose + Material 3)
+├── iraq-news-hub/               # المجمع البرمجي Python وبوابة الويب وملفات البيانات
+│   ├── config/sources.json      # إعدادات المصادر الـ 25
+│   ├── data/                    # news.json و sources_status.json
+│   ├── scraper/                 # محرك الجلب والتحليل ومنع التكرار
+│   ├── web/                     # واجهة الويب + releases.json
+│   └── docs/                    # وثائق الاستخدام والتحديثات
+└── README.md
 ```
-
----
-
-## التشغيل المحلي | Local Setup
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-# تشغيل اختبارات الوحدة
-python -m unittest discover -s tests -t . -v
-
-# تشغيل سحب الأخبار
-python -m scraper.main
-
-# تجهيز وتشغيل الموقع محلياً
-python scripts/build_site.py
-python -m http.server 8080 --directory _site
-```
-
----
-
-## إضافة قناة جديدة | Adding a New Source
-
-افتح ملف `config/sources.json` وأضف كائناً جديداً داخل مصفوفة `"sources"` بصيغة `https://t.me/s/<username>`:
-
-```json
-{
-  "id": "new_channel",
-  "name": "اسم القناة بالعربية",
-  "username": "ChannelUsername",
-  "url": "https://t.me/s/ChannelUsername",
-  "category": "أخبار عامة",
-  "language": "ar",
-  "enabled": true,
-  "notes": "وصف مختصر للمصدر"
-}
-```
-
----
-
-## هيكل عنصر الخبر في `data/news.json` | JSON Schema
-
-```json
-{
-  "id": "inainaiq_162706",
-  "source_id": "ina",
-  "source_name": "وكالة الأنباء العراقية (واع)",
-  "source_username": "inainaiq",
-  "message_id": 162706,
-  "category": "أخبار رسمية",
-  "title": "العنوان المستخرج مباشرة من بداية النص",
-  "content": "النص الكامل للمنشور...",
-  "published_at": "2026-11-16T18:58:05Z",
-  "fetched_at": "2026-11-21T04:17:20Z",
-  "updated_at": "2026-11-21T04:17:20Z",
-  "original_url": "https://t.me/inainaiq/162706",
-  "images": ["https://..."],
-  "media": [{"type": "photo", "url": "https://...", "thumbnail": "https://...", "title": ""}],
-  "links": ["https://..."],
-  "is_edited": false,
-  "content_hash": "sha256..."
-}
-```
-
----
-
-## الربط مع تطبيقات أندرويد وويندوز
-
-- **رابط الموقع (WebView):** `https://moshraheem-sudo.github.io/Newsiraq/`
-- **رابط البيانات (HTTP JSON):** `https://moshraheem-sudo.github.io/Newsiraq/news.json`
-- راجع ملف `docs/USAGE.md` للحصول على أمثلة جاهزة بلغة Kotlin (Android) و C# (Windows).
 
 ---
 
 ## الترخيص | License
 
-هذا المشروع مرخص بموجب رخصة [MIT](LICENSE).
+هذا المشروع مرخص بموجب رخصة [MIT](iraq-news-hub/LICENSE).

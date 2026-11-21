@@ -31,20 +31,20 @@ object MediaDownloader {
       val urlExt = MimeTypeMap.getFileExtensionFromUrl(cleanUrl).lowercase().takeIf { it.isNotBlank() }
       val ext = urlExt ?: if (isVideo) "mp4" else "jpg"
       val prefix = if (isVideo) "video" else "photo"
-      val fileName = "IraqNews_${prefix}_${System.currentTimeMillis()}.$ext"
+      val fileName = "WorldNews_${prefix}_${System.currentTimeMillis()}.$ext"
       val mimeType = if (isVideo) "video/mp4" else "image/jpeg"
 
       val displayTitle =
         articleTitle.trim().take(60).ifBlank {
-          if (language == AppLanguage.ARABIC) "وسائط أخبار العراق" else "Iraq News Media"
+          if (language == AppLanguage.ARABIC) "وسائط أخبار العالم" else "World News Media"
         }
 
       fun buildRequest(publicDir: Boolean): DownloadManager.Request {
         return DownloadManager.Request(uri)
           .setTitle(displayTitle)
           .setDescription(
-            if (language == AppLanguage.ARABIC) "تنزيل عبر تطبيق أخبار العراق"
-            else "Downloading via Iraq News"
+            if (language == AppLanguage.ARABIC) "تنزيل عبر تطبيق أخبار العالم"
+            else "Downloading via World News"
           )
           .setMimeType(mimeType)
           .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
@@ -54,13 +54,13 @@ object MediaDownloader {
             if (publicDir) {
               setDestinationInExternalPublicDir(
                 Environment.DIRECTORY_DOWNLOADS,
-                "IraqNews/$fileName",
+                "WorldNews/$fileName",
               )
             } else {
               setDestinationInExternalFilesDir(
                 context,
                 Environment.DIRECTORY_DOWNLOADS,
-                "IraqNews/$fileName",
+                "WorldNews/$fileName",
               )
             }
           }

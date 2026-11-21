@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">أخبار العراق</string>
+    <string name="app_name">أخبار العالم</string>
     <string name="nav_feed">الأخبار</string>
-    <string name="nav_webview">الموقع</string>
-    <string name="nav_about">حول</string>
-    <string name="search_hint">ابحث في الأخبار العراقية...</string>
+    <string name="nav_favorites">المفضلة</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="search_hint">ابحث في أخبار العالم...</string>
     <string name="open_original">فتح المنشور الأصلي</string>
     <string name="refresh">تحديث</string>
 </resources>

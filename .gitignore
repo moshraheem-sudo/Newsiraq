@@ -1,31 +1,3 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.egg-info/
-.venv/
-venv/
-env/
-
-# Build & site artifacts
-_site/
-dist/
-build/
-
-# Logs & temporary files
-*.log
-.DS_Store
-Thumbs.db
-tmp/
-.pytest_cache/
-
-# Environment secrets (never commit credentials)
-.env
-.env.local
-*.pem
-*.key
-
-# Android
 *.iml
 .gradle
 .kotlin
@@ -44,3 +16,10 @@ tmp/
 local.properties
 .env
 debug.keystore
+
+# AI Studio & artifacts
+.aistudio/
+public/
+
+# APK builds
+*.apk
