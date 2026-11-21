@@ -307,3 +307,21 @@ def parse_channel_html(html: str, source: SourceConfig, max_posts: int = 30) -> 
         )
 
     return posts
+
+
+def parse_channel_pages(
+    pages_html: list[str],
+    source: SourceConfig,
+    max_posts: int = 50,
+) -> list[ParsedPost]:
+    """Parse multiple paginated t.me/s/ pages, deduplicate by message_id, and return newest max_posts."""
+    by_id: dict[str, ParsedPost] = {}
+    for html in pages_html:
+        page_posts = parse_channel_html(html, source, max_posts=0)
+        for post in page_posts:
+            by_id.setdefault(post.id, post)
+
+    ordered = sorted(by_id.values(), key=lambda p: p.message_id)
+    if max_posts > 0 and len(ordered) > max_posts:
+        return ordered[-max_posts:]
+    return ordered

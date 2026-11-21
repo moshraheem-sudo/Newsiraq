@@ -10,6 +10,7 @@ import com.example.data.NewsRepository
 import com.example.data.NewsSourceInfo
 import com.example.data.SettingsPreferences
 import com.example.data.ThemeMode
+import com.example.notifications.NewsNotificationHelper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -18,6 +19,7 @@ import kotlinx.coroutines.launch
 
 data class NewsUiState(
   val isLoading: Boolean = true,
+  val isRefreshing: Boolean = false,
   val errorMessage: String? = null,
   val articles: List<NewsArticle> = emptyList(),
   val sources: List<NewsSourceInfo> = emptyList(),
@@ -27,6 +29,7 @@ data class NewsUiState(
   val loadedFromRemote: Boolean = false,
   val activeVideoUrl: String? = null,
   val newArticlesAlertCount: Int? = null,
+  val pendingArticleId: String? = null,
   val settings: AppSettings = AppSettings(),
 ) {
   val filteredArticles: List<NewsArticle>
@@ -63,35 +66,59 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
   fun refresh() {
     viewModelScope.launch {
       val previousIds = _uiState.value.articles.map { it.id }.toSet()
-      _uiState.update { it.copy(isLoading = it.articles.isEmpty(), errorMessage = null) }
+      _uiState.update {
+        it.copy(
+          isLoading = it.articles.isEmpty(),
+          isRefreshing = true,
+          errorMessage = null,
+        )
+      }
       try {
         val payload = repository.fetchNews(NewsUiState.DEFAULT_JSON_URL)
-        val newCount =
-          if (previousIds.isNotEmpty()) {
-            payload.items.count { it.id !in previousIds }
+        val systemNotifiedCount =
+          if (payload.loadedFromRemote) {
+            NewsNotificationHelper.processAndNotify(getApplication(), payload.items)
           } else {
             0
           }
-        val shouldAlert = newCount > 0 && !_uiState.value.settings.muteNotifications
+        val inSessionNewCount =
+          if (previousIds.isNotEmpty()) {
+            payload.items.count { it.id !in previousIds }
+          } else {
+            systemNotifiedCount
+          }
+        val shouldAlert = inSessionNewCount > 0 && !_uiState.value.settings.muteNotifications
         _uiState.update {
           it.copy(
             isLoading = false,
+            isRefreshing = false,
             articles = payload.items,
             sources = payload.sources,
             lastSuccessfulUpdate = payload.lastSuccessfulUpdate,
             loadedFromRemote = payload.loadedFromRemote,
-            newArticlesAlertCount = if (shouldAlert) newCount else null,
+            newArticlesAlertCount = if (shouldAlert) inSessionNewCount else null,
           )
         }
       } catch (e: Exception) {
         _uiState.update {
           it.copy(
             isLoading = false,
+            isRefreshing = false,
             errorMessage = e.localizedMessage ?: "تعذر تحميل الأخبار",
           )
         }
       }
     }
+  }
+
+  fun openArticleFromNotification(articleId: String?) {
+    if (!articleId.isNullOrBlank()) {
+      _uiState.update { it.copy(pendingArticleId = articleId) }
+    }
+  }
+
+  fun consumePendingArticle() {
+    _uiState.update { it.copy(pendingArticleId = null) }
   }
 
   fun dismissAlert() {

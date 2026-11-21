@@ -10,8 +10,8 @@ from pathlib import Path
 
 from scraper import __version__
 from scraper.config import SourceConfig, load_config
-from scraper.fetcher import SourceFetchError, build_session, fetch_source_html
-from scraper.parser import ParsedPost, SourceParseError, parse_channel_html
+from scraper.fetcher import SourceFetchError, build_session, fetch_source_pages_html
+from scraper.parser import ParsedPost, SourceParseError, parse_channel_pages
 from scraper.storage import (
     build_sources_summary,
     load_news_store,
@@ -101,8 +101,10 @@ def run_scrape(
                         source, app_config.defaults, session=session, max_posts=max_posts
                     )
                 else:
-                    html = fetch_source_html(source, app_config.defaults, session=session)
-                    posts = parse_channel_html(html, source, max_posts=max_posts)
+                    pages_html = fetch_source_pages_html(
+                        source, app_config.defaults, session=session, max_posts=max_posts
+                    )
+                    posts = parse_channel_pages(pages_html, source, max_posts=max_posts)
 
                 collected_posts.extend(posts)
                 any_source_succeeded = True
@@ -175,7 +177,7 @@ def run_scrape(
     if content_changed:
         updated_news_store = {
             "schema_version": "1.0",
-            "project": "Iraq News Hub",
+            "project": "Iraq News",
             "app_version": __version__,
             "generated_at": run_timestamp,
             "last_successful_update": last_successful,

@@ -202,6 +202,41 @@ class ScraperTests(unittest.TestCase):
         self.assertEqual(posts[0].media[0]["type"], "video")
         self.assertEqual(posts[0].media[0]["url"], "https://video.twimg.com/clip.mp4")
 
+    def test_telegram_pagination_dedup_and_limit(self) -> None:
+        from scraper.fetcher import extract_before_cursor
+        from scraper.parser import parse_channel_pages
+
+        page1 = """
+        <html><body>
+          <div class="tgme_channel_info_header_title"><span>قناة الاختبار</span></div>
+          <a class="tme_messages_more" href="/s/testchan?before=101" data-before="101">المزيد</a>
+          <div class="tgme_widget_message" data-post="testchan/102">
+            <div class="tgme_widget_message_text">الخبر الثاني</div>
+            <a class="tgme_widget_message_date" href="https://t.me/testchan/102"><time datetime="2026-11-21T10:00:00+00:00"></time></a>
+          </div>
+          <div class="tgme_widget_message" data-post="testchan/103">
+            <div class="tgme_widget_message_text">الخبر الثالث</div>
+            <a class="tgme_widget_message_date" href="https://t.me/testchan/103"><time datetime="2026-11-21T10:05:00+00:00"></time></a>
+          </div>
+        </body></html>
+        """
+        page2 = """
+        <html><body>
+          <div class="tgme_channel_info_header_title"><span>قناة الاختبار</span></div>
+          <div class="tgme_widget_message" data-post="testchan/100">
+            <div class="tgme_widget_message_text">الخبر الأول</div>
+            <a class="tgme_widget_message_date" href="https://t.me/testchan/100"><time datetime="2026-11-21T09:50:00+00:00"></time></a>
+          </div>
+          <div class="tgme_widget_message" data-post="testchan/102">
+            <div class="tgme_widget_message_text">الخبر الثاني</div>
+            <a class="tgme_widget_message_date" href="https://t.me/testchan/102"><time datetime="2026-11-21T10:00:00+00:00"></time></a>
+          </div>
+        </body></html>
+        """
+        self.assertEqual(extract_before_cursor(page1, "testchan"), 101)
+        posts = parse_channel_pages([page1, page2], self.source, max_posts=2)
+        self.assertEqual([p.message_id for p in posts], [102, 103])
+
 
 if __name__ == "__main__":
     unittest.main()

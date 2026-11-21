@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Iraq News Hub</string>
+    <string name="app_name">أخبار العراق</string>
     <string name="nav_feed">الأخبار</string>
     <string name="nav_webview">الموقع</string>
     <string name="nav_about">حول</string>

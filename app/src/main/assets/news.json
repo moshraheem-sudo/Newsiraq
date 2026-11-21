@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "project": "Iraq News Hub",
-  "app_version": "1.2.0",
-  "generated_at": "2026-11-21T05:15:50.810043Z",
-  "last_successful_update": "2026-11-21T05:15:50.810043Z",
-  "total_count": 94,
+  "project": "Iraq News",
+  "app_version": "1.3.0",
+  "generated_at": "2026-11-21T05:32:52.343111Z",
+  "last_successful_update": "2026-11-21T05:32:52.343111Z",
+  "total_count": 200,
   "sources": [
     {
       "id": "ina",
@@ -35,6 +35,917 @@
     }
   ],
   "items": [
+    {
+      "id": "list_1763642433328279733_2124013090920435721",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124013090920435721,
+      "category": "أخبار منوعة (X)",
+      "title": "مصدر في الإسعاف والطوارئ: مصابان بنيران قوات الاحتلال الإسرائيلي في مخيم للنازحين شمال شرقي مدينة غزة",
+      "content": "@aljazeera_now (الجزيرة الآن)\nمصدر في الإسعاف والطوارئ: مصابان بنيران قوات الاحتلال الإسرائيلي في مخيم للنازحين شمال شرقي مدينة غزة\nمجمع ناصر الطبي: إصابة طفل وامرأة برصاص قوات الاحتلال الإسرائيلي خارج مناطق سيطرتها جنوبي مدينة خان يونس\n#عاجل",
+      "published_at": "2026-11-21T05:32:37Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/aljazeera_now/status/2124013090920435721",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124013037023555584/img/F2lVhPKZwjHNX_TV.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124013037023555584/vid/avc1/2160x2700/8IjAhCUECf6MPhvP.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124013037023555584/img/F2lVhPKZwjHNX_TV.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "4b48142ea65802217d2b52b31090ddef33a7966063525eb0b4f65f023f0940ca"
+    },
+    {
+      "id": "list_1763642433328279733_2124013039338881049",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124013039338881049,
+      "category": "أخبار منوعة (X)",
+      "title": "إيران تجهز ناقلات نفط وتلوح بضربات انتقامية في الخليج إذا تعرضت لهجوم.. فهل يغامر ترمب باعتراضها؟",
+      "content": "@AlGhadTV (قناة الغد)\nإيران تجهز ناقلات نفط وتلوح بضربات انتقامية في الخليج إذا تعرضت لهجوم.. فهل يغامر ترمب باعتراضها؟",
+      "published_at": "2026-11-21T05:32:25Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlGhadTV/status/2124013039338881049",
+      "images": [
+        "https://pbs.twimg.com/media/HXoCjd5XEAAsOqL.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124012436990672896/vid/avc1/1080x1920/OAUMrGtXfOVtELIi.mp4",
+          "thumbnail": "https://pbs.twimg.com/media/HXoCjd5XEAAsOqL.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "f43b914c9bd672d48a6c36b6c6b9d8f2be3c3f588f62b5457980292bcd523ed5"
+    },
+    {
+      "id": "list_1763642433328279733_2124012861168959819",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012861168959819,
+      "category": "أخبار منوعة (X)",
+      "title": "زلزال بقوة 6.8 درجة يضرب جبال الأنديز ويهز عاصمة بيرو",
+      "content": "@TRTArabi (TRT عربي)\nزلزال بقوة 6.8 درجة يضرب جبال الأنديز ويهز عاصمة بيرو\nhttps://www.trtarabi.com/article/8064b5095656",
+      "published_at": "2026-11-21T05:31:43Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/TRTArabi/status/2124012861168959819",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://www.trtarabi.com/article/8064b5095656"
+      ],
+      "is_edited": false,
+      "content_hash": "ab19d6f05c8787d9063f5dda55495ff5d2f1320990ca3a83b6a2b634e608b458"
+    },
+    {
+      "id": "list_1763642433328279733_2124012827874558153",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012827874558153,
+      "category": "أخبار منوعة (X)",
+      "title": "وزير الخارجية الإيراني عباس عراقجي يقول إن تنفيذ مقترح بلاده ممكن خلال يومين إذا أبدت واشنطن جدية مؤكدا أن فتح مضيق هرمز مرتبط بتنفيذ…",
+      "content": "@aljazeera_now (الجزيرة الآن)\nوزير الخارجية الإيراني عباس عراقجي يقول إن تنفيذ مقترح بلاده ممكن خلال يومين إذا أبدت واشنطن جدية مؤكدا أن فتح مضيق هرمز مرتبط بتنفيذ الشروط الإيرانية\n#الأخبار",
+      "published_at": "2026-11-21T05:31:35Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/aljazeera_now/status/2124012827874558153",
+      "images": [
+        "https://pbs.twimg.com/media/HXoCaLHWkAA7OT6.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124012609519116288/vid/avc1/608x1080/WmQ_nUvqgKcp8mAl.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXoCaLHWkAA7OT6.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "97fb8fe38ff7bcb9cca50c066460d3b513b3e9d0ef8423a5190fbd60dc5338a6"
+    },
+    {
+      "id": "list_1763642433328279733_2124012757892616531",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012757892616531,
+      "category": "أخبار منوعة (X)",
+      "title": "مجتبی ذوالنوری، عضو کمیسیون امنیت ملی مجلس، به خبرگزاری مهر گفت: «اینکه برخی از مسئولان ما مرتب پیام ضعف ارسال کنند و بگویند جنگ است، مملکت…",
+      "content": "@IranIntl (ايران اينترنشنال)\nمجتبی ذوالنوری، عضو کمیسیون امنیت ملی مجلس، به خبرگزاری مهر گفت: «اینکه برخی از مسئولان ما مرتب پیام ضعف ارسال کنند و بگویند جنگ است، مملکت مشکل دارد و باید کنار بیاییم، طرف مقابل را در مواضع خود جری‌تر می‌کند و موجب می‌شود به ما امتیاز ندهد، بنابراین ما باید با دست پر و از موضع",
+      "published_at": "2026-11-21T05:31:18Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/IranIntl/status/2124012757892616531",
+      "images": [
+        "https://pbs.twimg.com/media/HXoCWKNXoAAvaYb.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoCWKNXoAAvaYb.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoCWKNXoAAvaYb.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "43c448ccdd5a838375e475763a1eb9479300cc68290d708357aa8b24014a5ce1"
+    },
+    {
+      "id": "list_1763642433328279733_2124012722031333849",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012722031333849,
+      "category": "أخبار منوعة (X)",
+      "title": "مصدر في الإسعاف والطوارئ: مصابان بنيران قوات الاحتلال الإسرائيلي في مخيم للنازحين شمال شرقي مدينة #غزة",
+      "content": "@SawtBeirut (Sawt Beirut International)\nمصدر في الإسعاف والطوارئ: مصابان بنيران قوات الاحتلال الإسرائيلي في مخيم للنازحين شمال شرقي مدينة #غزة",
+      "published_at": "2026-11-21T05:31:09Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/SawtBeirut/status/2124012722031333849",
+      "images": [
+        "https://pbs.twimg.com/media/HXoCTDkXsAIeHh5.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoCTDkXsAIeHh5.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoCTDkXsAIeHh5.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "ce29781956edb52cfcdf91f2dbc27427bb4014d059043bf42f1f1a7ff28354a0"
+    },
+    {
+      "id": "list_1763642433328279733_2124012501020848578",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012501020848578,
+      "category": "أخبار منوعة (X)",
+      "title": "عرفان قانعی‌فرد، پژوهشگر مطالعات امنیت، با اشاره به نفوذ احتمالی به بانک اطلاعاتی اف‌بی‌آی گفت چنین اقدامی می‌تواند توان ضدجاسوسی آمریکا و…",
+      "content": "@IranIntl (ايران اينترنشنال)\nعرفان قانعی‌فرد، پژوهشگر مطالعات امنیت، با اشاره به نفوذ احتمالی به بانک اطلاعاتی اف‌بی‌آی گفت چنین اقدامی می‌تواند توان ضدجاسوسی آمریکا و امنیت زیرساخت‌های اطلاعاتی این کشور را با تهدید جدی مواجه کند.",
+      "published_at": "2026-11-21T05:30:17Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/IranIntl/status/2124012501020848578",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124012425569607681/img/Yk9Qp6fJ3EvPdmsm.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124012425569607681/vid/avc1/1280x720/dxJcdzvzNKGzRGTf.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124012425569607681/img/Yk9Qp6fJ3EvPdmsm.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "36e0b12649907e90539cb38d02434ac3e6ebbec65d58574bec1ec11c41a70340"
+    },
+    {
+      "id": "list_1763642433328279733_2124012489654636570",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012489654636570,
+      "category": "أخبار منوعة (X)",
+      "title": "\"هل تتزوجينني؟\".. نائب أسترالي يطلب يد صديقته تحت قبة البرلمان",
+      "content": "@skynewsarabia (سكاي نيوز عربية)\n\"هل تتزوجينني؟\".. نائب أسترالي يطلب يد صديقته تحت قبة البرلمان\n#سوشال_سكاي\n#أستراليا",
+      "published_at": "2026-11-21T05:30:14Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/skynewsarabia/status/2124012489654636570",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124012435724275712/img/TnD6FGVI0HHomzd_.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124012435724275712/vid/avc1/1080x1920/Jxa_OYgD37CNzBY4.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124012435724275712/img/TnD6FGVI0HHomzd_.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "92c271dccf2e33bcba2b03772d1b3a7b56838e98aef3ad9ab186cc2e2d0dfcd3"
+    },
+    {
+      "id": "list_1763642433328279733_2124012432574021688",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012432574021688,
+      "category": "أخبار منوعة (X)",
+      "title": "ترامب: إيران تريد إبرام اتفاق معنا",
+      "content": "@Extranewstv (eXtra news)\nترامب: إيران تريد إبرام اتفاق معنا\n#بهيرة_الشافعي\n#eXtranews",
+      "published_at": "2026-11-21T05:30:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/Extranewstv/status/2124012432574021688",
+      "images": [
+        "https://pbs.twimg.com/media/HXnc5mxWgAEFoHa.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123930110105432064/vid/avc1/1920x1080/yUBqPcVBBs8HR6lw.mp4",
+          "thumbnail": "https://pbs.twimg.com/media/HXnc5mxWgAEFoHa.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "be0c3fa0418ad64cb4ceae07996671622d1476c156e9af72a4d69af1cbe7750b"
+    },
+    {
+      "id": "list_1763642433328279733_2124012431965925461",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012431965925461,
+      "category": "أخبار منوعة (X)",
+      "title": "الباحث في الشأن الإيراني وجدان عبد الرحمن: مرونة التفاوض التي أبدتها الخارجية الإيرانية وحكومة بيزشكيان تصطدم بشروط المتشددين.. ولا تنازل…",
+      "content": "@AlArabiya (العربية)\nالباحث في الشأن الإيراني وجدان عبد الرحمن: مرونة التفاوض التي أبدتها الخارجية الإيرانية وحكومة بيزشكيان تصطدم بشروط المتشددين.. ولا تنازل يبدو مطروحاً الآن\n\n#العربية",
+      "published_at": "2026-11-21T05:30:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlArabiya/status/2124012431965925461",
+      "images": [
+        "https://pbs.twimg.com/media/HXnaHEjXsAAo2vl.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123968467753656320/vid/avc1/1920x1080/U-ZbKc6I-awtER7x.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXnaHEjXsAAo2vl.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "d573ab04cee27a46116c5017971d411d75c2aabb053981f026ceb46cae82e923"
+    },
+    {
+      "id": "list_1763642433328279733_2124012431861064167",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012431861064167,
+      "category": "أخبار منوعة (X)",
+      "title": "منظمة مناصرة ضحايا دارفور تحذر من نزوح أسر بسبب الجوع وشح الأمطار في ولايتي شمال وجنوب دارفور",
+      "content": "@AlarabyTV (التلفزيون العربي)\nمنظمة مناصرة ضحايا دارفور تحذر من نزوح أسر بسبب الجوع وشح الأمطار في ولايتي شمال وجنوب دارفور",
+      "published_at": "2026-11-21T05:30:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlarabyTV/status/2124012431861064167",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123994551748562944/img/pNjRVJ_oMtgezSs_.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123994551748562944/vid/avc1/1920x1080/VcyGV_wqY_80esUe.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123994551748562944/img/pNjRVJ_oMtgezSs_.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "cae9b1798daab59fde02f391a4264d2c5ba1d2224e6e0da8bfb9ce16d81a4e83"
+    },
+    {
+      "id": "list_1763642433328279733_2124012431664165215",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012431664165215,
+      "category": "أخبار منوعة (X)",
+      "title": "مشهد احتجاجي لافت في برلين، حيث عطّل 47 ناشطا مناهضا للتسلح الحركة عند تقاطعات قريبة من مصنع ذخيرة تابع لشركة \"راينميتال\"، بعد إلصاق أنفسهم…",
+      "content": "@RTarabic (RT Arabic)\nمشهد احتجاجي لافت في برلين، حيث عطّل 47 ناشطا مناهضا للتسلح الحركة عند تقاطعات قريبة من مصنع ذخيرة تابع لشركة \"راينميتال\"، بعد إلصاق أنفسهم بالطريق.\n#ألمانيا #برلين #احتجاجات #راينميتال #ناشطون #ترند #اكسبلور",
+      "published_at": "2026-11-21T05:30:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/RTarabic/status/2124012431664165215",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123833440143601664/img/DylLt2Om9K1g0ohL.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123833440143601664/vid/avc1/1080x1920/2nOV7tqkzK6w62Rk.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123833440143601664/img/DylLt2Om9K1g0ohL.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "e8b1e984c81f06d50a383d36b1ffe6b2d1bc5904ebcf498fc84db0533dbf874b"
+    },
+    {
+      "id": "list_1763642433328279733_2124012430485545267",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012430485545267,
+      "category": "أخبار منوعة (X)",
+      "title": "انخفاض أسعار الذهب.. كيف يؤثر على السوق الكويتي؟",
+      "content": "@CNBCArabia (CNBC Arabia)\nانخفاض أسعار الذهب.. كيف يؤثر على السوق الكويتي؟\n\nالتفاصيل في حلقة جديدة من برنامج عين على الكويت",
+      "published_at": "2026-11-21T05:30:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/CNBCArabia/status/2124012430485545267",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123459929411670016/img/5-83dEFWDVZwHx5p.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123459929411670016/vid/avc1/1920x1080/tNF2VbudVUoGhNg_.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123459929411670016/img/5-83dEFWDVZwHx5p.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "cd7fab928e5cc5051b4444aa63ef38e213cc75088d433b7fccd7c5682f07a25a"
+    },
+    {
+      "id": "list_1763642433328279733_2124012372754944161",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012372754944161,
+      "category": "أخبار منوعة (X)",
+      "title": "في قلب قمة أوبك وتحت أنظار ممثلي 20 اقتصاداً لم يكن الأمر مجرد عشاء عادي بل مائدة رسمية وطنية أعدتها الصين بـ20 طبقاً صُممت بدقة متناهية.",
+      "content": "@M0SC0W0 (موسكو | 🇷🇺 MOSCOW NEWS)\nفي قلب قمة أوبك وتحت أنظار ممثلي 20 اقتصاداً لم يكن الأمر مجرد عشاء عادي بل مائدة رسمية وطنية أعدتها الصين بـ20 طبقاً صُممت بدقة متناهية.",
+      "published_at": "2026-11-21T05:29:46Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/M0SC0W0/status/2124012372754944161",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124012264093106176/img/WAwD4p_7ea0x1kAA.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124012264093106176/vid/avc1/576x1024/TAFjiDxDpRFOowMg.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124012264093106176/img/WAwD4p_7ea0x1kAA.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "9801438aa71b8480661bed9cf438a789704ae5572a572a312055ac11a7f3079d"
+    },
+    {
+      "id": "list_1763642433328279733_2124012200733934072",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012200733934072,
+      "category": "أخبار منوعة (X)",
+      "title": "استدعاء فرقة إطفاء عسكرية في ولاية ميناس جيرايس البرازيلية بعد سقوط كلب في حفرة عمقها 3 أمتار",
+      "content": "@AJArabic (قناة الجزيرة)\nاستدعاء فرقة إطفاء عسكرية في ولاية ميناس جيرايس البرازيلية بعد سقوط كلب في حفرة عمقها 3 أمتار\n\n#فيديو",
+      "published_at": "2026-11-21T05:29:05Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AJArabic/status/2124012200733934072",
+      "images": [
+        "https://pbs.twimg.com/media/HXn-w-wXUAAJdkL.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124008684934012928/vid/avc1/1080x1920/SaUyqdZzp79bzBk0.mp4",
+          "thumbnail": "https://pbs.twimg.com/media/HXn-w-wXUAAJdkL.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "9c6d2b7ffbfcb499301df79ec66267e2a7b4bf96d32e7b820e4603b7413e0544"
+    },
+    {
+      "id": "list_1763642433328279733_2124012131465023959",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124012131465023959,
+      "category": "أخبار منوعة (X)",
+      "title": "حريق في موقع انفجار بمحطة كهرباء الهارثة الحرارية بالبصرة جنوبي العراق",
+      "content": "@AlarabyTV (التلفزيون العربي)\nحريق في موقع انفجار بمحطة كهرباء الهارثة الحرارية بالبصرة جنوبي العراق",
+      "published_at": "2026-11-21T05:28:49Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlarabyTV/status/2124012131465023959",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124011927781216256/img/fU-CnD_AZ2xk8ymA.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124011927781216256/vid/avc1/1080x1920/gAkEBRJrrtGj90ee.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124011927781216256/img/fU-CnD_AZ2xk8ymA.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "40933a4f82e3d05276d9060f3c0a67f4efd202f2eee5262bfb212aaf5f53de15"
+    },
+    {
+      "id": "list_1763642433328279733_2124011781681217596",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124011781681217596,
+      "category": "أخبار منوعة (X)",
+      "title": "حريق محطة الهارثة في البصرة.. إصابات بشرية وأضرار تطال منازل المواطنين وسياراتهم",
+      "content": "@ahadtv (قناة العهد)\nحريق محطة الهارثة في البصرة.. إصابات بشرية وأضرار تطال منازل المواطنين وسياراتهم",
+      "published_at": "2026-11-21T05:27:25Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/ahadtv/status/2124011781681217596",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124011736080556032/img/fJwvOLaRNH0WFqel.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124011736080556032/vid/avc1/1080x1920/8MoRApsj2MmOz0f5.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124011736080556032/img/fJwvOLaRNH0WFqel.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "3c6ad583f4947ea69d334984c231c78e88fb72acbd0873afca4589aea878f7bc"
+    },
+    {
+      "id": "SabrenNewss_232169",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232169,
+      "category": "أخبار عاجلة",
+      "title": "سيطرة فرق الدفاع المدني على الحريق بالكامل.",
+      "content": "سيطرة فرق الدفاع المدني على الحريق بالكامل.",
+      "published_at": "2026-11-21T05:27:02Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232169",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "2096b24ec71eb18a3485e52e319efbaa6379d0da2081a3fb583633f54edc3257"
+    },
+    {
+      "id": "list_1763642433328279733_2124011644221100178",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124011644221100178,
+      "category": "أخبار منوعة (X)",
+      "title": "ضغوط أميركية وإسرائيلية على ترامب لاستئناف حرب إيران https://ara.tv/2ocjc",
+      "content": "@AlArabiya (العربية)\nضغوط أميركية وإسرائيلية على ترامب لاستئناف حرب إيران https://ara.tv/2ocjc",
+      "published_at": "2026-11-21T05:26:52Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlArabiya/status/2124011644221100178",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ara.tv/2ocjc"
+      ],
+      "is_edited": false,
+      "content_hash": "fbefb7af3ecd32d64915c45d1cd19f7becfc0d1948c1dbf6f29ca998220e88e0"
+    },
+    {
+      "id": "list_1763642433328279733_2124011349936062583",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124011349936062583,
+      "category": "أخبار منوعة (X)",
+      "title": "صحيفة: أكثر ما يخشاه زيلينسكي هو رحيل ماكرون",
+      "content": "@RTarabic (RT Arabic)\nصحيفة: أكثر ما يخشاه زيلينسكي هو رحيل ماكرون\n\nhttps://r.rtarabic.com/13s38",
+      "published_at": "2026-11-21T05:25:42Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/RTarabic/status/2124011349936062583",
+      "images": [
+        "https://pbs.twimg.com/media/HXoBEVEWoAAeh_a.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoBEVEWoAAeh_a.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoBEVEWoAAeh_a.jpg",
+          "title": ""
+        }
+      ],
+      "links": [
+        "https://r.rtarabic.com/13s38"
+      ],
+      "is_edited": false,
+      "content_hash": "35970ee5f6aede0b8452c015fcf46dac38d25ba8ff7715ca5fe2ee804d8d6bc7"
+    },
+    {
+      "id": "SabrenNewss_232168",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232168,
+      "category": "أخبار عاجلة",
+      "title": "بردًا وسلامًا على بصرتنا الحبيبة والغالية",
+      "content": "بردًا وسلامًا على بصرتنا الحبيبة والغالية",
+      "published_at": "2026-11-21T05:25:34Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232168",
+      "images": [
+        "https://cdn4.telesco.pe/file/Qorvu0miRMsHSWAhRc53LWX9s2hHghEY8jytvKSW61iOZbgxci_zqUNr3joXd0laZh3_XYyiMba3Bl8PxWDlgWbGiehROlwl3XLnGIm4etNL6qe2TQrovtU9KAjMknhZ2SJkETgmtagMo4fVPArxA4_H_DJLFRCwIGrL2_OaUhqSjCzPPFAC5tqFr5jgyBVBIlgYrsxsVPPeBY7fqTlPOzMoDArZhYCVtgAYaT8b0dKDB9YQXuxO2MudrAW2OMe5jvcVGjGQfPWuaB7ATdB7jXDQbxYw77fBT_oSjqv9T_EQyEr7c18KJex0bTAokavu5kzB0MG5HL21IL1eiagO5A"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://cdn4.telesco.pe/file/0a9d46e921.mp4?token=QfigiRnzZo4sYUvqI8Vb0Ro6Dx9p6nUkd_xXH8SVzRFVxGJ0UicmVZr3ay4a78cVm8m-y_EBmJWswKhPSbhve_KhnqcGlAMonZUVaVZ-L6gPdHp8n5aCS7vuIlrk-EmyHAVwtgGbx_vFgVMtQgVd8TQI3eTw4FEAkhZbA5PVzcW7wWkbG_hqyh9mi0gwV0Xu3FTdHLhmfdeWbhROi9Rf9Lhc6VU2KkmRr1IK5_WxeyL-93V6DkLP-d_-M4nIuDRzET0tihq0DO63KMo6Ydwb0qfbSxWrZMuEkA85UZjp-qvTAC8qeryhP-60Kmy_x30nLjL_7cpAOFBiHc2UksPheA",
+          "thumbnail": "https://cdn4.telesco.pe/file/Qorvu0miRMsHSWAhRc53LWX9s2hHghEY8jytvKSW61iOZbgxci_zqUNr3joXd0laZh3_XYyiMba3Bl8PxWDlgWbGiehROlwl3XLnGIm4etNL6qe2TQrovtU9KAjMknhZ2SJkETgmtagMo4fVPArxA4_H_DJLFRCwIGrL2_OaUhqSjCzPPFAC5tqFr5jgyBVBIlgYrsxsVPPeBY7fqTlPOzMoDArZhYCVtgAYaT8b0dKDB9YQXuxO2MudrAW2OMe5jvcVGjGQfPWuaB7ATdB7jXDQbxYw77fBT_oSjqv9T_EQyEr7c18KJex0bTAokavu5kzB0MG5HL21IL1eiagO5A",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "232ed44f498774ed778c6f316e7c441abf8aff56eff3f653313d7719b8fb30e2"
+    },
+    {
+      "id": "list_1763642433328279733_2124011168624996674",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124011168624996674,
+      "category": "أخبار منوعة (X)",
+      "title": "نصائح لحماية الأطفال من مخاطر الإنترنت والقرصنة الإلكترونية",
+      "content": "@AlMamlakaTV (قناة المملكة)\nنصائح لحماية الأطفال من مخاطر الإنترنت والقرصنة الإلكترونية\n\n#الأردن #هنا_المملكة\nhttps://almamlakatv.com/ar/url/ZeijbUJPd9",
+      "published_at": "2026-11-21T05:24:59Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlMamlakaTV/status/2124011168624996674",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://almamlakatv.com/ar/url/ZeijbUJPd9"
+      ],
+      "is_edited": false,
+      "content_hash": "9c43ac3c706fee646a47b94e1bd01ca2e7acbb8b7bf1074329c69f35f2977cf0"
+    },
+    {
+      "id": "list_1763642433328279733_2124010922561732885",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010922561732885,
+      "category": "أخبار منوعة (X)",
+      "title": "قال الرئيس الأميركي دونالد ترمب، الجمعة، إن الولايات المتحدة تقترب من إبرام اتفاق تجاري مع المكسيك، فيما أشار إلى أن المفاوضات المنفصلة مع…",
+      "content": "@AsharqNews (Asharq News الشرق للأخبار)\nقال الرئيس الأميركي دونالد ترمب، الجمعة، إن الولايات المتحدة تقترب من إبرام اتفاق تجاري مع المكسيك، فيما أشار إلى أن المفاوضات المنفصلة مع كندا لم تحرز تقدماً مماثلاً، متهماً أوتاوا بـ\"استغلال الولايات المتحدة\".\n\nالتفاصيل: https://asharq.net/6011xGf1S",
+      "published_at": "2026-11-21T05:24:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AsharqNews/status/2124010922561732885",
+      "images": [
+        "https://pbs.twimg.com/media/HXn4-HbXsAAWQK4.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXn4-HbXsAAWQK4.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXn4-HbXsAAWQK4.jpg",
+          "title": ""
+        }
+      ],
+      "links": [
+        "https://asharq.net/6011xGf1S"
+      ],
+      "is_edited": false,
+      "content_hash": "71494d3f5f53e961f873b7e6323c2cdfa6563006ae4a46ba73c0f5a63bca5960"
+    },
+    {
+      "id": "list_1763642433328279733_2124010850998481339",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010850998481339,
+      "category": "أخبار منوعة (X)",
+      "title": "عاجل | مجمع ناصر الطبي: إصابة طفل وامرأة برصاص قوات الاحتلال الإسرائيلي خارج مناطق سيطرتها جنوبي مدينة خان يونس",
+      "content": "@AJABreaking (الجزيرة - عاجل)\nعاجل | مجمع ناصر الطبي: إصابة طفل وامرأة برصاص قوات الاحتلال الإسرائيلي خارج مناطق سيطرتها جنوبي مدينة خان يونس",
+      "published_at": "2026-11-21T05:23:43Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AJABreaking/status/2124010850998481339",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "ab289d9d8012d9970e61b211ede244c71c3a0afd638906c5e4d58135a0e44246"
+    },
+    {
+      "id": "list_1763642433328279733_2124010801874796980",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010801874796980,
+      "category": "أخبار منوعة (X)",
+      "title": "التقطت الكاميرات مشهداً لرجل يتجول بقاربه في شوارع فلوريدا التي غمرتها مياه الأمطار الغزيرة والفيضانات، وأغرقت مساحات واسعة من ساحل الولاية…",
+      "content": "@aawsat_News (صحيفة الشرق الأوسط)\nالتقطت الكاميرات مشهداً لرجل يتجول بقاربه في شوارع فلوريدا التي غمرتها مياه الأمطار الغزيرة والفيضانات، وأغرقت مساحات واسعة من ساحل الولاية المطل على المحيط الأطلسي، واستدعت تنفيذ عشرات عمليات الإنقاذ، وسط تحذيرات من استمرار خطر الفيضانات حتى الأسبوع المقبل\nالتفاصيل:",
+      "published_at": "2026-11-21T05:23:32Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/aawsat_News/status/2124010801874796980",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124010770409062400/img/tTDL4yoe_BSDHivE.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124010770409062400/vid/avc1/1080x1440/NGzFDNQVDp7-7lMd.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124010770409062400/img/tTDL4yoe_BSDHivE.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "c30cf74f057840f1cdb0d8db771db34ff0beae946127022f3c15dac5db9f4bd9"
+    },
+    {
+      "id": "list_1763642433328279733_2124010787094319345",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010787094319345,
+      "category": "أخبار منوعة (X)",
+      "title": "التلفزيون الإيراني يتحدث عن إسقاط مسيّرة أميركية من طراز MQ-9 عند السواحل الجنوبية لإيران",
+      "content": "@AlarabyTV (التلفزيون العربي)\nالتلفزيون الإيراني يتحدث عن إسقاط مسيّرة أميركية من طراز MQ-9 عند السواحل الجنوبية لإيران",
+      "published_at": "2026-11-21T05:23:28Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlarabyTV/status/2124010787094319345",
+      "images": [
+        "https://pbs.twimg.com/media/HXoAidcWgAAldBj.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoAidcWgAAldBj.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoAidcWgAAldBj.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "a30eda0527d7022cf1cbf7162b4e55f48ec42132409240ae9663de27b81681ab"
+    },
+    {
+      "id": "list_1763642433328279733_2124010678801301758",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010678801301758,
+      "category": "أخبار منوعة (X)",
+      "title": "رسالة تصعيدية.. جماعة الحوثي تهدد باستهدافات داخل الأراضي السعودية",
+      "content": "@AlarabyTV (التلفزيون العربي)\nرسالة تصعيدية.. جماعة الحوثي تهدد باستهدافات داخل الأراضي السعودية\n@kalkahiri",
+      "published_at": "2026-11-21T05:23:02Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlarabyTV/status/2124010678801301758",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124010189066047488/img/Yp8FilqwTUKIyLbl.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124010189066047488/vid/avc1/608x1080/WNdETCyeQ6b0sWjK.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124010189066047488/img/Yp8FilqwTUKIyLbl.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "900a0d80370d52d4a07a5af596c886adcfe9d18a34ffeabaaa406cafadb288ad"
+    },
+    {
+      "id": "list_1763642433328279733_2124010621624627560",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010621624627560,
+      "category": "أخبار منوعة (X)",
+      "title": "حريق واسع يلتهم كنيسة تاريخية في ولاية #ماريلاند الأميركية، من دون تسجيل إصابات، فيما تُقدّر الخسائر المادية بنحو 280 ألف دولار.",
+      "content": "@shamsnewstv (Shams TV قناة شمس)\nحريق واسع يلتهم كنيسة تاريخية في ولاية #ماريلاند الأميركية، من دون تسجيل إصابات، فيما تُقدّر الخسائر المادية بنحو 280 ألف دولار.",
+      "published_at": "2026-11-21T05:22:49Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/shamsnewstv/status/2124010621624627560",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124010287409856512/img/Fi3Xl1ZSiDvzfklO.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124010287409856512/vid/avc1/1080x1920/N_4Oi2KBKty3RR4B.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124010287409856512/img/Fi3Xl1ZSiDvzfklO.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "27b52581bc98e0b53648905123508afe79e178722f83760f401cc4474ea8df51"
+    },
+    {
+      "id": "list_1763642433328279733_2124010538204119402",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010538204119402,
+      "category": "أخبار منوعة (X)",
+      "title": "احصاءات غرفة التحكم المروري: قتيلان و١٢ جريحا في ١٢ حادث سير خلال الساعات الـ24 الماضية",
+      "content": "@LBCI_NEWS (LBCI Lebanon News)\nاحصاءات غرفة التحكم المروري: قتيلان و١٢ جريحا في ١٢ حادث سير خلال الساعات الـ24 الماضية",
+      "published_at": "2026-11-21T05:22:29Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/LBCI_NEWS/status/2124010538204119402",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "13a6fa66ac78dbf5c9db2062d5286d305243087ab71d2399b02c5ccf0126180c"
+    },
+    {
+      "id": "list_1763642433328279733_2124010473897038317",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010473897038317,
+      "category": "أخبار منوعة (X)",
+      "title": "عاجل | مصدر في الإسعاف والطوارئ: مصابان بنيران قوات الاحتلال الإسرائيلي في مخيم للنازحين شمال شرقي مدينة غزة",
+      "content": "@AJABreaking (الجزيرة - عاجل)\nعاجل | مصدر في الإسعاف والطوارئ: مصابان بنيران قوات الاحتلال الإسرائيلي في مخيم للنازحين شمال شرقي مدينة غزة",
+      "published_at": "2026-11-21T05:22:13Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AJABreaking/status/2124010473897038317",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "442acfb0ba3897fb8958b4cbb610492c488a8c65cdbf9b94a19bf6918e981a8e"
+    },
+    {
+      "id": "list_1763642433328279733_2124010098645176326",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124010098645176326,
+      "category": "أخبار منوعة (X)",
+      "title": "ترامب يمازح كبير موظفي البيت الأبيض الجديد بسؤاله: هل تريد الترشح للرئاسة؟",
+      "content": "@LBCI_NEWS (LBCI Lebanon News)\nترامب يمازح كبير موظفي البيت الأبيض الجديد بسؤاله: هل تريد الترشح للرئاسة؟\n#LBCINews https://www.lbcgroup.tv/news/world/968997/%D8%AA%D8%B1%D8%A7%D9%85%D8%A8-%D9%8A%D9%85%D8%A7%D8%B2%D8%AD-%D9%83%D8%A8%D9%8A%D8%B1-%D9%85%D9%88%D8%B8%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D9%8A%D8%AA-%D8%A7%D9%84%D8%A3%D8%A8%D9%8A%D8%B6-%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF-%D8%A8%D8%B3%D8%A4%D8%A7%D9%84%D9%87-%D9%87%D9%84-%D8%AA%D8%B1%D9%8A%D8%AF-%D8%A7%D9%84%D8%AA%D8%B1%D8%B4%D8%AD-%D9%84%D9%84%D8%B1%D8%A6%D8%A7/ar",
+      "published_at": "2026-11-21T05:20:44Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/LBCI_NEWS/status/2124010098645176326",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://www.lbcgroup.tv/news/world/968997/%D8%AA%D8%B1%D8%A7%D9%85%D8%A8-%D9%8A%D9%85%D8%A7%D8%B2%D8%AD-%D9%83%D8%A8%D9%8A%D8%B1-%D9%85%D9%88%D8%B8%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D9%8A%D8%AA-%D8%A7%D9%84%D8%A3%D8%A8%D9%8A%D8%B6-%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF-%D8%A8%D8%B3%D8%A4%D8%A7%D9%84%D9%87-%D9%87%D9%84-%D8%AA%D8%B1%D9%8A%D8%AF-%D8%A7%D9%84%D8%AA%D8%B1%D8%B4%D8%AD-%D9%84%D9%84%D8%B1%D8%A6%D8%A7/ar"
+      ],
+      "is_edited": false,
+      "content_hash": "0d627df5a440a6e888ef8e696588264310311e01e8a8b6203b9febde67ba1de9"
+    },
+    {
+      "id": "list_1763642433328279733_2124009917728149999",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124009917728149999,
+      "category": "أخبار منوعة (X)",
+      "title": "🔶استهداف محطة\" كريفوي روغ \" للطاقة الحرارية في مقاطعة دنيبروبتروفسك والتي تدعم عمل المؤسسات العسكرية الصناعية في أوكرانيا - وزارة الدفاع…",
+      "content": "@sputnik_ar (Sputnik Arabic)\n🔶استهداف محطة\" كريفوي روغ \" للطاقة الحرارية في مقاطعة دنيبروبتروفسك والتي تدعم عمل المؤسسات العسكرية الصناعية في أوكرانيا - وزارة الدفاع الروسية\n\n⭕️ استهداف سفينة شحن جاف في البحر الأسود في منطقة أوديسا كانت تنقل معدات عسكرية وشحنات ذات استخدام مزدوج للقوات الأوكرانية\n\n⭕️استهداف",
+      "published_at": "2026-11-21T05:20:01Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/sputnik_ar/status/2124009917728149999",
+      "images": [
+        "https://pbs.twimg.com/media/HXn_wDWWcAAEpuV.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXn_wDWWcAAEpuV.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXn_wDWWcAAEpuV.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "682d987498429294d875b45270edeae2d5324c0f65414bb8fd03617d788a1e2d"
+    },
+    {
+      "id": "list_1763642433328279733_2124009915891298613",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124009915891298613,
+      "category": "أخبار منوعة (X)",
+      "title": "وسائل إعلام عراقية: انفجار في محطة كهربائية في البصرة جنوب العراق",
+      "content": "@SkyNewsArabia_B (سكاي نيوز عربية-عاجل)\nوسائل إعلام عراقية: انفجار في محطة كهربائية في البصرة جنوب العراق",
+      "published_at": "2026-11-21T05:20:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/SkyNewsArabia_B/status/2124009915891298613",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "4ab18aa3c2abf2732f37ba718eb1d90588b21ba767e14a6e65f3c2ff887addb5"
+    },
+    {
+      "id": "list_1763642433328279733_2124009352809840919",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124009352809840919,
+      "category": "أخبار منوعة (X)",
+      "title": "بالفيديو | حريق في محطة كهرباء الهارثة في #البصرة جنوب #العراق",
+      "content": "@TVManar1 (قناة المنار)\nبالفيديو | حريق في محطة كهرباء الهارثة في #البصرة جنوب #العراق",
+      "published_at": "2026-11-21T05:17:46Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/TVManar1/status/2124009352809840919",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124009279354994688/img/Sx5hQrYbZIVf61SP.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124009279354994688/vid/avc1/464x824/bMyvYAMuNsvCdkdL.mp4?tag=14",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124009279354994688/img/Sx5hQrYbZIVf61SP.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "4c32103494ec9dcc1084a7a676692782a59e6b621021477243abbc5ce687c819"
+    },
+    {
+      "id": "list_1763642433328279733_2124009290927161680",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124009290927161680,
+      "category": "أخبار منوعة (X)",
+      "title": "فلاديمير بوتين يخوض تجربة لف \"الباو\" الصيني.",
+      "content": "@M0SC0W0 (موسكو | 🇷🇺 MOSCOW NEWS)\nفلاديمير بوتين يخوض تجربة لف \"الباو\" الصيني.",
+      "published_at": "2026-11-21T05:17:31Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/M0SC0W0/status/2124009290927161680",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2124009195351498753/img/V7ttEcX38sDUhe_M.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124009195351498753/vid/avc1/1440x1080/NRZTIGdgZht2kZlJ.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124009195351498753/img/V7ttEcX38sDUhe_M.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "9bd9b1e714f5181d0d0af1da99d0a7b6abed9e2e58cb19acbd4b73a951e992f7"
+    },
     {
       "id": "list_1763642433328279733_2124008757961146644",
       "source_id": "x_news_list",
@@ -1474,6 +2385,466 @@
       "content_hash": "aa9bffcf586aecd012d0580582d084a27b07d44d0215bf4d519bf404ead5fea4"
     },
     {
+      "id": "list_1763642433328279733_2123999752899670297",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123999752899670297,
+      "category": "أخبار منوعة (X)",
+      "title": "«ميتا» تعتزم طرح جهاز «Muse Charm» مقابل 300 دولار",
+      "content": "@AlraiMediaGroup (الراي)\n«ميتا» تعتزم طرح جهاز «Muse Charm» مقابل 300 دولار\nhttps://www.alraimedia.com/article/1786789/",
+      "published_at": "2026-11-21T04:39:37Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlraiMediaGroup/status/2123999752899670297",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://www.alraimedia.com/article/1786789/"
+      ],
+      "is_edited": false,
+      "content_hash": "1521a755eb229bf4fff01b025f8b35f7d77338deccfeae26f98ee62cb433a54a"
+    },
+    {
+      "id": "list_1763642433328279733_2123999542743896349",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123999542743896349,
+      "category": "أخبار منوعة (X)",
+      "title": "سیامک آرام، تحلیلگر سیاسی و مدرس دانشگاه، با اشاره به تغییر لحن دیپلماتیک جمهوری اسلامی گفت تهران در محتوای مواضع خود، از جمله درباره…",
+      "content": "@IranIntl (ايران اينترنشنال)\nسیامک آرام، تحلیلگر سیاسی و مدرس دانشگاه، با اشاره به تغییر لحن دیپلماتیک جمهوری اسلامی گفت تهران در محتوای مواضع خود، از جمله درباره اورانیوم غنی‌شده و شروط مذاکراتی، تغییری ایجاد نکرده است.",
+      "published_at": "2026-11-21T04:38:47Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/IranIntl/status/2123999542743896349",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123999466428506112/img/o4t0zYW0xOtqpNj8.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123999466428506112/vid/avc1/1280x720/vslm1g64I1vclTaW.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123999466428506112/img/o4t0zYW0xOtqpNj8.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "213468552d1ff144d3e4062eb372eda9b0376d549fe2b380ee22f29cb59ec989"
+    },
+    {
+      "id": "list_1763642433328279733_2123999454155964542",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123999454155964542,
+      "category": "أخبار منوعة (X)",
+      "title": "الصورة التي لايستطيع نسيان موقعها.",
+      "content": "@M0SC0W0 (موسكو | 🇷🇺 MOSCOW NEWS)\nالصورة التي لايستطيع نسيان موقعها.",
+      "published_at": "2026-11-21T04:38:26Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/M0SC0W0/status/2123999454155964542",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123999434568515584/img/hYpui29W6Fogeojb.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123999434568515584/vid/avc1/540x516/wHqRbJZMESLIGzZy.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123999434568515584/img/hYpui29W6Fogeojb.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "f1736bcccd5d8d02a9d904e7fade5097e83ad9868d857661d1674782f913fd7f"
+    },
+    {
+      "id": "list_1763642433328279733_2123999383003787750",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123999383003787750,
+      "category": "أخبار منوعة (X)",
+      "title": "وزير النقل المصري كامل الوزير، الذي يصف نفسه بأنه «فلاح ابن فلاح»، كان محور حالة من الانقسام شهدتها مصر، بين من يطالب باستقالته بداعي…",
+      "content": "@aawsat_News (صحيفة الشرق الأوسط)\nوزير النقل المصري كامل الوزير، الذي يصف نفسه بأنه «فلاح ابن فلاح»، كان محور حالة من الانقسام شهدتها مصر، بين من يطالب باستقالته بداعي «مسؤوليته السياسية» عن حادث تصادم قطارين في العياط (جنوب محافظة الجيزة)، أودى بحياة 7 أشخاص وأصاب 125 آخرين، ومن يصر على بقائه، ويصفه بـ«المهندس",
+      "published_at": "2026-11-21T04:38:09Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/aawsat_News/status/2123999383003787750",
+      "images": [
+        "https://pbs.twimg.com/media/HXn2LpmXgAAlzBk.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXn2LpmXgAAlzBk.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXn2LpmXgAAlzBk.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "038e3413b8ac637698e799152ec4d08bb8e44ad14a5b56b16693c354c0390e4e"
+    },
+    {
+      "id": "list_1763642433328279733_2123999058435977492",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123999058435977492,
+      "category": "أخبار منوعة (X)",
+      "title": "گزارش‌ها درباره احتمال حمله جمهوری اسلامی به پایتخت آمریکا با استفاده از «بمب کثیف» در روزهای اخیر بازتاب گسترده‌ای داشته و با واکنش…",
+      "content": "@IranIntl (ايران اينترنشنال)\nگزارش‌ها درباره احتمال حمله جمهوری اسلامی به پایتخت آمریکا با استفاده از «بمب کثیف» در روزهای اخیر بازتاب گسترده‌ای داشته و با واکنش مقام‌های واشینگتن و تهران همراه شده است.\n\nگزارش هادی زنوزی، ایران‌اینترنشنال",
+      "published_at": "2026-11-21T04:36:52Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/IranIntl/status/2123999058435977492",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123998993914998784/img/TFbSkZf5CysinKs7.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123998993914998784/vid/avc1/1280x720/qS6k7HlbjDPH675c.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123998993914998784/img/TFbSkZf5CysinKs7.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "706e48256a3c07bfa43382abed6a9fbcd82756114ecc189d1259058ac31ac89c"
+    },
+    {
+      "id": "list_1763642433328279733_2123998966719119553",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998966719119553,
+      "category": "أخبار منوعة (X)",
+      "title": "▪️عملة بيتكوين، أكبر العملات المشفرة من حيث القيمة السوقية، تتراجع بنسبة 4.6% إلى 55,674.72",
+      "content": "@CNBCArabia (CNBC Arabia)\n▪️عملة بيتكوين، أكبر العملات المشفرة من حيث القيمة السوقية، تتراجع بنسبة 4.6% إلى 55,674.72\nدولار\n\n▪️كانت العملة قد هبطت في وقت سابق من يوم الجمعة دون مستوى 60 ألف دولار للمرة الأولى منذ يوليو تموز، في ظل تزايد المخاوف بشأن التقييمات المرتفعة للأصول، ما ضغط على الاستثمارات",
+      "published_at": "2026-11-21T04:36:30Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/CNBCArabia/status/2123998966719119553",
+      "images": [
+        "https://pbs.twimg.com/media/HXn1zURW0AA57cX.jpg",
+        "https://pbs.twimg.com/media/HXn1zT8WUAE2uff.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXn1zURW0AA57cX.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXn1zURW0AA57cX.jpg",
+          "title": ""
+        },
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXn1zT8WUAE2uff.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXn1zT8WUAE2uff.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "0d373eb42f4c9b92a18abe7f422eb0fa02f403df99673e3a0ac28ca41b34fd35"
+    },
+    {
+      "id": "list_1763642433328279733_2123998941503016983",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998941503016983,
+      "category": "أخبار منوعة (X)",
+      "title": "📌 رويترز: انخفاض عملة البيتكوين بنسبة 5.10% لتصل إلى 55,830 دولارا",
+      "content": "@aljazeera_now (الجزيرة الآن)\n📌 رويترز: انخفاض عملة البيتكوين بنسبة 5.10% لتصل إلى 55,830 دولارا\n\n#الجزيرة\n📌 تابعوا البث المباشر لقناة الجزيرة الآن على اليوتيوب عبر الرابط التالي:\n🔗https://www.youtube.com/watch?v=bNyUyrR0PHo",
+      "published_at": "2026-11-21T04:36:24Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/aljazeera_now/status/2123998941503016983",
+      "images": [
+        "https://pbs.twimg.com/media/HXn1xBHXwAA6iep.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXn1xBHXwAA6iep.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXn1xBHXwAA6iep.jpg",
+          "title": ""
+        }
+      ],
+      "links": [
+        "https://www.youtube.com/watch?v=bNyUyrR0PHo"
+      ],
+      "is_edited": false,
+      "content_hash": "8dd076da2d232b42fd68e193947fa0f8d486816724c8d81e0546d7630e909695"
+    },
+    {
+      "id": "list_1763642433328279733_2123998840269218139",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998840269218139,
+      "category": "أخبار منوعة (X)",
+      "title": "زلزال بقوة 6.7 درجات على عمق 129 كيلومترا يضرب قرب مدينة جونين وسط بيرو دون خسائر بشرية أو أضرار وفق تقرير أولي",
+      "content": "@AJArabic (قناة الجزيرة)\nزلزال بقوة 6.7 درجات على عمق 129 كيلومترا يضرب قرب مدينة جونين وسط بيرو دون خسائر بشرية أو أضرار وفق تقرير أولي\n#الأخبار",
+      "published_at": "2026-11-21T04:36:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AJArabic/status/2123998840269218139",
+      "images": [
+        "https://pbs.twimg.com/media/HXn5wm8bgAINwiK.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123998787307806720/vid/avc1/608x1080/2K9Lxw93OFyi6DVZ.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXn5wm8bgAINwiK.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "67e1b19b21bbded78ab66a9665141d36ff9e9dbfcee1cce2cc55ea948d232e4d"
+    },
+    {
+      "id": "list_1763642433328279733_2123998699126919584",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998699126919584,
+      "category": "أخبار منوعة (X)",
+      "title": "الرئيس دونالد ترامب | ملخص المؤتمر الصحفي | 20 نوفمبر 2026",
+      "content": "@Icarus_ICG (Icarus International Consulting Group LLC)\nالرئيس دونالد ترامب | ملخص المؤتمر الصحفي | 20 نوفمبر 2026\n\nإيران: تسعى طهران إلى اتفاق، لكنها تواصل تقديم شروط غير مقبولة. وأكد ترامب أن إيران لن تمتلك سلاحاً نووياً.\n\nالعمليات العسكرية: أكد استعداده لاتخاذ قرار الحرب ضد إيران مجدداً رغم تداعياتها السياسية والاقتصادية.\n\nالعراق:",
+      "published_at": "2026-11-21T04:35:26Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/Icarus_ICG/status/2123998699126919584",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "b5fb571b3a8ab1bb6d6063f680eaa75885c65cc3c6301d7f460986e2098eebfd"
+    },
+    {
+      "id": "list_1763642433328279733_2123998695842517259",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998695842517259,
+      "category": "أخبار منوعة (X)",
+      "title": "ترامب يحاول تقليد الرئيس بوتين بتصوير مشهد وهو يغادر فوق طائراته .",
+      "content": "@M0SC0W0 (موسكو | 🇷🇺 MOSCOW NEWS)\nترامب يحاول تقليد الرئيس بوتين بتصوير مشهد وهو يغادر فوق طائراته .",
+      "published_at": "2026-11-21T04:35:25Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/M0SC0W0/status/2123998695842517259",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123998662632124416/img/j0Z09Gb7VXIlfXOx.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123998662632124416/vid/avc1/720x1252/LkuaebTSIe0viRuS.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123998662632124416/img/j0Z09Gb7VXIlfXOx.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "42d944b8c848777da4fc48058b3b80ad642905ca21e5ac24d1ef5a7ad8f6ec1e"
+    },
+    {
+      "id": "list_1763642433328279733_2123998642776203760",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998642776203760,
+      "category": "أخبار منوعة (X)",
+      "title": "🔹مفاوضات الأمم المتحدة بشأن تنظيم استخدام أنظمة الأسلحة الفتاكة ذاتية التشغيل تدخل وقتاً إضافياً بعد فشل الدول المشاركة في التوصل إلى توافق…",
+      "content": "@CNBCArabia (CNBC Arabia)\n🔹مفاوضات الأمم المتحدة بشأن تنظيم استخدام أنظمة الأسلحة الفتاكة ذاتية التشغيل تدخل وقتاً إضافياً بعد فشل الدول المشاركة في التوصل إلى توافق قبل انتهاء المهلة المحددة في جنيف\n\n⚠️ الانقسام يتركز حول مستقبل الأسلحة المدعومة بالذكاء الاصطناعي القادرة على تحديد الأهداف ومهاجمتها مع",
+      "published_at": "2026-11-21T04:35:13Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/CNBCArabia/status/2123998642776203760",
+      "images": [
+        "https://pbs.twimg.com/media/HXn1glNXEAAirHQ.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXn1glNXEAAirHQ.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXn1glNXEAAirHQ.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "072960023ba38ee71b84225c9ba738059584101081eca4f0acaf9687ac53e8b3"
+    },
+    {
+      "id": "list_1763642433328279733_2123998633183883501",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998633183883501,
+      "category": "أخبار منوعة (X)",
+      "title": "هلع في صفوف السكان لحظة وقوع زلزال بقوة 6.7 درجات في بيرو",
+      "content": "@AlarabyTV (التلفزيون العربي)\nهلع في صفوف السكان لحظة وقوع زلزال بقوة 6.7 درجات في بيرو",
+      "published_at": "2026-11-21T04:35:10Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlarabyTV/status/2123998633183883501",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123998443492548608/img/nuGw3b177squwoe1.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123998443492548608/vid/avc1/1080x1920/G_C2IhrFi9bRKMx3.mp4",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123998443492548608/img/nuGw3b177squwoe1.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "6b0b1254fb4b5fce01a3bf940102d39833dbae87eb4197809eab110f938c1ec2"
+    },
+    {
+      "id": "list_1763642433328279733_2123998507925483821",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998507925483821,
+      "category": "أخبار منوعة (X)",
+      "title": "PRESIDENT TRUMP | PRESS CONFERENCE SUMMARY | NOVEMBER 20, 2026",
+      "content": "@Icarus_ICG (Icarus International Consulting Group LLC)\nPRESIDENT TRUMP | PRESS CONFERENCE SUMMARY | NOVEMBER 20, 2026\n\nIran: Tehran seeks an agreement but continues to offer unacceptable terms. Trump reaffirmed that Iran will never possess nuclear weapons.\n\nMilitary operations: Would authorize military action against Iran again",
+      "published_at": "2026-11-21T04:34:40Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/Icarus_ICG/status/2123998507925483821",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "29fac1807371792ee377be682ff01e1de2184437bbf31c4722067db30a6fbb84"
+    },
+    {
+      "id": "list_1763642433328279733_2123998497670086932",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998497670086932,
+      "category": "أخبار منوعة (X)",
+      "title": "نیکولاس گیلانی، بانکدار سرمایه‌گذاری، گفت تحریم افراد جدید در شبکه فروش نفت جمهوری اسلامی می‌تواند توان تهران برای دور زدن تحریم‌ها را کاهش…",
+      "content": "@IranIntl (ايران اينترنشنال)\nنیکولاس گیلانی، بانکدار سرمایه‌گذاری، گفت تحریم افراد جدید در شبکه فروش نفت جمهوری اسلامی می‌تواند توان تهران برای دور زدن تحریم‌ها را کاهش دهد، زیرا نیروهای تازه‌وارد به این شبکه لزوما تجربه و مهارت افراد قدیمی را ندارند.",
+      "published_at": "2026-11-21T04:34:38Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/IranIntl/status/2123998497670086932",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123998427012820992/img/Ckg_EKSlOFXS4Pbe.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123998427012820992/vid/avc1/1280x720/K6EoKAU3zUw3RFmL.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123998427012820992/img/Ckg_EKSlOFXS4Pbe.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "45dbff680323584c66fd1cf564e4aed724ec65ba34a0766878fb41bbd4bb960e"
+    },
+    {
+      "id": "list_1763642433328279733_2123998333467336804",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998333467336804,
+      "category": "أخبار منوعة (X)",
+      "title": "شمال دارفور.. مقتل حامد السافنا عبود أحد قادة الدعم السريع وعدد من مرافقيه في استهداف بمسيرة",
+      "content": "@AlArabiya (العربية)\nشمال دارفور.. مقتل حامد السافنا عبود أحد قادة الدعم السريع وعدد من مرافقيه في استهداف بمسيرة\n\n#العربية",
+      "published_at": "2026-11-21T04:33:59Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlArabiya/status/2123998333467336804",
+      "images": [
+        "https://pbs.twimg.com/media/HXn1Og1WAAAD55X.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123998288093343744/vid/avc1/1920x1080/_GUCkbDX5WHXa9hV.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXn1Og1WAAAD55X.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "3730f01602b5d0f6d96b399933d776926e993fd1c7dcee188584107eb7dd6a23"
+    },
+    {
+      "id": "list_1763642433328279733_2123998088805114066",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123998088805114066,
+      "category": "أخبار منوعة (X)",
+      "title": "الأكاديمي عقيلة دلهوم: \"تقارير صندوق النقد الدولي توثق أموال ليبيا وثرواتها المجمدة.. وبرامج الدعم والمحافظ الاستثمارية استفادت منها الأسر…",
+      "content": "@AlArabiya (العربية)\nالأكاديمي عقيلة دلهوم: \"تقارير صندوق النقد الدولي توثق أموال ليبيا وثرواتها المجمدة.. وبرامج الدعم والمحافظ الاستثمارية استفادت منها الأسر محدودة الدخل\".. والحقوقي عبدالحفيظ غوقة: \"لا أنكر إيجابيات عهد القذافي في مجانية الخدمات والمساعدات الاجتماعية.. لكن الشعب الليبي دفع ثمناً",
+      "published_at": "2026-11-21T04:33:01Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/AlArabiya/status/2123998088805114066",
+      "images": [
+        "https://pbs.twimg.com/media/HXmuV-MW4AARYiO.png"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123919648622014465/vid/avc1/1080x1920/_iPYfAoNN6gIAgoW.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXmuV-MW4AARYiO.png",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "817bdc50bf8e01dd7927ac3e7fe554060d8797674a09266d0112748ecdd4f486"
+    },
+    {
+      "id": "list_1763642433328279733_2123997781157146773",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2123997781157146773,
+      "category": "أخبار منوعة (X)",
+      "title": "چین در حاشیه نشست اپک با برگزاری برنامه‌های فرهنگی، بر نقش میراث فرهنگی و شناخت متقابل ملت‌ها در تقویت همکاری‌های منطقه‌ای تاکید کرد. این…",
+      "content": "@IranIntl (ايران اينترنشنال)\nچین در حاشیه نشست اپک با برگزاری برنامه‌های فرهنگی، بر نقش میراث فرهنگی و شناخت متقابل ملت‌ها در تقویت همکاری‌های منطقه‌ای تاکید کرد. این برنامه‌ها با هدف نشان دادن پیوند میان فرهنگ، همکاری و پیشرفت مشترک برگزار شدند.\n\nگزارش رضا محمدی، ایران‌اینترنشنال",
+      "published_at": "2026-11-21T04:31:47Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://x.com/IranIntl/status/2123997781157146773",
+      "images": [
+        "https://pbs.twimg.com/amplify_video_thumb/2123997724433379328/img/FxXaUGwIX4A2myDi.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123997724433379328/vid/avc1/1280x720/6YuL5vzL2rEpIaXU.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2123997724433379328/img/FxXaUGwIX4A2myDi.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "e5cc497cfa450d97c31c7fa11c26bb9c45f087689f90aa050aad2e28a7f31c39"
+    },
+    {
       "id": "SabrenNewss_232162",
       "source_id": "sabereen",
       "source_name": "صابرين نيوز",
@@ -1952,6 +3323,586 @@
       "content_hash": "b416f8c4fccc21e0fd50a6b18d28e26ae65e9c4b1e14a6d05e06dbeda7fc5a0c"
     },
     {
+      "id": "SabrenNewss_232141",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232141,
+      "category": "أخبار عاجلة",
+      "title": "نفذت قواتنا المسلحة بعون الله عملية عسكرية نوعية استهدفت محطة الشقيق الكهربائية وميناء جيزان وكانت الإصابات دقيقة ومباشرة وخلفت أضرارًا…",
+      "content": "نفذت قواتنا المسلحة بعون الله عملية عسكرية نوعية استهدفت محطة الشقيق الكهربائية وميناء جيزان وكانت الإصابات دقيقة ومباشرة وخلفت أضرارًا كبيرة.\nيأتي هذا الاستهداف ردا على استهداف العدو السعودي المجرم لمحطات كهرباء صعدة والمخا، واستهداف سابق ظهر اليوم لأحد الأرصفة في ميناء الحديدة.\nنؤكد للعدو السعودي أن أي استهداف لميناء الحديدة أو محطات الكهرباء سيتم الرد عليها مباشرة في موانئه ومحطاته الكهربائية.",
+      "published_at": "2026-11-20T17:06:54Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232141",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "4da92ff5626e187c0c0f1a786bb8a79cde65963deb3b52167acbbd4bb594906a"
+    },
+    {
+      "id": "SabrenNewss_232140",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232140,
+      "category": "أخبار عاجلة",
+      "title": "بحرية حرس الثورة الاسلامية: انفجار وحريق بناقلة نفط مخالفة بعد اصطدامها بلغم بحري عند مدخل ميناء خصب",
+      "content": "بحرية حرس الثورة الاسلامية: انفجار وحريق بناقلة نفط مخالفة بعد اصطدامها بلغم بحري عند مدخل ميناء خصب",
+      "published_at": "2026-11-20T16:30:36Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232140",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "4293a71f5f2467c438c7d35cfb54e3ab8854fc9865578df74f4705db42355dad"
+    },
+    {
+      "id": "SabrenNewss_232139",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232139,
+      "category": "أخبار عاجلة",
+      "title": "استهداف ناقلة على سواحل عُمان",
+      "content": "استهداف ناقلة على سواحل عُمان",
+      "published_at": "2026-11-20T16:03:32Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232139",
+      "images": [
+        "https://cdn4.telesco.pe/file/ZKqMhoouTkZkfYZtu2yrMUbDAG4qFstGJq9Vt2V4JANPbJ0K1CHEwuJIEiw_3Wq7VtIJ1NXhI67QvUTE9oeb5dO2aye02wgmq8VHBdYWifIp_9wXKwQsAv2XiIZWTSK1iYnhSfvZmUyYcKAOBAJab3suZENKPqjaumQWNIV8ChEq9tYl_h_1Sb86pkuDUuEGcVF5XPBbprF9yp7vMFkh_z64DO3Q9yJfLcVN3s5M2hg83cibYVvb9PrCfmjNJZQgnMGRZEQaVb7oPWyLcy0CkimI0JZPSOMsYCLWW06hCPKStVFnIDYpnOR1JfwuA-rQvqsa4TcoYs-dQwZ9fJ3sFQ.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/ZKqMhoouTkZkfYZtu2yrMUbDAG4qFstGJq9Vt2V4JANPbJ0K1CHEwuJIEiw_3Wq7VtIJ1NXhI67QvUTE9oeb5dO2aye02wgmq8VHBdYWifIp_9wXKwQsAv2XiIZWTSK1iYnhSfvZmUyYcKAOBAJab3suZENKPqjaumQWNIV8ChEq9tYl_h_1Sb86pkuDUuEGcVF5XPBbprF9yp7vMFkh_z64DO3Q9yJfLcVN3s5M2hg83cibYVvb9PrCfmjNJZQgnMGRZEQaVb7oPWyLcy0CkimI0JZPSOMsYCLWW06hCPKStVFnIDYpnOR1JfwuA-rQvqsa4TcoYs-dQwZ9fJ3sFQ.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/ZKqMhoouTkZkfYZtu2yrMUbDAG4qFstGJq9Vt2V4JANPbJ0K1CHEwuJIEiw_3Wq7VtIJ1NXhI67QvUTE9oeb5dO2aye02wgmq8VHBdYWifIp_9wXKwQsAv2XiIZWTSK1iYnhSfvZmUyYcKAOBAJab3suZENKPqjaumQWNIV8ChEq9tYl_h_1Sb86pkuDUuEGcVF5XPBbprF9yp7vMFkh_z64DO3Q9yJfLcVN3s5M2hg83cibYVvb9PrCfmjNJZQgnMGRZEQaVb7oPWyLcy0CkimI0JZPSOMsYCLWW06hCPKStVFnIDYpnOR1JfwuA-rQvqsa4TcoYs-dQwZ9fJ3sFQ.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "02bad3f3b66ecc29e3bdf3ded1e39a3e1311dacc63c987e6bfbe94ac97c017aa"
+    },
+    {
+      "id": "SabrenNewss_232138",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232138,
+      "category": "أخبار عاجلة",
+      "title": "تجدد الانفجارات في مضيق هرمز",
+      "content": "تجدد الانفجارات في مضيق هرمز",
+      "published_at": "2026-11-20T16:01:37Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232138",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "43e96b9a2d19e3b365338431f25812550b9784cc392ede80833abb160b4bc9dd"
+    },
+    {
+      "id": "SabrenNewss_232137",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232137,
+      "category": "أخبار عاجلة",
+      "title": "سماع اطلاقات نار كثيفة ضمن مقتربات منطقة الوزيرية ببغداد دون معرفة الاسباب.",
+      "content": "سماع اطلاقات نار كثيفة ضمن مقتربات منطقة الوزيرية ببغداد دون معرفة الاسباب.",
+      "published_at": "2026-11-20T15:56:43Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232137",
+      "images": [
+        "https://cdn4.telesco.pe/file/hMnkOEMlCFHx6MuVd6dLIA00QBlA-yALgsIKL8T6H8abrAdKoMCZDCWZH7wmtN-tVF_pR_XaxTb8sCK29ghX67GpGN_iAsApDhotvyjKKIsnUsOeV24EMWG_2FNW0v17h7JDX43qC5vDyPfrleG_g4ByUV0aioYFgdZj0XeGdvsq5-yuVCdYx3fnvPFQBcYxouJsXnnNZNPX5GTIRcvK-68TOBbhx9m-DMUlgppa_rTJ4ZyaClG8nvpTT5wYSfFt7ptspLd1Slre0ac0LPboY8m9avOeOgFF5AouM2g1Kq4Xe-sq2itdvOdiHuymr2YjBNJ1Uq0EYwlXHjJ4-AuXpQ"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://cdn4.telesco.pe/file/70f2d2c6be.mp4?token=RUj7NgUt-ewiTLOTDMiVdCosJYa4iYEWva-8zSRzEBGUGMTH3m973Z7HGW4O1t-b2Y52I6FZfnw1C6D8dvRd-H3h-Sjtas4HuTjhoKCUm9lFBG4eaZs-3iH1lACMlKvRIi-pCQyWtAKp3XG2M8u2ZkRVvDyHNBKzMZiphu895n8BpvVyOC1KnXrqs4w4DtItbJ4kD4aIXiayNwX2quiQnIE31O43kDcQu9iAlWBrkhRQ4-xXXEvT4MW3M21pHbsqe8NJleM5HWQAfTGsFkSxgTaT9fwR2_VAKUWi9-_fuRP_VnJxv6qoSAPvmE0rbCEmqiKeVaURhguz4D8wF4Yqlg",
+          "thumbnail": "https://cdn4.telesco.pe/file/hMnkOEMlCFHx6MuVd6dLIA00QBlA-yALgsIKL8T6H8abrAdKoMCZDCWZH7wmtN-tVF_pR_XaxTb8sCK29ghX67GpGN_iAsApDhotvyjKKIsnUsOeV24EMWG_2FNW0v17h7JDX43qC5vDyPfrleG_g4ByUV0aioYFgdZj0XeGdvsq5-yuVCdYx3fnvPFQBcYxouJsXnnNZNPX5GTIRcvK-68TOBbhx9m-DMUlgppa_rTJ4ZyaClG8nvpTT5wYSfFt7ptspLd1Slre0ac0LPboY8m9avOeOgFF5AouM2g1Kq4Xe-sq2itdvOdiHuymr2YjBNJ1Uq0EYwlXHjJ4-AuXpQ",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "dcf3f964992f64f144761ec0aee9c8a9837855550d462c46516cf1be73f0763f"
+    },
+    {
+      "id": "SabrenNewss_232136",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232136,
+      "category": "أخبار عاجلة",
+      "title": "سماع دوي انفجارات في جزيرة قشم",
+      "content": "سماع دوي انفجارات في جزيرة قشم",
+      "published_at": "2026-11-20T15:20:42Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232136",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "eac691a993ecdca00d28d6a811f4b44b4bbb25774b76415f77e6f8ab86a707b1"
+    },
+    {
+      "id": "SabrenNewss_232135",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232135,
+      "category": "أخبار عاجلة",
+      "title": "دوي انفجار في مضيق هرمز.",
+      "content": "دوي انفجار في مضيق هرمز.",
+      "published_at": "2026-11-20T15:09:22Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232135",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "b824174078a055d12896bec20f96766818a00c341e61424762721da66bd263b8"
+    },
+    {
+      "id": "SabrenNewss_232134",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232134,
+      "category": "أخبار عاجلة",
+      "title": "دوي انفجار في مضيق هرمز.",
+      "content": "دوي انفجار في مضيق هرمز.",
+      "published_at": "2026-11-20T14:59:08Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232134",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "b824174078a055d12896bec20f96766818a00c341e61424762721da66bd263b8"
+    },
+    {
+      "id": "SabrenNewss_232133",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232133,
+      "category": "أخبار عاجلة",
+      "title": "مازلنا على العهد.. نترجمُ \"هيهات منا الذلة\" أحراراً واضحين وسطَ كلّ هذا الضباب والتشويه..",
+      "content": "مازلنا على العهد.. نترجمُ \"هيهات منا الذلة\" أحراراً واضحين وسطَ كلّ هذا الضباب والتشويه..\n\nنفتخرُ ببزاتنا التي تؤرخُ خرائطَ المقاومة، طولا وعرضا، فيقلدُنا الصغارُ بكلّ جد، لانهم واثقون من الشرف المطبوعِ على جباه الرجال.",
+      "published_at": "2026-11-20T14:20:50Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232133",
+      "images": [
+        "https://cdn4.telesco.pe/file/CVNAAddu7eEe0gmoSqYFUyx-3lwc-OFRKlMelVEGZa1czUlQ_WBkPxr1n6-S_aNU3LeYZumIT7kS-kiENeT4rpxHk1wqBjs9KyvVh4dAuctL5NIc1SSidpLZwxe4P7HQxp5kOK8ggtAdqrdO2gvKKeSAja9TZwAejoUcTAtp28HO4pT7_7f2Lnru8BL70bKtEWY8Zqvm3B3X2GKH7sCx9NBHNAYDiNu0qUNTfA-d8F57LJr4bCQxRmp3pxyWBYDVKahBPbFDM8U9hOOGgW3FaSeSmq37M9nKFm0H7wM99-PXm81-6qS_648a1Hb45Fs6_ATiSjkwAcWYjCCDwyr6sg.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/CVNAAddu7eEe0gmoSqYFUyx-3lwc-OFRKlMelVEGZa1czUlQ_WBkPxr1n6-S_aNU3LeYZumIT7kS-kiENeT4rpxHk1wqBjs9KyvVh4dAuctL5NIc1SSidpLZwxe4P7HQxp5kOK8ggtAdqrdO2gvKKeSAja9TZwAejoUcTAtp28HO4pT7_7f2Lnru8BL70bKtEWY8Zqvm3B3X2GKH7sCx9NBHNAYDiNu0qUNTfA-d8F57LJr4bCQxRmp3pxyWBYDVKahBPbFDM8U9hOOGgW3FaSeSmq37M9nKFm0H7wM99-PXm81-6qS_648a1Hb45Fs6_ATiSjkwAcWYjCCDwyr6sg.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/CVNAAddu7eEe0gmoSqYFUyx-3lwc-OFRKlMelVEGZa1czUlQ_WBkPxr1n6-S_aNU3LeYZumIT7kS-kiENeT4rpxHk1wqBjs9KyvVh4dAuctL5NIc1SSidpLZwxe4P7HQxp5kOK8ggtAdqrdO2gvKKeSAja9TZwAejoUcTAtp28HO4pT7_7f2Lnru8BL70bKtEWY8Zqvm3B3X2GKH7sCx9NBHNAYDiNu0qUNTfA-d8F57LJr4bCQxRmp3pxyWBYDVKahBPbFDM8U9hOOGgW3FaSeSmq37M9nKFm0H7wM99-PXm81-6qS_648a1Hb45Fs6_ATiSjkwAcWYjCCDwyr6sg.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "e63621c35e3e01e81d7eab562fc67f0a501fd75388ce56ebc414e179426aff0c"
+    },
+    {
+      "id": "SabrenNewss_232132",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232132,
+      "category": "أخبار عاجلة",
+      "title": "تخرج طلبة الجامعات العراقية في العتبة العباسية المقدسة",
+      "content": "تخرج طلبة الجامعات العراقية في العتبة العباسية المقدسة\n\nواعتصموا بحبل الله جميعا",
+      "published_at": "2026-11-20T14:15:12Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232132",
+      "images": [
+        "https://cdn4.telesco.pe/file/EyDOnIhAFck0IRumg4_W7aIz-GBb3jutty48QYBd1H4J46VcZdPLgEVaPUPoFE8Pj-xG9XI0ZnMTlPHIoVF1Orz4Rub6SstToVGVp4o7bhYQsyJqUdFhpJQJVNBi51_FUuxY8Ky9miGhOQeLLyMRNxqNz98WS9yYRX1SgSb2eWmY3SOKmWWw4YgKT5SSGBfOP_h_Ym7dEETVJDjuNOqiuZ7amEh3XDDvp8W9gi0l3fC11ZddMOZJutrEoWtDQS9gng10EQ034pxQ8dIyzprO_OD6vc3SXIqcS6vR9ZJxcGnv6RvI_24M3y9ftC8iQ-zxonhKFneWn6cm7UDQGiIAVQ.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/EyDOnIhAFck0IRumg4_W7aIz-GBb3jutty48QYBd1H4J46VcZdPLgEVaPUPoFE8Pj-xG9XI0ZnMTlPHIoVF1Orz4Rub6SstToVGVp4o7bhYQsyJqUdFhpJQJVNBi51_FUuxY8Ky9miGhOQeLLyMRNxqNz98WS9yYRX1SgSb2eWmY3SOKmWWw4YgKT5SSGBfOP_h_Ym7dEETVJDjuNOqiuZ7amEh3XDDvp8W9gi0l3fC11ZddMOZJutrEoWtDQS9gng10EQ034pxQ8dIyzprO_OD6vc3SXIqcS6vR9ZJxcGnv6RvI_24M3y9ftC8iQ-zxonhKFneWn6cm7UDQGiIAVQ.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/EyDOnIhAFck0IRumg4_W7aIz-GBb3jutty48QYBd1H4J46VcZdPLgEVaPUPoFE8Pj-xG9XI0ZnMTlPHIoVF1Orz4Rub6SstToVGVp4o7bhYQsyJqUdFhpJQJVNBi51_FUuxY8Ky9miGhOQeLLyMRNxqNz98WS9yYRX1SgSb2eWmY3SOKmWWw4YgKT5SSGBfOP_h_Ym7dEETVJDjuNOqiuZ7amEh3XDDvp8W9gi0l3fC11ZddMOZJutrEoWtDQS9gng10EQ034pxQ8dIyzprO_OD6vc3SXIqcS6vR9ZJxcGnv6RvI_24M3y9ftC8iQ-zxonhKFneWn6cm7UDQGiIAVQ.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "82de7dfd14b2da38defa0eb1d9d69d71b582b64f0ebe585ffec15ecf53a2b347"
+    },
+    {
+      "id": "SabrenNewss_232131",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232131,
+      "category": "أخبار عاجلة",
+      "title": "دوي انفجارات تهز جازان جنوب السعودية",
+      "content": "دوي انفجارات تهز جازان جنوب السعودية",
+      "published_at": "2026-11-20T14:05:54Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232131",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "a473040a5e29aac6ffeb769d86450dd325edc037a97791cab048e45ca7a679d8"
+    },
+    {
+      "id": "SabrenNewss_232130",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232130,
+      "category": "أخبار عاجلة",
+      "title": "الرصد اليومي لطلعات العدو الجوية التي يخرق بها السيادة العراقية.",
+      "content": "الرصد اليومي لطلعات العدو الجوية التي يخرق بها السيادة العراقية.\n\nيستمر العدو في انتهاكه الصارخ لسيادتنا الجوية، انطلاقا من قواعدهم في الأردن والكويت.\n\n- طائرات (MQ-9) عدد 4.\n- طائرات (UNK drone) عدد 1.\n- طائرات (CESSNA-208) عدد 1.\n\nيوم الخميس  19 - 11 - 2026",
+      "published_at": "2026-11-20T14:00:49Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232130",
+      "images": [
+        "https://cdn4.telesco.pe/file/emTxMSFkfwyqYU_ByN99ju0_FNgvNHKQDwG6YUbVBbNhvHTQLsfTxnsIlPMi4Xqn7w8kfcgocCCazMVOhjO_GTLqqNYqSuSMs_l9A4eMvLjbS-jmaFpbwC0EdyMGH1y2kN_--wPlx7SG5tpzQBhanYyIsFJSgeJ5GL4tePAZksZlar7Bv-lwRggASsTdNkONWYeE-OWBm9KrFlTT75IqM2COeN7V3JkOGXhQCxoVw8g-P4u-DAom7agEVnx_KNxQofUVnVsFc6PDnLoURtu6scth51_u0QWRbe7n9aY6Hx5yG8Mo1_uwdoFbYgj-wV_n_CUYBLZUfeGNHGvZ497E0g.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/emTxMSFkfwyqYU_ByN99ju0_FNgvNHKQDwG6YUbVBbNhvHTQLsfTxnsIlPMi4Xqn7w8kfcgocCCazMVOhjO_GTLqqNYqSuSMs_l9A4eMvLjbS-jmaFpbwC0EdyMGH1y2kN_--wPlx7SG5tpzQBhanYyIsFJSgeJ5GL4tePAZksZlar7Bv-lwRggASsTdNkONWYeE-OWBm9KrFlTT75IqM2COeN7V3JkOGXhQCxoVw8g-P4u-DAom7agEVnx_KNxQofUVnVsFc6PDnLoURtu6scth51_u0QWRbe7n9aY6Hx5yG8Mo1_uwdoFbYgj-wV_n_CUYBLZUfeGNHGvZ497E0g.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/emTxMSFkfwyqYU_ByN99ju0_FNgvNHKQDwG6YUbVBbNhvHTQLsfTxnsIlPMi4Xqn7w8kfcgocCCazMVOhjO_GTLqqNYqSuSMs_l9A4eMvLjbS-jmaFpbwC0EdyMGH1y2kN_--wPlx7SG5tpzQBhanYyIsFJSgeJ5GL4tePAZksZlar7Bv-lwRggASsTdNkONWYeE-OWBm9KrFlTT75IqM2COeN7V3JkOGXhQCxoVw8g-P4u-DAom7agEVnx_KNxQofUVnVsFc6PDnLoURtu6scth51_u0QWRbe7n9aY6Hx5yG8Mo1_uwdoFbYgj-wV_n_CUYBLZUfeGNHGvZ497E0g.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "9e1f260c5dc3d000e422a8ff1b2f7c89161af96cae8d11c9d22fe47be709aa07"
+    },
+    {
+      "id": "SabrenNewss_232129",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232129,
+      "category": "أخبار عاجلة",
+      "title": "العدو السعودي استهدف ميناء الحديدة اليوم بغارتين قبل ساعتين من إطلاق التحذير بإخلائه لاستهدافه مجددًا ضمن جرائمه المتواصلة ضد المنشآت…",
+      "content": "العدو السعودي استهدف ميناء الحديدة اليوم بغارتين قبل ساعتين من إطلاق التحذير بإخلائه لاستهدافه مجددًا ضمن جرائمه المتواصلة ضد المنشآت الحيوية المدنية",
+      "published_at": "2026-11-20T13:52:39Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232129",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "fd272d2d49e7272f89b2a82e1f07b2ef1b8e92442ff8944c28bf633a5f0f4178"
+    },
+    {
+      "id": "SabrenNewss_232128",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232128,
+      "category": "أخبار عاجلة",
+      "title": "البحرية البريطانية إطلاق نار على سفينة شحن من زورق صغير جنوب غرب المكلا اليمنية",
+      "content": "البحرية البريطانية إطلاق نار على سفينة شحن من زورق صغير جنوب غرب المكلا اليمنية",
+      "published_at": "2026-11-20T13:32:23Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232128",
+      "images": [
+        "https://cdn4.telesco.pe/file/ZgLHfE61li5VgfyxqdS0nrJf0tsUA9_jUZdWGngPs85ye2cgmdkoaWTNiAGIwTYhzxKxucHWCqSIW4-m5g5rtl6VuzYLr2CnucfbODVAxaLBu3IBjSWlfGn1LATQVZusslf5m123dU64OQizxqwKXqUr_NYZPWCUqg4D1LT8JYfucJExPgtJ6uIBtPBlDUv_KVhM8IHg59FgYV-pohT3Ry0d0MM4MmubVJzrI6qo6I0k4WsdQDYWch6hU8AG0yg-a3_TW72AkF96BJ8gAPpboWml73TbHB8XrM5anNFXzTweuodB_vkC4pJEs51pmPBJO8myKjYQmgUGrB-0n_TuPg.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/ZgLHfE61li5VgfyxqdS0nrJf0tsUA9_jUZdWGngPs85ye2cgmdkoaWTNiAGIwTYhzxKxucHWCqSIW4-m5g5rtl6VuzYLr2CnucfbODVAxaLBu3IBjSWlfGn1LATQVZusslf5m123dU64OQizxqwKXqUr_NYZPWCUqg4D1LT8JYfucJExPgtJ6uIBtPBlDUv_KVhM8IHg59FgYV-pohT3Ry0d0MM4MmubVJzrI6qo6I0k4WsdQDYWch6hU8AG0yg-a3_TW72AkF96BJ8gAPpboWml73TbHB8XrM5anNFXzTweuodB_vkC4pJEs51pmPBJO8myKjYQmgUGrB-0n_TuPg.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/ZgLHfE61li5VgfyxqdS0nrJf0tsUA9_jUZdWGngPs85ye2cgmdkoaWTNiAGIwTYhzxKxucHWCqSIW4-m5g5rtl6VuzYLr2CnucfbODVAxaLBu3IBjSWlfGn1LATQVZusslf5m123dU64OQizxqwKXqUr_NYZPWCUqg4D1LT8JYfucJExPgtJ6uIBtPBlDUv_KVhM8IHg59FgYV-pohT3Ry0d0MM4MmubVJzrI6qo6I0k4WsdQDYWch6hU8AG0yg-a3_TW72AkF96BJ8gAPpboWml73TbHB8XrM5anNFXzTweuodB_vkC4pJEs51pmPBJO8myKjYQmgUGrB-0n_TuPg.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "6160660991c00d28e9ed83fc9981646e67eba621c2b8cdcdf3288eb555543a25"
+    },
+    {
+      "id": "SabrenNewss_232127",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232127,
+      "category": "أخبار عاجلة",
+      "title": "دوي انفجارات تهز جازان جنوب السعودية",
+      "content": "دوي انفجارات تهز جازان جنوب السعودية",
+      "published_at": "2026-11-20T12:52:19Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232127",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "a473040a5e29aac6ffeb769d86450dd325edc037a97791cab048e45ca7a679d8"
+    },
+    {
+      "id": "SabrenNewss_232125",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232125,
+      "category": "أخبار عاجلة",
+      "title": "قالوا في الاعلام سيدخلون على جثث كتائب حزب الله",
+      "content": "قالوا في الاعلام سيدخلون على جثث كتائب حزب الله\nفي النهاية اختلف المشهد\nو تحدّث الواقع على خلاف تخرصات الابواق المأجورة\nو كانت الكتائب حولهم وورائهم و تحميهم وكتفاً على كتف معهم\n#تفويت_الفرصة",
+      "published_at": "2026-11-20T12:47:19Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232125",
+      "images": [
+        "https://cdn4.telesco.pe/file/WHIAuDvpwvKm1cKMI7e6nPjI6qQTARCuXjJA7yRc45h_6dINis5tCB-S4-Vy-QNh-vBWaIjnC-ZZUlJw5kYU-AThTkF1YFsR1yENijFbQBbBoCM9jpkt-JCf5XhkJ2Rfuvhh0N_N6TSLeMVFdXNej92b2knFsjhR25TWJVtytcD_DPXmLokJPQZSr9Pf8r9WbplTNNtuTwhvqP60HlPlLINJqto-Ec48JBgPLWVut3WrzprLA4cnCfvkXMuTc_br3uPZY-XZzSHNpoASxA_EgvOueqX7RtT2bk5p2axEHYj6dkK9r2qgapkMIEdk6fIaIWS_wx1QA87m8zZMEJMuFw.jpg",
+        "https://cdn4.telesco.pe/file/ozPpJM3pEAw5WHvVDR4xH7MdItr6Ih_9ALe-XjCgsjTfTL_xtH8EF8FH6iRaUF6gnRqmRm2KltM0JomkBb-Hu_LHbTguzWSkr4D2x0wiE39BecmDd2C4HcMp2MXAgEpNGhhxD7s1DjcgY0S5fVroNQHn7pwAs1hEFy2aBzxCweTEOmSuwwNyiNLejCj54NF-i905tu0vYiv1DCvKekqpI78_O2_C4o0ygqP5XddWcxs2KHRqBBRaMwDC3r7GnLGkEjPcSreFNcxEQrR8fey9ohAB7Lvye5qmOEizq4EOiCxhtcBX2ntzarDq06GWi_ciHn_xT-KS1g3d5VR8QYYYcA.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/WHIAuDvpwvKm1cKMI7e6nPjI6qQTARCuXjJA7yRc45h_6dINis5tCB-S4-Vy-QNh-vBWaIjnC-ZZUlJw5kYU-AThTkF1YFsR1yENijFbQBbBoCM9jpkt-JCf5XhkJ2Rfuvhh0N_N6TSLeMVFdXNej92b2knFsjhR25TWJVtytcD_DPXmLokJPQZSr9Pf8r9WbplTNNtuTwhvqP60HlPlLINJqto-Ec48JBgPLWVut3WrzprLA4cnCfvkXMuTc_br3uPZY-XZzSHNpoASxA_EgvOueqX7RtT2bk5p2axEHYj6dkK9r2qgapkMIEdk6fIaIWS_wx1QA87m8zZMEJMuFw.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/WHIAuDvpwvKm1cKMI7e6nPjI6qQTARCuXjJA7yRc45h_6dINis5tCB-S4-Vy-QNh-vBWaIjnC-ZZUlJw5kYU-AThTkF1YFsR1yENijFbQBbBoCM9jpkt-JCf5XhkJ2Rfuvhh0N_N6TSLeMVFdXNej92b2knFsjhR25TWJVtytcD_DPXmLokJPQZSr9Pf8r9WbplTNNtuTwhvqP60HlPlLINJqto-Ec48JBgPLWVut3WrzprLA4cnCfvkXMuTc_br3uPZY-XZzSHNpoASxA_EgvOueqX7RtT2bk5p2axEHYj6dkK9r2qgapkMIEdk6fIaIWS_wx1QA87m8zZMEJMuFw.jpg",
+          "title": ""
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/ozPpJM3pEAw5WHvVDR4xH7MdItr6Ih_9ALe-XjCgsjTfTL_xtH8EF8FH6iRaUF6gnRqmRm2KltM0JomkBb-Hu_LHbTguzWSkr4D2x0wiE39BecmDd2C4HcMp2MXAgEpNGhhxD7s1DjcgY0S5fVroNQHn7pwAs1hEFy2aBzxCweTEOmSuwwNyiNLejCj54NF-i905tu0vYiv1DCvKekqpI78_O2_C4o0ygqP5XddWcxs2KHRqBBRaMwDC3r7GnLGkEjPcSreFNcxEQrR8fey9ohAB7Lvye5qmOEizq4EOiCxhtcBX2ntzarDq06GWi_ciHn_xT-KS1g3d5VR8QYYYcA.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/ozPpJM3pEAw5WHvVDR4xH7MdItr6Ih_9ALe-XjCgsjTfTL_xtH8EF8FH6iRaUF6gnRqmRm2KltM0JomkBb-Hu_LHbTguzWSkr4D2x0wiE39BecmDd2C4HcMp2MXAgEpNGhhxD7s1DjcgY0S5fVroNQHn7pwAs1hEFy2aBzxCweTEOmSuwwNyiNLejCj54NF-i905tu0vYiv1DCvKekqpI78_O2_C4o0ygqP5XddWcxs2KHRqBBRaMwDC3r7GnLGkEjPcSreFNcxEQrR8fey9ohAB7Lvye5qmOEizq4EOiCxhtcBX2ntzarDq06GWi_ciHn_xT-KS1g3d5VR8QYYYcA.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "63da3a5cfeda47c45bd5a7fa7045c154007b9e89b4c60953a694b0e4c89e47bd"
+    },
+    {
+      "id": "SabrenNewss_232120",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232120,
+      "category": "أخبار عاجلة",
+      "title": "القوات المسلحة اليمنية تنشر تحذيرات في: المركز المالي الرياض ميناء جدة ميناء الملك فهد الصناعي ميناء ينبع ميناء جيزان",
+      "content": "القوات المسلحة اليمنية تنشر تحذيرات في: المركز المالي الرياض ميناء جدة ميناء الملك فهد الصناعي ميناء ينبع ميناء جيزان",
+      "published_at": "2026-11-20T12:41:06Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232120",
+      "images": [
+        "https://cdn4.telesco.pe/file/fEcOCiSDqLQO5J-Yqs34kQb9mFYlZ0cAQwrkaBWI1BijnQ7LFFRLD70868tLS-B1JM562Xfw4WhOw9M-9q-mXX431Z9ehGiLg-O3bSbsnXbA6lbYgHuzFtCDC_gBqxTtZR4W-AQ3PzaptlAvM_FT3DnRaeU_rajYpnj8eT096OpJbGGE7kB9LAxbbhZw6VZk0-Ww1LowyO2CL0zpJdQz4i6x44oHl-MyVGs4Pf5hBfK3AakTT-utQPtLgKoVsNAAaTUwOlmgS4NiLGyk__s4oj61aq_3Yh-c2Xh8Wh7CdyLjOLVy3fMhbuKIKJcOTFMBRdM0EiJxXWk024ueTGh5gw.jpg",
+        "https://cdn4.telesco.pe/file/ot4HxPqW8xs6gFIEXTMvfiiMqjWCR3OhfOXV4EpUrSPTZMmBAPYttuQgWh1dwYJqtTSPvpkKU-d697B9r-MBzaf5260JLgSiH5WHdn5IZ3hXk07zHCo3hneZR3Oktx2vUIwveFQddXun6WOd2oltpPw-B6F3SaqRy8Tf7F6Tom_ZTX3X8Wjx_xIUjHCB5Gj840ky8FSwn7EMDkTQ1AC_lcyFUDzd0BQ87v433pLgp6JA_ucR36hQWiy94QG1Vlt0A1Z9v5xbWWG6rw5A9ASD_y8VINj1KivoXDRLUVAB9PkGsosGEYiZFGIG6ijyvGPpQ4N6ZzEAe62gEQrODs3gNA.jpg",
+        "https://cdn4.telesco.pe/file/UKI8ln16XPg4rV-qMZHU-McAouC8FI9t6tY2WpHZEWs1JEJeW7iyvQA7QcVIvM1dHMgoeQDoTOTOnF3HvE2xFudDVANwZTW-z6ScFDx6qVDA1lDWjLbbg92vAPgYkJw9tOPedvKqrrhyCKF7CaktlK6ZA4IrlrTUz0FOODzj7rcgkCg_59DTzr1oB_O9sj8m-31Ke6_pN_Fju2HtP5yCyQP0OBYsPXQZzmNbyJ_OGEoV-Hq4yyYT1Q7IOMtayb4lny0YaVJnHpr_8OHThHjIpmwds4PXDDQTPMWdWuoi_l2GDBlWRt3PXUfyaUgmjrzBPCet58O-sLvCD0q8Yydcpw.jpg",
+        "https://cdn4.telesco.pe/file/vBP98uO99DmyCD8ptkU9QWa0TGgRCWBR6uZqvVwTtpjEr-2n_SoNaOpU--NnUB60aC5z206-zhVFdGYwHy1vWO-bMf3LlR-b14PuMijFT9FNR6GWaDp6n5UBLqY_u3TTaEfUoG3bUGrx_3vAEcmrUCtvb7IbGDiMsEFIn4zaRqSiCyDq9jQGyAxnT3Mt60Q6tHA3uyWYr6bsRtobIQ-WkqzrrfbbZQYVT9dvDXhBYGbt9TpfLQzpymNDbgBjUSaqV5D2kwHuifjDGbgEmSXHNJNiqm9FS9SGmcRFrLoNxCr6Wntz2eXbmy-6FOyZPPIp-MVXrld7Eohx__Y1XpcERg.jpg",
+        "https://cdn4.telesco.pe/file/JES0FH4Vsj3HAT9mYJiTEMeMCFvI-qGYjA-kIADL8H-8jujMjEshp7WxH3-CkGoYOa43Z5NrjlZlLCaTEn2hFlOT9Dgs5ZnWL6kQ7-GpcGBFQivapjoIKtztyYGisKumcak6Wm6zHxYkjvavRlQSv04rP3OF_K5EoVexqdF6af0suPCMb33ny5E4goejSHe-VSFVOVBCK-DFn7WJi6Fo-dcpiQlgeAJzIqRbJ3pAQ4282MDfe-Yc2pdtxdViz-A69DoxYSxoyQng_Cnz_gv-vPKPSYtCmkJuxxt99XuD3Q1Ihc8Zk2c6SFX3FkmHefkCQ80TUxVTjdtjVW443eNTyw.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/fEcOCiSDqLQO5J-Yqs34kQb9mFYlZ0cAQwrkaBWI1BijnQ7LFFRLD70868tLS-B1JM562Xfw4WhOw9M-9q-mXX431Z9ehGiLg-O3bSbsnXbA6lbYgHuzFtCDC_gBqxTtZR4W-AQ3PzaptlAvM_FT3DnRaeU_rajYpnj8eT096OpJbGGE7kB9LAxbbhZw6VZk0-Ww1LowyO2CL0zpJdQz4i6x44oHl-MyVGs4Pf5hBfK3AakTT-utQPtLgKoVsNAAaTUwOlmgS4NiLGyk__s4oj61aq_3Yh-c2Xh8Wh7CdyLjOLVy3fMhbuKIKJcOTFMBRdM0EiJxXWk024ueTGh5gw.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/fEcOCiSDqLQO5J-Yqs34kQb9mFYlZ0cAQwrkaBWI1BijnQ7LFFRLD70868tLS-B1JM562Xfw4WhOw9M-9q-mXX431Z9ehGiLg-O3bSbsnXbA6lbYgHuzFtCDC_gBqxTtZR4W-AQ3PzaptlAvM_FT3DnRaeU_rajYpnj8eT096OpJbGGE7kB9LAxbbhZw6VZk0-Ww1LowyO2CL0zpJdQz4i6x44oHl-MyVGs4Pf5hBfK3AakTT-utQPtLgKoVsNAAaTUwOlmgS4NiLGyk__s4oj61aq_3Yh-c2Xh8Wh7CdyLjOLVy3fMhbuKIKJcOTFMBRdM0EiJxXWk024ueTGh5gw.jpg",
+          "title": ""
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/ot4HxPqW8xs6gFIEXTMvfiiMqjWCR3OhfOXV4EpUrSPTZMmBAPYttuQgWh1dwYJqtTSPvpkKU-d697B9r-MBzaf5260JLgSiH5WHdn5IZ3hXk07zHCo3hneZR3Oktx2vUIwveFQddXun6WOd2oltpPw-B6F3SaqRy8Tf7F6Tom_ZTX3X8Wjx_xIUjHCB5Gj840ky8FSwn7EMDkTQ1AC_lcyFUDzd0BQ87v433pLgp6JA_ucR36hQWiy94QG1Vlt0A1Z9v5xbWWG6rw5A9ASD_y8VINj1KivoXDRLUVAB9PkGsosGEYiZFGIG6ijyvGPpQ4N6ZzEAe62gEQrODs3gNA.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/ot4HxPqW8xs6gFIEXTMvfiiMqjWCR3OhfOXV4EpUrSPTZMmBAPYttuQgWh1dwYJqtTSPvpkKU-d697B9r-MBzaf5260JLgSiH5WHdn5IZ3hXk07zHCo3hneZR3Oktx2vUIwveFQddXun6WOd2oltpPw-B6F3SaqRy8Tf7F6Tom_ZTX3X8Wjx_xIUjHCB5Gj840ky8FSwn7EMDkTQ1AC_lcyFUDzd0BQ87v433pLgp6JA_ucR36hQWiy94QG1Vlt0A1Z9v5xbWWG6rw5A9ASD_y8VINj1KivoXDRLUVAB9PkGsosGEYiZFGIG6ijyvGPpQ4N6ZzEAe62gEQrODs3gNA.jpg",
+          "title": ""
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/UKI8ln16XPg4rV-qMZHU-McAouC8FI9t6tY2WpHZEWs1JEJeW7iyvQA7QcVIvM1dHMgoeQDoTOTOnF3HvE2xFudDVANwZTW-z6ScFDx6qVDA1lDWjLbbg92vAPgYkJw9tOPedvKqrrhyCKF7CaktlK6ZA4IrlrTUz0FOODzj7rcgkCg_59DTzr1oB_O9sj8m-31Ke6_pN_Fju2HtP5yCyQP0OBYsPXQZzmNbyJ_OGEoV-Hq4yyYT1Q7IOMtayb4lny0YaVJnHpr_8OHThHjIpmwds4PXDDQTPMWdWuoi_l2GDBlWRt3PXUfyaUgmjrzBPCet58O-sLvCD0q8Yydcpw.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/UKI8ln16XPg4rV-qMZHU-McAouC8FI9t6tY2WpHZEWs1JEJeW7iyvQA7QcVIvM1dHMgoeQDoTOTOnF3HvE2xFudDVANwZTW-z6ScFDx6qVDA1lDWjLbbg92vAPgYkJw9tOPedvKqrrhyCKF7CaktlK6ZA4IrlrTUz0FOODzj7rcgkCg_59DTzr1oB_O9sj8m-31Ke6_pN_Fju2HtP5yCyQP0OBYsPXQZzmNbyJ_OGEoV-Hq4yyYT1Q7IOMtayb4lny0YaVJnHpr_8OHThHjIpmwds4PXDDQTPMWdWuoi_l2GDBlWRt3PXUfyaUgmjrzBPCet58O-sLvCD0q8Yydcpw.jpg",
+          "title": ""
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/vBP98uO99DmyCD8ptkU9QWa0TGgRCWBR6uZqvVwTtpjEr-2n_SoNaOpU--NnUB60aC5z206-zhVFdGYwHy1vWO-bMf3LlR-b14PuMijFT9FNR6GWaDp6n5UBLqY_u3TTaEfUoG3bUGrx_3vAEcmrUCtvb7IbGDiMsEFIn4zaRqSiCyDq9jQGyAxnT3Mt60Q6tHA3uyWYr6bsRtobIQ-WkqzrrfbbZQYVT9dvDXhBYGbt9TpfLQzpymNDbgBjUSaqV5D2kwHuifjDGbgEmSXHNJNiqm9FS9SGmcRFrLoNxCr6Wntz2eXbmy-6FOyZPPIp-MVXrld7Eohx__Y1XpcERg.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/vBP98uO99DmyCD8ptkU9QWa0TGgRCWBR6uZqvVwTtpjEr-2n_SoNaOpU--NnUB60aC5z206-zhVFdGYwHy1vWO-bMf3LlR-b14PuMijFT9FNR6GWaDp6n5UBLqY_u3TTaEfUoG3bUGrx_3vAEcmrUCtvb7IbGDiMsEFIn4zaRqSiCyDq9jQGyAxnT3Mt60Q6tHA3uyWYr6bsRtobIQ-WkqzrrfbbZQYVT9dvDXhBYGbt9TpfLQzpymNDbgBjUSaqV5D2kwHuifjDGbgEmSXHNJNiqm9FS9SGmcRFrLoNxCr6Wntz2eXbmy-6FOyZPPIp-MVXrld7Eohx__Y1XpcERg.jpg",
+          "title": ""
+        },
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/JES0FH4Vsj3HAT9mYJiTEMeMCFvI-qGYjA-kIADL8H-8jujMjEshp7WxH3-CkGoYOa43Z5NrjlZlLCaTEn2hFlOT9Dgs5ZnWL6kQ7-GpcGBFQivapjoIKtztyYGisKumcak6Wm6zHxYkjvavRlQSv04rP3OF_K5EoVexqdF6af0suPCMb33ny5E4goejSHe-VSFVOVBCK-DFn7WJi6Fo-dcpiQlgeAJzIqRbJ3pAQ4282MDfe-Yc2pdtxdViz-A69DoxYSxoyQng_Cnz_gv-vPKPSYtCmkJuxxt99XuD3Q1Ihc8Zk2c6SFX3FkmHefkCQ80TUxVTjdtjVW443eNTyw.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/JES0FH4Vsj3HAT9mYJiTEMeMCFvI-qGYjA-kIADL8H-8jujMjEshp7WxH3-CkGoYOa43Z5NrjlZlLCaTEn2hFlOT9Dgs5ZnWL6kQ7-GpcGBFQivapjoIKtztyYGisKumcak6Wm6zHxYkjvavRlQSv04rP3OF_K5EoVexqdF6af0suPCMb33ny5E4goejSHe-VSFVOVBCK-DFn7WJi6Fo-dcpiQlgeAJzIqRbJ3pAQ4282MDfe-Yc2pdtxdViz-A69DoxYSxoyQng_Cnz_gv-vPKPSYtCmkJuxxt99XuD3Q1Ihc8Zk2c6SFX3FkmHefkCQ80TUxVTjdtjVW443eNTyw.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "6efded9ceb4b0e4edf6696cdaacb69f3971894629b85c7a4b63178f56af22d16"
+    },
+    {
+      "id": "SabrenNewss_232119",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232119,
+      "category": "أخبار عاجلة",
+      "title": "دوي انفجارات في جزيرة قشم الايرانية",
+      "content": "دوي انفجارات في جزيرة قشم الايرانية",
+      "published_at": "2026-11-20T12:32:24Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232119",
+      "images": [
+        "https://cdn4.telesco.pe/file/XiHG0aMcXGax-SJgl8TFAsdVe-RIJEkvFdjT3oMlbmATGpuKpZ3p-pCcnkF-CYzBgdQlS3d_9-PodgMFrI9qNA8C3e2zRRKj4hXp9_xSIVG01R7PW5ejgWfxtEUnalJkcg2LpiraelhnkrlDh54L-NRBuYW-WerJrwbRzRmwTgmgGzEm6WAn3-dpXnxcoOvrxG5lumc1tz6WsxSTw08CXYNh9EGEUcb7Vw6g31mEhQDlm1_D4NToryX9gvzVA_pdlNLEdjtSMf7m7tV-ODkvKn6Zc5CyXq657w-1LHCLz98ni11uYPTIAav0Y3FSCh8OWtrJdokESxtNcS5EatvGlA.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/XiHG0aMcXGax-SJgl8TFAsdVe-RIJEkvFdjT3oMlbmATGpuKpZ3p-pCcnkF-CYzBgdQlS3d_9-PodgMFrI9qNA8C3e2zRRKj4hXp9_xSIVG01R7PW5ejgWfxtEUnalJkcg2LpiraelhnkrlDh54L-NRBuYW-WerJrwbRzRmwTgmgGzEm6WAn3-dpXnxcoOvrxG5lumc1tz6WsxSTw08CXYNh9EGEUcb7Vw6g31mEhQDlm1_D4NToryX9gvzVA_pdlNLEdjtSMf7m7tV-ODkvKn6Zc5CyXq657w-1LHCLz98ni11uYPTIAav0Y3FSCh8OWtrJdokESxtNcS5EatvGlA.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/XiHG0aMcXGax-SJgl8TFAsdVe-RIJEkvFdjT3oMlbmATGpuKpZ3p-pCcnkF-CYzBgdQlS3d_9-PodgMFrI9qNA8C3e2zRRKj4hXp9_xSIVG01R7PW5ejgWfxtEUnalJkcg2LpiraelhnkrlDh54L-NRBuYW-WerJrwbRzRmwTgmgGzEm6WAn3-dpXnxcoOvrxG5lumc1tz6WsxSTw08CXYNh9EGEUcb7Vw6g31mEhQDlm1_D4NToryX9gvzVA_pdlNLEdjtSMf7m7tV-ODkvKn6Zc5CyXq657w-1LHCLz98ni11uYPTIAav0Y3FSCh8OWtrJdokESxtNcS5EatvGlA.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "921db79521cdf35b28c2a0327ff3a6484424e79c95a835658f733113c8287134"
+    },
+    {
+      "id": "SabrenNewss_232118",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232118,
+      "category": "أخبار عاجلة",
+      "title": "اعلام العدو الامريكي : تدرس الولايات المتحدة وإسرائيل شنّ هجوم عسكري مشترك جديد على إيران في المدى القريب، وسط قلق من إعادة بناء طهران…",
+      "content": "اعلام العدو الامريكي : تدرس الولايات المتحدة وإسرائيل شنّ هجوم عسكري مشترك جديد على إيران في المدى القريب، وسط قلق من إعادة بناء طهران لقدراتها الصاروخية وتحركات سياسية قبل خسارة نتنياهو للسلطة وسيطرة الديمقراطيين على الكونغرس.",
+      "published_at": "2026-11-20T12:31:25Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232118",
+      "images": [
+        "https://cdn4.telesco.pe/file/hALoYKd72-7wV6posFHPWn3brZH8Li67FSxx-fPwSn13msTMyd2Tj0SJ9SIIX1BpcGBGcEriWqk7wPFxl6v6xVSouG5ZPBmeaGnnXCkwjlKsBvrWiAdnQjMHrDX4JucBJcMeyNoaOVGfncO5UYdG2a_j13Fj2KBMXunKFEmBA6grNvC8xEW_WmewY7lALYCRrHxwjo5sOh9WCZQb2nlz8WLva-RT90_DJtNYJeCxn4QCBxT5GkGQJ97Hunyh3oNm64pkuAg2XVQU3Z9o7G-0m1mRjFtWuaOavecMQ69juPVWSpj0TiiNw7bQrYLE7VSrbKuqAYwcK6_l44pkmnf2bg.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://cdn4.telesco.pe/file/hALoYKd72-7wV6posFHPWn3brZH8Li67FSxx-fPwSn13msTMyd2Tj0SJ9SIIX1BpcGBGcEriWqk7wPFxl6v6xVSouG5ZPBmeaGnnXCkwjlKsBvrWiAdnQjMHrDX4JucBJcMeyNoaOVGfncO5UYdG2a_j13Fj2KBMXunKFEmBA6grNvC8xEW_WmewY7lALYCRrHxwjo5sOh9WCZQb2nlz8WLva-RT90_DJtNYJeCxn4QCBxT5GkGQJ97Hunyh3oNm64pkuAg2XVQU3Z9o7G-0m1mRjFtWuaOavecMQ69juPVWSpj0TiiNw7bQrYLE7VSrbKuqAYwcK6_l44pkmnf2bg.jpg",
+          "thumbnail": "https://cdn4.telesco.pe/file/hALoYKd72-7wV6posFHPWn3brZH8Li67FSxx-fPwSn13msTMyd2Tj0SJ9SIIX1BpcGBGcEriWqk7wPFxl6v6xVSouG5ZPBmeaGnnXCkwjlKsBvrWiAdnQjMHrDX4JucBJcMeyNoaOVGfncO5UYdG2a_j13Fj2KBMXunKFEmBA6grNvC8xEW_WmewY7lALYCRrHxwjo5sOh9WCZQb2nlz8WLva-RT90_DJtNYJeCxn4QCBxT5GkGQJ97Hunyh3oNm64pkuAg2XVQU3Z9o7G-0m1mRjFtWuaOavecMQ69juPVWSpj0TiiNw7bQrYLE7VSrbKuqAYwcK6_l44pkmnf2bg.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "f905b76edd9ac859e987b40902e056e5555a55b172a74578086ffc1949d37558"
+    },
+    {
+      "id": "SabrenNewss_232117",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232117,
+      "category": "أخبار عاجلة",
+      "title": "دوي انفجارات في جزيرة قشم الايرانية",
+      "content": "دوي انفجارات في جزيرة قشم الايرانية",
+      "published_at": "2026-11-20T12:30:42Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232117",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "96db80923e5bb35b8da95f99e6ed5ef21c604c9eb0f9602904c86b3a557da6ce"
+    },
+    {
+      "id": "SabrenNewss_232116",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232116,
+      "category": "أخبار عاجلة",
+      "title": "ضمن سلسلة الامن المفقود",
+      "content": "ضمن سلسلة الامن المفقود\n\nاشتباك مسلح وسط شوارع قضاء حرير بمحافظة اربيل",
+      "published_at": "2026-11-20T12:30:20Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232116",
+      "images": [
+        "https://cdn4.telesco.pe/file/Jf7otlCwG368OR3nXwvsWxUUwXzMW0j2BU_ZUQ6TOijCHzn0xFHPOjwbefbalEJRF7jaY-Sw3n-QAaiMcpH8OQaNbelVA8idUHqLnJnzlgTWXcars5ou4SqmfgSvDGIqJxnHZcp8YXUdD1zcr7Q3AN4qf_lexONJ1gFegPjmj7vGa9l4aHgg4tlM7d1Q8VDxPK_OaMC9PSUyhDeyBkbPY-UzwI3srbnCBq_PXLFvMtPQ4PvhEzRlgS1TKzD31u5Jy7TYWCTPW0k1ZVqH7El_PqTPSTSzCfzq1PDe6mT-A7MUDAMp9NSWZGhqi8ual9PvVGcOiYMaNJOH3WS9nuUswA"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://cdn4.telesco.pe/file/cff275700a.mp4?token=mTuKoNZeCaeIlelq5mTDwTtwzYO9ixo2dXRotQmkE0KheiWn3ry9Ky8PZXdo5ct_iaNb5Eewmvq8rZusJnNQvrQkhZZE4KpWg5NsnGcBqOI48GcSe04FicXLDwj7SuBJ_vyDuw2ZNY5IN2bG0_S8hpZFZ1BjEvP6SczO_OJn5-fc-aTb6yL0SVw8YC583mts5LzJs9IS2UBUw_6ioU_0fdD8sp_4PCf60yx3CO2ucsfLvWXU3oSSstiHmScWcXD47hT4U88oThosAtfH3_HnSiKe90UqB8AA_uvljg3qMVRdV2lW7Ex6OvY9AE4XzCmzsdrj-sVWXHpZ7UYoLGrQdw",
+          "thumbnail": "https://cdn4.telesco.pe/file/Jf7otlCwG368OR3nXwvsWxUUwXzMW0j2BU_ZUQ6TOijCHzn0xFHPOjwbefbalEJRF7jaY-Sw3n-QAaiMcpH8OQaNbelVA8idUHqLnJnzlgTWXcars5ou4SqmfgSvDGIqJxnHZcp8YXUdD1zcr7Q3AN4qf_lexONJ1gFegPjmj7vGa9l4aHgg4tlM7d1Q8VDxPK_OaMC9PSUyhDeyBkbPY-UzwI3srbnCBq_PXLFvMtPQ4PvhEzRlgS1TKzD31u5Jy7TYWCTPW0k1ZVqH7El_PqTPSTSzCfzq1PDe6mT-A7MUDAMp9NSWZGhqi8ual9PvVGcOiYMaNJOH3WS9nuUswA",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "b3556b9c17d775fad7b69943e2078741ce6036b71a33bcabef63d32c933e97d0"
+    },
+    {
+      "id": "SabrenNewss_232115",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232115,
+      "category": "أخبار عاجلة",
+      "title": "🔻ملخص بأهم وابرز الاحداث المحلية في العراق خلال الاسبوع السابق ..",
+      "content": "🔻ملخص بأهم وابرز الاحداث المحلية في العراق خلال الاسبوع السابق ..\n\n• تنفيذ : فريق الطاهرة\n\n#صابرين_نيوز",
+      "published_at": "2026-11-20T12:09:57Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232115",
+      "images": [
+        "https://cdn4.telesco.pe/file/a2Zd9Yg7765E66O9l0lSzizsnwdeIFa6QlhF6E8DPMRs_OQ_m4O5xWpSW6pU2w8XZA3A4vDPINVMAjXaATyTfOPqIZ-oDKJsqQ7cKunU2RZCATlZnfUmE0U32BIh08x5l6aNNh4mhhsQV-uocIfaTvVR6EwKqMZLWsXPLx1UviZju4ZMEndG9hUY4qHOy7p4cr3DIZUowZAUvJ8Au9tlr7ohQId08brmDsbKhz9BhExuHFrpNOhTKnRYmMKPMyetSB9lcIaglwjHGsZaU6h5DDZ78P3IM6Qil0WVYVRSQ728okRU8FtCpLarl96ZILqMNLAatmWzTWEvGN-g8VJFTQ"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "",
+          "thumbnail": "https://cdn4.telesco.pe/file/a2Zd9Yg7765E66O9l0lSzizsnwdeIFa6QlhF6E8DPMRs_OQ_m4O5xWpSW6pU2w8XZA3A4vDPINVMAjXaATyTfOPqIZ-oDKJsqQ7cKunU2RZCATlZnfUmE0U32BIh08x5l6aNNh4mhhsQV-uocIfaTvVR6EwKqMZLWsXPLx1UviZju4ZMEndG9hUY4qHOy7p4cr3DIZUowZAUvJ8Au9tlr7ohQId08brmDsbKhz9BhExuHFrpNOhTKnRYmMKPMyetSB9lcIaglwjHGsZaU6h5DDZ78P3IM6Qil0WVYVRSQ728okRU8FtCpLarl96ZILqMNLAatmWzTWEvGN-g8VJFTQ",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "2cde05454ea1bb4981d6ddfd0fa7acc8ea908fc30c2031e5df0ec84b29fdc1b5"
+    },
+    {
+      "id": "SabrenNewss_232114",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232114,
+      "category": "أخبار عاجلة",
+      "title": "العميد يحيى سريع: ردا على استهداف العدو السعودي لمحطتي صعدة والمخا الكهربائيتين نعلن أن محطة الشقيق الكهربائية ستكون هدفا مشروعا لقواتنا في…",
+      "content": "العميد يحيى سريع: ردا على استهداف العدو السعودي لمحطتي صعدة والمخا الكهربائيتين نعلن أن محطة الشقيق الكهربائية ستكون هدفا مشروعا لقواتنا في الساعات القادمة وننذر العاملين والموظفين بإخلائها فورا وندعو المواطنين إلى عدم الاقتراب منها.",
+      "published_at": "2026-11-20T12:01:06Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/SabrenNewss/232114",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "d5a3baefcaa099d28bbb0948e93c74612133e75386a77b9c5f690ba49f07a64a"
+    },
+    {
       "id": "inainaiq_162708",
       "source_id": "ina",
       "source_name": "وكالة الأنباء العراقية (واع)",
@@ -2335,6 +4286,613 @@
       "links": [],
       "is_edited": false,
       "content_hash": "141318d137ddbe64bb4d6e43ef6a2d3e0e0e76c347081ac044afd3a5b89031b5"
+    },
+    {
+      "id": "inainaiq_162688",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162688,
+      "category": "أخبار رسمية",
+      "title": "وزيرة التعاون الاقتصادي والتنمية الألمانية: نرغب في توقيع مذكرة للتفاهم بين العراق ووكالة التنمية الألمانية وبنك التنمية الألمانية",
+      "content": "وزيرة التعاون الاقتصادي والتنمية الألمانية: نرغب في توقيع مذكرة للتفاهم بين العراق ووكالة التنمية الألمانية وبنك التنمية الألمانية",
+      "published_at": "2026-11-16T14:17:53Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162688",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "25bfa21c4f20933a5d55ab9f8718bea477baa51d6a7e6e5cb3ecab9f889290e2"
+    },
+    {
+      "id": "inainaiq_162687",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162687,
+      "category": "أخبار رسمية",
+      "title": "وزيرة التعاون الاقتصادي والتنمية الألمانية تعرب عن دعم حكومة بلادها لجهود الحكومة العراقية",
+      "content": "وزيرة التعاون الاقتصادي والتنمية الألمانية تعرب عن دعم حكومة بلادها لجهود الحكومة العراقية",
+      "published_at": "2026-11-16T14:17:18Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162687",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "497d087b025366d4a90a6bcaaafb309553aa35cf54f66a0f512b843102a7c692"
+    },
+    {
+      "id": "inainaiq_162686",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162686,
+      "category": "أخبار رسمية",
+      "title": "رئيس الوزراء: مشروع طريق التنمية سيوفر فرصاً مهمة من خلال مشاريع المدن الصناعية والاقتصادية",
+      "content": "رئيس الوزراء: مشروع طريق التنمية سيوفر فرصاً مهمة من خلال مشاريع المدن الصناعية والاقتصادية",
+      "published_at": "2026-11-16T14:15:56Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162686",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "18573334e68bc9ae4900ececfcbad33d3b79806070fa81be70c41c701a59d093"
+    },
+    {
+      "id": "inainaiq_162685",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162685,
+      "category": "أخبار رسمية",
+      "title": "رئيس الوزراء: سياسة العراق التنموية هي العمل باتجاه بناء اقتصاد قوي ومتنوع",
+      "content": "رئيس الوزراء: سياسة العراق التنموية هي العمل باتجاه بناء اقتصاد قوي ومتنوع",
+      "published_at": "2026-11-16T14:14:35Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162685",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "9f6981a93f71b5f7893f4e1f743738b37dafdbc32c1cf300b743630bbdea30b2"
+    },
+    {
+      "id": "inainaiq_162684",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162684,
+      "category": "أخبار رسمية",
+      "title": "رئيس الوزراء: الحكومة العراقية ستمنح المستثمرين امتيازات كثيرة لتسهيل عملهم في العراق",
+      "content": "رئيس الوزراء: الحكومة العراقية ستمنح المستثمرين امتيازات كثيرة لتسهيل عملهم في العراق",
+      "published_at": "2026-11-16T14:14:17Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162684",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "8fcb2f0696ed6df80aaf5073c2d58fe6eabae639209c394465d7f53bb10d63f9"
+    },
+    {
+      "id": "inainaiq_162683",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162683,
+      "category": "أخبار رسمية",
+      "title": "رئيس الوزراء: الفرص الاستثمارية متاحة في العراق وندعو الشركات الألمانية للإفادة منها",
+      "content": "رئيس الوزراء: الفرص الاستثمارية متاحة في العراق وندعو الشركات الألمانية للإفادة منها",
+      "published_at": "2026-11-16T14:13:56Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162683",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "c3fd50760ebb33e53d1db842822b1170416bce3963ebfa968fb1821e5b20e548"
+    },
+    {
+      "id": "inainaiq_162682",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162682,
+      "category": "أخبار رسمية",
+      "title": "رئيس الوزراء يؤكد عمق العلاقات الثنائية بين العراق وألمانيا وأهمية تطويرها بما يخدم مصالح البلدين",
+      "content": "رئيس الوزراء يؤكد عمق العلاقات الثنائية بين العراق وألمانيا وأهمية تطويرها بما يخدم مصالح البلدين",
+      "published_at": "2026-11-16T14:12:49Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162682",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "8ad2206f1b41027b1e5387558931e40e0d50a5373e0976ce3a8a0204d374a96c"
+    },
+    {
+      "id": "inainaiq_162681",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162681,
+      "category": "أخبار رسمية",
+      "title": "رئيس مجلس الوزراء علي فالح الزيدي يستقبل وزيرة التعاون الاقتصادي والتنمية الألمانية",
+      "content": "رئيس مجلس الوزراء علي فالح الزيدي يستقبل وزيرة التعاون الاقتصادي والتنمية الألمانية",
+      "published_at": "2026-11-16T14:12:05Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162681",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "8eca30dc8774f31c11f5ca0dd74c4e65776e496638a82d38766e8d8fe10d6aa9"
+    },
+    {
+      "id": "inainaiq_162680",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162680,
+      "category": "أخبار رسمية",
+      "title": "الملك السعودي يعفي قائد التحالف العسكري الذي تقوده المملكة في اليمن من منصبه",
+      "content": "الملك السعودي يعفي قائد التحالف العسكري الذي تقوده المملكة في اليمن من منصبه",
+      "published_at": "2026-11-16T14:02:07Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162680",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "491678c5d0c3fd52f54a86b178714398b1876ff0eace57b8b73cbd1b9fe76c20"
+    },
+    {
+      "id": "inainaiq_162679",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162679,
+      "category": "أخبار رسمية",
+      "title": "لجنة التحقيق النيابية: وثائق وأدلة مصوّرة تكشف عمليات تهريب النفط في جرف النصر",
+      "content": "لجنة التحقيق النيابية: وثائق وأدلة مصوّرة تكشف عمليات تهريب النفط في جرف النصر\nhttps://ina.iq/ar/279632-.html",
+      "published_at": "2026-11-16T13:41:38Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162679",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ina.iq/ar/279632-.html"
+      ],
+      "is_edited": false,
+      "content_hash": "795a6c673f487ad6ce0704f84150f635cc93ebff8f6d4a0b2b5b2f97d11ddc5a"
+    },
+    {
+      "id": "inainaiq_162678",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162678,
+      "category": "أخبار رسمية",
+      "title": "الجمارك: إجراءات عاجلة لمعالجة زخم الشاحنات في سيطرة السد بتوجيه من رئيس الوزراء",
+      "content": "الجمارك: إجراءات عاجلة لمعالجة زخم الشاحنات في سيطرة السد بتوجيه من رئيس الوزراء\nhttps://ina.iq/ar/279631-.html",
+      "published_at": "2026-11-16T13:33:56Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162678",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ina.iq/ar/279631-.html"
+      ],
+      "is_edited": false,
+      "content_hash": "8484cf75782b87f77744e6be1f8b0d7c87aeebed35bc8dd817f5c7becd270b2b"
+    },
+    {
+      "id": "inainaiq_162677",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162677,
+      "category": "أخبار رسمية",
+      "title": "هيئة النزاهة: السجن سبع سنوات لرئيس هيئة استثمار صلاح الدين لإضراره بالمال العام",
+      "content": "هيئة النزاهة: السجن سبع سنوات لرئيس هيئة استثمار صلاح الدين لإضراره بالمال العام\n\n- المدان تستر على مخالفات ارتكبها مستثمر مشروع سكني",
+      "published_at": "2026-11-16T13:27:42Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162677",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "47122a734c869e51a3e64a64d30162caa04a895cf62fbe4abd2e7c223f2160cc"
+    },
+    {
+      "id": "inainaiq_162676",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162676,
+      "category": "أخبار رسمية",
+      "title": "رئيس الوزراء يتسلم رسالة من نظيره السوداني كامل ادريس عبر فيها عن اعتزازه بزيارة العراق وتوطيد العلاقات الثنائية بما يخدم المصالح المتبادلة…",
+      "content": "رئيس الوزراء يتسلم رسالة من نظيره السوداني كامل ادريس عبر فيها عن اعتزازه بزيارة العراق وتوطيد العلاقات الثنائية بما يخدم المصالح المتبادلة للشعبين الشقيقين",
+      "published_at": "2026-11-16T13:11:00Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162676",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "1e534fdf07a16bdd4f831e0b98cc87812d539fa6384809614d052ab91eb06b78"
+    },
+    {
+      "id": "inainaiq_162675",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162675,
+      "category": "أخبار رسمية",
+      "title": "رئيس مجلس الوزراء علي فالح الزيدي يستقبل المبعوث والممثل الخاص لرئيس مجلس الوزراء السوداني",
+      "content": "رئيس مجلس الوزراء علي فالح الزيدي يستقبل المبعوث والممثل الخاص لرئيس مجلس الوزراء السوداني",
+      "published_at": "2026-11-16T13:10:22Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162675",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "0ab05713f4090c1ea0bc273cfe065e9dc8c0fa89e66a20eddd135492bf81a72d"
+    },
+    {
+      "id": "inainaiq_162674",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162674,
+      "category": "أخبار رسمية",
+      "title": "‏تابع قناة وكالة الأنباء العراقية (واع) في واتساب:",
+      "content": "‏تابع قناة وكالة الأنباء العراقية (واع) في واتساب:\nhttps://whatsapp.com/channel/0029VaGhTP9CBtxIQK6dAG1o",
+      "published_at": "2026-11-16T12:08:34Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162674",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://whatsapp.com/channel/0029VaGhTP9CBtxIQK6dAG1o"
+      ],
+      "is_edited": false,
+      "content_hash": "14f2f70a61db36fd0ab1694aad42d237c7f1b998a506d56d2d60201ef91114e9"
+    },
+    {
+      "id": "inainaiq_162673",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162673,
+      "category": "أخبار رسمية",
+      "title": "المتحدث باسم الحكومة حيدر العبودي لـ(واع): القوات المسلحة ستدخل جرف النصر ومهلة خروج كتائب حزب الله حُددت",
+      "content": "المتحدث باسم الحكومة حيدر العبودي لـ(واع): القوات المسلحة ستدخل جرف النصر ومهلة خروج كتائب حزب الله حُددت\n\nالمتحدث باسم الحكومة حيدر العبودي في مقابلة مع وكالة الأنباء العراقية: اللجنة التحقيقية العليا رصدت تلاعباً في أنابيب النفط ووجود مصافٍ وخزانات وصهاريج داخل منطقة جرف النصر\n\nالعبودي: ملف جرف النصر يوصف منذ سنوات بأنه ملف مغلق، إلا أن الحكومة، استناداً إلى صلاحياتها القانونية ومسؤوليتها الدستورية في حماية المال العام اتخذت إجراءات لمتابعة شبهات تهريب النفط\n\nالعبودي: اللجنة التحقيقية العليا عاينت ستة مواقع وانتقلت إلى الإحداثيات المحددة في تقرير وكالة الاستخبارات\n\nالعبودي: اللجنة التحقيقية رصدت تلاعباً واضحاً في الأنابيب المارة بالمنطقة، فضلاً عن وجود محاولات لردم آثار هذا التلاعب وتغطيتها\n\nالعبودي: اللجنة التحقيقية شخصت وجود مصفاتين في المنطقة، إلى جانب صهريج وخزانات\n\nالعبودي: القائد العام للقوات المسلحة شدد على ضرورة تحمل جميع المسؤولين الأمنيين في قواطع المسؤولية واجباتهم بصورة كاملة، وعدم السماح بالعبث بموارد الدولة، ولا سيما الثروة النفطية التي تعود ملكيتها إلى الشعب العراقي\n\nالعبودي: توجيهات القائد العام لا تقتصر على متابعة تهريب النفط في منطقة محددة، بل تشمل جميع المناطق التي شُخصت فيها شبهات التهريب\n\nالعبودي: القائد العام وجه بإحالة المتورطين والملف بصورة عامة إلى القضاء\n\nالعبودي: القائد العام وجه هيئة النزاهة بأخذ دورها في التحقيق في ملف التهريب من جرف النصر\n\nالعبودي: القائد العام وجه الأجهزة الأمنية المختصة بمنع أي مظاهر أو مؤشرات تتعلق بخروج سيارات الحوضيات المسؤولة عن نقل النفط أو المشتقات النفطية\n\nالعبودي: القائد العام وجه القوات المسلحة بالدخول إلى منطقة جرف النصر\n\nالعبودي: دخول قواتنا الأمنية يمثل الوضع الطبيعي لإدارة المدن والأقضية وجميع مناطق العراق، إذ تقع المسؤولية الأمنية على عاتق القوات المخولة قانوناً والتي تعمل بأمر القائد العام للقوات المسلحة\n\nالعبودي: القوات المسلحة العراقية، بقيادة القائد العام للقوات المسلحة ستثبت قدرتها على حماية أرض العراق وتأمين ثرواته وحياة شعبه\n\nالعبودي: هناك مهلة حددت لخروج الفصيل المسلح من جرف النصر وهذه المهلة ليست بعيدة\n\nالعبودي: الأجهزة الأمنية المختصة باشرت بالفعل تنفيذ واجباتها في تتبع شبهات تهريب النفط في عدد من المناطق وليس في جرف النصر وحدها.\n\nالعبودي: الحكومة تتعامل مع الملف وفقاً للدستور، الذي حدد صلاحيات الإقليم ضمن إطار الدولة العراقية\n\nالعبودي: صلاحيات الإقليم لا تعني خروجه عن المحددات الدستورية التي تنظم العلاقة بين الحكومة الاتحادية والإقليم\n\nالعبودي: وجود تنسيق مع إقليم كردستان ومؤشرات مقبولة على التعاون مع ممثلي الأجهزة الأمنية المكلفين رسمياً من الحكومة الاتحادية بتعقب شبهات تهريب النفط\n\nالعبودي: كل من يقف عائقاً أمام أداء واجبات القوات الأمنية المكلفة بمتابعة هذا الملف سيكون في مواجهة القانون\n\nالعبودي: هناك إمكانية دخول قوات الجيش إلى مناطق إقليم كردستان",
+      "published_at": "2026-11-16T11:52:34Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162673",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": true,
+      "content_hash": "57077361f84b3b8bb67e32fc555dba24802941e149474ba608e83bcdb68d57b5"
+    },
+    {
+      "id": "inainaiq_162672",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162672,
+      "category": "أخبار رسمية",
+      "title": "‏تابع قناة وكالة الأنباء العراقية (واع) في واتساب: https://whatsapp.com/channel/0029VaGhTP9CBtxIQK6dAG1o",
+      "content": "‏تابع قناة وكالة الأنباء العراقية (واع) في واتساب: https://whatsapp.com/channel/0029VaGhTP9CBtxIQK6dAG1o",
+      "published_at": "2026-11-16T11:38:26Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162672",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://whatsapp.com/channel/0029VaGhTP9CBtxIQK6dAG1o"
+      ],
+      "is_edited": false,
+      "content_hash": "70ed7f83041dea5dd13e9e4181d0887338c8b19cdf2647bbb2b04a827de1f04b"
+    },
+    {
+      "id": "inainaiq_162671",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162671,
+      "category": "أخبار رسمية",
+      "title": "الإعلام والاتصالات: الهدف من الحجب إلزام الشركة بمراجعة المحتوى العراقي المنشور عبر التطبيق واتخاذ التدابير اللازمة لمنع التجاوزات",
+      "content": "الإعلام والاتصالات: الهدف من الحجب إلزام الشركة بمراجعة المحتوى العراقي المنشور عبر التطبيق واتخاذ التدابير اللازمة لمنع التجاوزات",
+      "published_at": "2026-11-16T11:32:27Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162671",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "62414d8313a1d877ec90e854a7a576dc8659109b7ed565efa31c3cbd0fdc0a49"
+    },
+    {
+      "id": "inainaiq_162670",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162670,
+      "category": "أخبار رسمية",
+      "title": "هيئة الإعلام والاتصالات تتخذ إجراء تنظيميا بحجب تلغرام حفاظا على الأمن الوطني ومكافحة المحتوى المخالف استناداً إلى توجيه رئيس مجلس الوزراء",
+      "content": "هيئة الإعلام والاتصالات تتخذ إجراء تنظيميا بحجب تلغرام حفاظا على الأمن الوطني ومكافحة المحتوى المخالف استناداً إلى توجيه رئيس مجلس الوزراء",
+      "published_at": "2026-11-16T11:30:18Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162670",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "bb86cebb843c825f2f2c7524ac8d7dae5ddea49d6993efd4be35a139b060b47c"
+    },
+    {
+      "id": "inainaiq_162669",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162669,
+      "category": "أخبار رسمية",
+      "title": "النزاهة العراقية ووكالة مكافحة الفساد الفرنسية يطلقان برنامج \"منع الفساد في القطاعين العامّ والخاصّ\"",
+      "content": "النزاهة العراقية ووكالة مكافحة الفساد الفرنسية يطلقان برنامج \"منع الفساد في القطاعين العامّ والخاصّ\"",
+      "published_at": "2026-11-16T11:27:04Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162669",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "d40080fc47778090e88da3b5c1838444a1b24f7bc886272d25fa142b240be28f"
+    },
+    {
+      "id": "inainaiq_162668",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162668,
+      "category": "أخبار رسمية",
+      "title": "مدرب إيران: مواجهة العراق ديربي حقيقي وأرنولد قادر على قيادة الأسود جيداً",
+      "content": "مدرب إيران: مواجهة العراق ديربي حقيقي وأرنولد قادر على قيادة الأسود جيداً\nhttps://ina.iq/ar/279614-.html",
+      "published_at": "2026-11-16T11:02:14Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162668",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ina.iq/ar/279614-.html"
+      ],
+      "is_edited": false,
+      "content_hash": "e4e69df280bce32cc073a9ae8542b67f8b2fa8df488300e3698eff15688be281"
+    },
+    {
+      "id": "inainaiq_162667",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162667,
+      "category": "أخبار رسمية",
+      "title": "أرنولد: أتمنى استمرار رحلتي مع المنتخب العراقي وهدفي الفوز على إيران",
+      "content": "أرنولد: أتمنى استمرار رحلتي مع المنتخب العراقي وهدفي الفوز على إيران\nhttps://ina.iq/ar/279612-.html",
+      "published_at": "2026-11-16T10:54:03Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162667",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ina.iq/ar/279612-.html"
+      ],
+      "is_edited": false,
+      "content_hash": "6c5221e978ab0cea5139817a2158dc93e1eb3b7f3b5d9bb3a05b5741e5d2bd60"
+    },
+    {
+      "id": "inainaiq_162666",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162666,
+      "category": "أخبار رسمية",
+      "title": "اللجنة النيابية التحقيقية: تهريب النفط يكبد العراق خسائر بالمليارات",
+      "content": "اللجنة النيابية التحقيقية: تهريب النفط يكبد العراق خسائر بالمليارات\nhttps://ina.iq/ar/279610-.html",
+      "published_at": "2026-11-16T10:40:53Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162666",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ina.iq/ar/279610-.html"
+      ],
+      "is_edited": false,
+      "content_hash": "1604ce68d2ad7300d513a0ccc60496c9dbc7fd5d1f926f5211d4caa64b11aa37"
+    },
+    {
+      "id": "inainaiq_162665",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162665,
+      "category": "أخبار رسمية",
+      "title": "مستشار الأمن القومي: الدستور العراقي لا يسمح لجماعات مسلحة بتهديد أي دولة",
+      "content": "مستشار الأمن القومي: الدستور العراقي لا يسمح لجماعات مسلحة بتهديد أي دولة",
+      "published_at": "2026-11-16T10:04:32Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162665",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "6c7bae28d8684cdca25f3beb8f9a94ffdbf5fad5c4e146b647f8ef104fe8fad6"
+    },
+    {
+      "id": "inainaiq_162664",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162664,
+      "category": "أخبار رسمية",
+      "title": "فرق الدفاع المدني تكافح حريقاً في معمل للنجارة بالوزيرية",
+      "content": "فرق الدفاع المدني تكافح حريقاً في معمل للنجارة بالوزيرية",
+      "published_at": "2026-11-16T09:30:02Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162664",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "1719c53d92ce3a0f32b2d46d6eb1730e0b770c04e219d8b6d1c0f08c8315904f"
+    },
+    {
+      "id": "inainaiq_162663",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162663,
+      "category": "أخبار رسمية",
+      "title": "تحقيق كربلاء المقدسة: الإطاحة بشبكة ابتزت مسؤولين عبر انتحال صفة رئيس الادعاء العام",
+      "content": "تحقيق كربلاء المقدسة: الإطاحة بشبكة ابتزت مسؤولين عبر انتحال صفة رئيس الادعاء العام",
+      "published_at": "2026-11-16T09:25:29Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162663",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "f26204cced54c35ab3a21264a1a719a15dafa678af57b7727cacab323c35d626"
+    },
+    {
+      "id": "inainaiq_162662",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162662,
+      "category": "أخبار رسمية",
+      "title": "وزيرة البيئة سروة عبد الواحد:",
+      "content": "وزيرة البيئة سروة عبد الواحد:\n\n- بدأنا مراجعة شاملة للواقع البيئي وتشخيص أبرز التحديات ووضع الحلول بالتعاون مع المؤسسات الحكومية والجهات المعنية\n\n- عززنا مشاركتنا في مؤتمر الأطراف الحادي والثلاثين (COP31) في أنطاليا قناعتنا بضرورة الانتقال من إدارة الأزمات البيئية إلى الاستثمار في الحلول والتكنولوجيا والتنمية المستدامة\n\n- العراق يحتاج إلى مشروع بيئي وطني تتكامل فيه مؤسسات الدولة والقطاع الخاص والحكومات المحلية ومنظمات المجتمع المدني والمواطنون\n\n- إنشاء وتأهيل محطات معالجة مياه الصرف الصحي، وتوسيع إعادة استخدام المياه المعالجة بصورة آمنة في الزراعة والصناعة والتشجير\n\n- دعم جهود إنهاء حرق الغاز بحلول عام 2029 وتسريع استثماره لتقليل الانبعاثات وتعزيز إنتاج الطاقة\n\n- تحويل الاستراتيجيات الوطنية إلى مشاريع تنفيذية، وتطوير الزراعة الذكية مناخياً، وتحسين إدارة المياه والتربة ومواجهة الجفاف والتصحر",
+      "published_at": "2026-11-16T09:23:30Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162662",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "7010fd829f1b44ced24ef345794e3ce4958aa6bc0809eaf65bec10c691748118"
+    },
+    {
+      "id": "inainaiq_162661",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162661,
+      "category": "أخبار رسمية",
+      "title": "أمانة بغداد والعتبة الكاظمية المقدسة تطلقان حملة لزراعة 3 آلاف شجرة في مدينة الكاظمية تعزيزاً للمساحات الخضراء",
+      "content": "أمانة بغداد والعتبة الكاظمية المقدسة تطلقان حملة لزراعة 3 آلاف شجرة في مدينة الكاظمية تعزيزاً للمساحات الخضراء",
+      "published_at": "2026-11-16T08:59:19Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162661",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "4690833093e5288726e445cde07ef8b16ab42f35ee24d0d9080885562f71bfcc"
+    },
+    {
+      "id": "inainaiq_162660",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162660,
+      "category": "أخبار رسمية",
+      "title": "اللجنة النيابية بالتحقيق في تهريب النفط تؤجل اجتماعها مع وزيري الدفاع والداخلية",
+      "content": "اللجنة النيابية بالتحقيق في تهريب النفط تؤجل اجتماعها مع وزيري الدفاع والداخلية\nhttps://ina.iq/ar/279593-.html",
+      "published_at": "2026-11-16T08:39:03Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162660",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ina.iq/ar/279593-.html"
+      ],
+      "is_edited": false,
+      "content_hash": "2319e6f636848f0e1327afd3c316028c9dbe343ea1dca08d38c68972d2886f1d"
+    },
+    {
+      "id": "inainaiq_162659",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162659,
+      "category": "أخبار رسمية",
+      "title": "محافظ أربيل: مساعٍ للحصول على دعم من بغداد لتعويض متضرري السيول",
+      "content": "محافظ أربيل: مساعٍ للحصول على دعم من بغداد لتعويض متضرري السيول\nhttps://ina.iq/ar/279590-.html",
+      "published_at": "2026-11-16T08:20:02Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162659",
+      "images": [],
+      "media": [],
+      "links": [
+        "https://ina.iq/ar/279590-.html"
+      ],
+      "is_edited": false,
+      "content_hash": "07ec6d006ac9bfd1a82d78ea18192244a45f994cc2457d7ac9423f03c6bdad64"
+    },
+    {
+      "id": "inainaiq_162658",
+      "source_id": "ina",
+      "source_name": "وكالة الأنباء العراقية (واع)",
+      "source_username": "inainaiq",
+      "message_id": 162658,
+      "category": "أخبار رسمية",
+      "title": "مفارز الاستخبارات العسكرية تكشف وتدمر مخبأً لوجستياً وكدساً للعتاد من مخلفات عصابات داعش الإرهابية في صلاح الدين ونينوى",
+      "content": "مفارز الاستخبارات العسكرية تكشف وتدمر مخبأً لوجستياً وكدساً للعتاد من مخلفات عصابات داعش الإرهابية في صلاح الدين ونينوى",
+      "published_at": "2026-11-16T08:02:27Z",
+      "fetched_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "original_url": "https://t.me/inainaiq/162658",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "cd68565b436c1a3e298edffcb88aaa05bbba2383b55bb1e2dae077f9aff601aa"
     }
   ]
 }

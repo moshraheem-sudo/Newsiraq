@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "defaults": {
     "request_timeout_seconds": 20,
-    "max_posts_per_fetch": 30,
-    "user_agent": "IraqNewsHubBot/1.0 (+https://github.com/moshraheem-sudo/Newsiraq)"
+    "max_posts_per_fetch": 50,
+    "user_agent": "IraqNewsBot/1.3 (+https://github.com/moshraheem-sudo/Newsiraq)"
   },
   "sources": [
     {
@@ -15,8 +15,9 @@
       "category": "أخبار رسمية",
       "language": "ar",
       "enabled": true,
+      "max_posts": 50,
       "fetch_interval_minutes": 10,
-      "notes": "المصدر الرسمي لوكالة الأنباء العراقية عبر العرض العام على الويب"
+      "notes": "سحب ما يقارب 50 خبراً كل 10 دقائق من وكالة الأنباء العراقية عبر العرض العام على الويب"
     },
     {
       "id": "sabereen",
@@ -27,8 +28,9 @@
       "category": "أخبار عاجلة",
       "language": "ar",
       "enabled": true,
+      "max_posts": 50,
       "fetch_interval_minutes": 10,
-      "notes": "قناة صابرين نيوز الإخبارية عبر العرض العام على الويب"
+      "notes": "سحب ما يقارب 50 خبراً كل 10 دقائق من قناة صابرين نيوز عبر العرض العام على الويب"
     },
     {
       "id": "x_news_list",
@@ -39,9 +41,9 @@
       "category": "أخبار منوعة (X)",
       "language": "ar",
       "enabled": true,
-      "max_posts": 50,
-      "fetch_interval_minutes": 60,
-      "notes": "تحديث مجاني كل ساعة لأحدث 50 خبراً من قائمة X العامة عبر نقطة التضمين الرسمية"
+      "max_posts": 100,
+      "fetch_interval_minutes": 10,
+      "notes": "سحب مجاني كل 10 دقائق لأحدث 100 خبر من قائمة X العامة فقط عبر نقطة التضمين الرسمية"
     }
   ]
 }
