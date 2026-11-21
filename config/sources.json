@@ -8,23 +8,40 @@
   "sources": [
     {
       "id": "ina",
+      "type": "telegram_web",
       "name": "وكالة الأنباء العراقية (واع)",
       "username": "inainaiq",
       "url": "https://t.me/s/inainaiq",
       "category": "أخبار رسمية",
       "language": "ar",
       "enabled": true,
+      "fetch_interval_minutes": 10,
       "notes": "المصدر الرسمي لوكالة الأنباء العراقية عبر العرض العام على الويب"
     },
     {
       "id": "sabereen",
+      "type": "telegram_web",
       "name": "صابرين نيوز",
       "username": "SabrenNewss",
       "url": "https://t.me/s/SabrenNewss",
       "category": "أخبار عاجلة",
       "language": "ar",
       "enabled": true,
+      "fetch_interval_minutes": 10,
       "notes": "قناة صابرين نيوز الإخبارية عبر العرض العام على الويب"
+    },
+    {
+      "id": "x_news_list",
+      "type": "x_list",
+      "name": "قائمة أخبار X",
+      "username": "list_1763642433328279733",
+      "url": "https://x.com/i/lists/1763642433328279733",
+      "category": "أخبار منوعة (X)",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 60,
+      "notes": "تحديث مجاني كل ساعة لأحدث 50 خبراً من قائمة X العامة عبر نقطة التضمين الرسمية"
     }
   ]
 }

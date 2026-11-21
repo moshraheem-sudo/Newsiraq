@@ -5,10 +5,11 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from scraper import __version__
-from scraper.config import load_config
+from scraper.config import SourceConfig, load_config
 from scraper.fetcher import SourceFetchError, build_session, fetch_source_html
 from scraper.parser import ParsedPost, SourceParseError, parse_channel_html
 from scraper.storage import (
@@ -19,6 +20,7 @@ from scraper.storage import (
     utc_now_iso,
     write_json_atomic,
 )
+from scraper.x_list import fetch_and_parse_x_list
 
 logging.basicConfig(
     level=logging.INFO,
@@ -27,19 +29,41 @@ logging.basicConfig(
 logger = logging.getLogger("iraq_news_hub")
 
 
+def _should_skip_due_to_interval(
+    source: SourceConfig,
+    prev_status: dict,
+    now_dt: datetime,
+    force: bool,
+) -> bool:
+    if force or source.fetch_interval_minutes <= 0:
+        return False
+    last_success_raw = prev_status.get("last_success_at")
+    if not last_success_raw:
+        return False
+    try:
+        last_dt = datetime.fromisoformat(str(last_success_raw).replace("Z", "+00:00"))
+        elapsed_minutes = (now_dt - last_dt).total_seconds() / 60.0
+        # Small 2-minute tolerance for GitHub Actions cron jitter
+        return elapsed_minutes < max(1, source.fetch_interval_minutes - 2)
+    except ValueError:
+        return False
+
+
 def run_scrape(
     config_path: Path,
     news_path: Path,
     status_path: Path,
     limit_per_source: int | None = None,
     dry_run: bool = False,
+    force: bool = False,
 ) -> int:
     app_config = load_config(config_path)
     news_store = load_news_store(news_path)
     status_store = load_status_store(status_path)
     sources_status: dict[str, dict] = dict(status_store.get("sources", {}))
 
-    run_timestamp = utc_now_iso()
+    now_dt = datetime.now(timezone.utc)
+    run_timestamp = now_dt.isoformat().replace("+00:00", "Z")
     collected_posts: list[ParsedPost] = []
     any_source_succeeded = False
 
@@ -61,10 +85,25 @@ def run_scrape(
                 }
                 continue
 
-            max_posts = limit_per_source or app_config.defaults.max_posts_per_fetch
+            if _should_skip_due_to_interval(source, prev_status, now_dt, force):
+                logger.info(
+                    "Skipping %s until %d-minute interval elapses (last success: %s)",
+                    source.name,
+                    source.fetch_interval_minutes,
+                    prev_status.get("last_success_at"),
+                )
+                continue
+
+            max_posts = limit_per_source or source.max_posts or app_config.defaults.max_posts_per_fetch
             try:
-                html = fetch_source_html(source, app_config.defaults, session=session)
-                posts = parse_channel_html(html, source, max_posts=max_posts)
+                if source.source_type == "x_list":
+                    posts = fetch_and_parse_x_list(
+                        source, app_config.defaults, session=session, max_posts=max_posts
+                    )
+                else:
+                    html = fetch_source_html(source, app_config.defaults, session=session)
+                    posts = parse_channel_html(html, source, max_posts=max_posts)
+
                 collected_posts.extend(posts)
                 any_source_succeeded = True
                 logger.info(
@@ -167,12 +206,13 @@ def run_scrape(
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Iraq News Hub Telegram Web Scraper")
+    parser = argparse.ArgumentParser(description="Iraq News Hub Scraper")
     parser.add_argument("--config", type=Path, default=Path("config/sources.json"))
     parser.add_argument("--output", type=Path, default=Path("data/news.json"))
     parser.add_argument("--status", type=Path, default=Path("data/sources_status.json"))
     parser.add_argument("--limit-per-source", type=int, default=None)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--force", action="store_true", help="Ignore per-source fetch intervals")
     return parser.parse_args(argv)
 
 
@@ -184,6 +224,7 @@ def main(argv: list[str] | None = None) -> int:
         status_path=args.status,
         limit_per_source=args.limit_per_source,
         dry_run=args.dry_run,
+        force=args.force,
     )
 
 

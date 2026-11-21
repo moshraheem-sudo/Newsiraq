@@ -40,8 +40,13 @@ jobs:
       - name: Run unit tests
         run: python -m unittest discover -s tests -t . -v
 
-      - name: Scrape public Telegram channels
-        run: python -m scraper.main
+      - name: Scrape public Telegram channels and X lists
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python -m scraper.main --force
+          else
+            python -m scraper.main
+          fi
 
       - name: Commit and push data changes if any
         run: |

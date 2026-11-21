@@ -134,6 +134,74 @@ class ScraperTests(unittest.TestCase):
         with self.assertRaises(SourceParseError):
             parse_channel_html("<html><body><div class='tgme_page_error'>Not found</div></body></html>", self.source)
 
+    def test_x_list_validation_and_parsing(self) -> None:
+        import json
+        from scraper.config import validate_x_list_url
+        from scraper.x_list import parse_x_list_html
+
+        self.assertEqual(
+            validate_x_list_url("https://x.com/i/lists/1763642433328279733/"),
+            "https://x.com/i/lists/1763642433328279733",
+        )
+        with self.assertRaises(ValueError):
+            validate_x_list_url("https://x.com/someuser")
+
+        x_source = SourceConfig(
+            id="x_list_test",
+            name="قائمة أخبار X",
+            username="list_1763642433328279733",
+            url="https://x.com/i/lists/1763642433328279733",
+            category="أخبار منوعة (X)",
+            language="ar",
+            enabled=True,
+            source_type="x_list",
+            max_posts=50,
+            fetch_interval_minutes=60,
+        )
+        sample_next_data = {
+            "props": {
+                "pageProps": {
+                    "timeline": {
+                        "entries": [
+                            {
+                                "content": {
+                                    "tweet": {
+                                        "id_str": "2124007673322471645",
+                                        "created_at": "Sat Nov 21 05:11:06 +0000 2026",
+                                        "full_text": "خبر عاجل من العراق https://t.co/abc123",
+                                        "user": {"name": "قناة إخبارية", "screen_name": "NewsChannel"},
+                                        "entities": {"urls": []},
+                                        "extended_entities": {
+                                            "media": [
+                                                {
+                                                    "url": "https://t.co/abc123",
+                                                    "type": "video",
+                                                    "media_url_https": "https://pbs.twimg.com/thumb.jpg",
+                                                    "video_info": {
+                                                        "variants": [
+                                                            {"content_type": "video/mp4", "bitrate": 832000, "url": "https://video.twimg.com/clip.mp4"}
+                                                        ]
+                                                    },
+                                                }
+                                            ]
+                                        },
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+        html = f'<script id="__NEXT_DATA__" type="application/json">{json.dumps(sample_next_data)}</script>'
+        posts = parse_x_list_html(html, x_source, max_posts=50)
+        self.assertEqual(len(posts), 1)
+        self.assertEqual(posts[0].id, "list_1763642433328279733_2124007673322471645")
+        self.assertEqual(posts[0].title, "خبر عاجل من العراق")
+        self.assertEqual(posts[0].images, ["https://pbs.twimg.com/thumb.jpg"])
+        self.assertEqual(posts[0].media[0]["type"], "video")
+        self.assertEqual(posts[0].media[0]["url"], "https://video.twimg.com/clip.mp4")
+
 
 if __name__ == "__main__":
     unittest.main()
