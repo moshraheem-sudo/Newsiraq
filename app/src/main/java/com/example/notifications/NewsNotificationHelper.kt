@@ -111,7 +111,7 @@ object NewsNotificationHelper {
 
       val notification =
         NotificationCompat.Builder(context, CHANNEL_ID)
-          .setSmallIcon(R.drawable.ic_launcher_foreground)
+          .setSmallIcon(R.drawable.ic_stat_news)
           .setContentTitle(title)
           .setContentText(body)
           .setSubText(article.sourceName.ifBlank { appName })
@@ -148,7 +148,7 @@ object NewsNotificationHelper {
         }
       val summary =
         NotificationCompat.Builder(context, CHANNEL_ID)
-          .setSmallIcon(R.drawable.ic_launcher_foreground)
+          .setSmallIcon(R.drawable.ic_stat_news)
           .setContentTitle(summaryTitle)
           .setContentText(toPost.last().title)
           .setGroup(GROUP_KEY)
@@ -176,7 +176,16 @@ object NewsNotificationHelper {
         .setPeriodic(15 * 60 * 1000L)
         .setPersisted(true)
         .build()
-    scheduler.schedule(jobInfo)
+    runCatching {
+      scheduler.schedule(jobInfo)
+    }.onFailure {
+      val fallbackJob =
+        JobInfo.Builder(JOB_ID, ComponentName(context, NewsSyncJobService::class.java))
+          .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+          .setPeriodic(15 * 60 * 1000L)
+          .build()
+      runCatching { scheduler.schedule(fallbackJob) }
+    }
   }
 
   private fun loadSeenIds(prefs: android.content.SharedPreferences): List<String> {

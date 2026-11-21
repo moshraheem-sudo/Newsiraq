@@ -154,10 +154,14 @@ def parse_rss_xml(xml_bytes: bytes | str, source: SourceConfig, max_posts: int =
 
         desc_el = (
             item.find("encoded")
-            or item.find("content")
             or item.find("description")
             or item.find("summary")
         )
+        if desc_el is None:
+            for c_el in item.find_all("content"):
+                if c_el.prefix != "media" and not c_el.get("url"):
+                    desc_el = c_el
+                    break
         desc_raw = desc_el.get_text() if desc_el else ""
         desc_text, desc_imgs, desc_vids = _strip_html(desc_raw)
 
@@ -201,7 +205,8 @@ def parse_rss_xml(xml_bytes: bytes | str, source: SourceConfig, max_posts: int =
                 for vd in inner_vids:
                     add_video(vd)
 
-        # Media RSS tags (<media:content>, <media:thumbnail>)
+        # Media RSS tags (<media:content>, <media:thumbnail>) preferring highest width for multi-size entries
+        media_image_candidates: list[tuple[int, str]] = []
         for m_el in item.find_all(["content", "thumbnail"]):
             if m_el.prefix != "media" and m_el.name not in ("thumbnail",):
                 continue
@@ -213,7 +218,13 @@ def parse_rss_xml(xml_bytes: bytes | str, source: SourceConfig, max_posts: int =
             if m_type.startswith("video/") or m_medium == "video" or VIDEO_EXT_RE.search(m_url):
                 add_video(m_url)
             else:
-                add_image(m_url)
+                w_raw = str(m_el.get("width") or "0")
+                w = int(w_raw) if w_raw.isdigit() else 0
+                media_image_candidates.append((w, m_url))
+
+        media_image_candidates.sort(key=lambda pair: pair[0], reverse=True)
+        for _, m_url in media_image_candidates[:2]:
+            add_image(m_url)
 
         for im in desc_imgs:
             add_image(im)

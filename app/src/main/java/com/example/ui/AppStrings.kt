@@ -68,6 +68,9 @@ data class AppStrings(
   val lastSyncLabel: String,
   val storedNewsCountLabel: String,
   val syncNowButton: String,
+  val scrollToTop: String,
+  val videoPlayError: String,
+  val noAppForLink: String,
 )
 
 fun stringsFor(language: AppLanguage): AppStrings =
@@ -135,6 +138,9 @@ fun stringsFor(language: AppLanguage): AppStrings =
         lastSyncLabel = "آخر تحديث ناجح",
         storedNewsCountLabel = "عدد الأخبار المحفوظة",
         syncNowButton = "تحديث الأخبار الآن",
+        scrollToTop = "الأعلى",
+        videoPlayError = "تعذر تشغيل الفيديو هنا — جرب المشغل الخارجي أو التنزيل",
+        noAppForLink = "لا يوجد تطبيق متوافق لفتح هذا الرابط",
       )
 
     AppLanguage.ENGLISH ->
@@ -200,6 +206,9 @@ fun stringsFor(language: AppLanguage): AppStrings =
         lastSyncLabel = "Last Successful Sync",
         storedNewsCountLabel = "Stored Articles",
         syncNowButton = "Sync News Now",
+        scrollToTop = "Top",
+        videoPlayError = "Unable to play video here — try External Player or Download",
+        noAppForLink = "No compatible app found to open this link",
       )
   }
 

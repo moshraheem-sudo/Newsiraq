@@ -66,7 +66,7 @@ def merge_posts(
     existing_items: list[dict[str, Any]],
     parsed_posts: list[ParsedPost],
     timestamp_iso: str,
-    max_items: int = 1200,
+    max_items: int = 1600,
 ) -> tuple[list[dict[str, Any]], MergeStats]:
     """Merge new and edited posts into existing items without deleting recent history."""
     stats = MergeStats()

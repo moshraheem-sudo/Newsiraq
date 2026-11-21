@@ -16,6 +16,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -36,6 +39,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -44,12 +48,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
+import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Bookmarks
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Download
+import androidx.compose.material.icons.filled.ErrorOutline
 import androidx.compose.material.icons.filled.Fullscreen
 import androidx.compose.material.icons.filled.FullscreenExit
 import androidx.compose.material.icons.filled.Language
@@ -83,6 +89,7 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
@@ -94,6 +101,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -136,6 +144,7 @@ import com.example.ui.stringsFor
 import com.example.ui.theme.MyApplicationTheme
 import com.example.util.MediaDownloader
 import com.example.util.NewsShareHelper
+import com.example.util.SafeIntentHelper
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -268,6 +277,12 @@ fun IraqNewsApp(
     }
   }
 
+  val onOpenExternalUrl: (String) -> Unit = { rawUrl ->
+    if (!SafeIntentHelper.openExternalUrl(context, rawUrl)) {
+      coroutineScope.launch { snackbarHostState.showSnackbar(strings.noAppForLink) }
+    }
+  }
+
   val onShareArticle: (NewsArticle) -> Unit = { article ->
     val text = NewsShareHelper.formatArticleForShare(article, strings)
     val shareIntent =
@@ -276,7 +291,11 @@ fun IraqNewsApp(
         putExtra(Intent.EXTRA_SUBJECT, article.title.ifBlank { strings.appTitle })
         putExtra(Intent.EXTRA_TEXT, text)
       }
-    context.startActivity(Intent.createChooser(shareIntent, strings.shareAction))
+    runCatching {
+      context.startActivity(Intent.createChooser(shareIntent, strings.shareAction))
+    }.onFailure {
+      coroutineScope.launch { snackbarHostState.showSnackbar(strings.noAppForLink) }
+    }
   }
 
   val onCopyArticle: (NewsArticle) -> Unit = { article ->
@@ -291,6 +310,7 @@ fun IraqNewsApp(
       request = fsRequest,
       strings = strings,
       onDownload = { onDownloadMedia(fsRequest.url, true, fsRequest.title) },
+      onOpenExternal = { onOpenExternalUrl(fsRequest.url) },
       onDismiss = viewModel::closeFullscreenVideo,
     )
   }
@@ -314,6 +334,7 @@ fun IraqNewsApp(
       },
       onToggleFavorite = { viewModel.toggleFavorite(currentArticle) },
       onDownloadMedia = onDownloadMedia,
+      onOpenExternalUrl = onOpenExternalUrl,
       onShareArticle = { onShareArticle(currentArticle) },
       onCopyArticle = { onCopyArticle(currentArticle) },
       onBack = {
@@ -418,6 +439,7 @@ fun IraqNewsApp(
             onToggleFavorite = viewModel::toggleFavorite,
             onOpenFavoritesTab = { selectedTab = 1 },
             onDownloadMedia = onDownloadMedia,
+            onOpenExternalUrl = onOpenExternalUrl,
             onShareArticle = onShareArticle,
             onCopyArticle = onCopyArticle,
             onArticleClick = {
@@ -435,6 +457,7 @@ fun IraqNewsApp(
             onOpenFullscreen = viewModel::openFullscreenVideo,
             onToggleFavorite = viewModel::toggleFavorite,
             onDownloadMedia = onDownloadMedia,
+            onOpenExternalUrl = onOpenExternalUrl,
             onShareArticle = onShareArticle,
             onCopyArticle = onCopyArticle,
             onArticleClick = {
@@ -457,18 +480,23 @@ fun IraqNewsApp(
                 if (deniedBefore) {
                   notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                 } else {
-                  val intent =
+                  val appNotifIntent =
                     Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
                       putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
                     }
-                  context.startActivity(intent)
+                  val fallbackIntent =
+                    Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                      data = Uri.fromParts("package", context.packageName, null)
+                    }
+                  runCatching { context.startActivity(appNotifIntent) }
+                    .onFailure { runCatching { context.startActivity(fallbackIntent) } }
                 }
               } else {
                 val intent =
                   Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
                     data = Uri.fromParts("package", context.packageName, null)
                   }
-                context.startActivity(intent)
+                runCatching { context.startActivity(intent) }
               }
             },
             onMuteChange = { muted ->
@@ -565,6 +593,7 @@ fun NewsFeedScreen(
   onToggleFavorite: (NewsArticle) -> Unit,
   onOpenFavoritesTab: () -> Unit,
   onDownloadMedia: (String, Boolean, String) -> Unit,
+  onOpenExternalUrl: (String) -> Unit,
   onShareArticle: (NewsArticle) -> Unit,
   onCopyArticle: (NewsArticle) -> Unit,
   onArticleClick: (NewsArticle) -> Unit,
@@ -576,162 +605,195 @@ fun NewsFeedScreen(
     return
   }
 
-  LazyColumn(
-    modifier = Modifier.fillMaxSize().widthIn(max = 720.dp).padding(horizontal = 14.dp),
-    verticalArrangement = Arrangement.spacedBy(12.dp),
-    contentPadding = PaddingValues(top = 8.dp, bottom = 24.dp),
-  ) {
-    // Scrollable header controls: disappears smoothly when scrolling down!
-    item(key = "feed_controls") {
-      Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        // Compact narrower search pill + Refresh + Favorites shortcut
-        Row(
-          modifier = Modifier.fillMaxWidth(),
-          horizontalArrangement = Arrangement.spacedBy(8.dp),
-          verticalAlignment = Alignment.CenterVertically,
-        ) {
-          CompactSearchPill(
-            query = uiState.searchQuery,
-            hint = strings.searchHint,
-            clearDescription = strings.clearSearch,
-            onQueryChange = onSearchChange,
-            modifier = Modifier.weight(1f).widthIn(max = 220.dp),
-          )
+  val listState = rememberLazyListState()
+  val coroutineScope = rememberCoroutineScope()
+  val showScrollToTop by remember { derivedStateOf { listState.firstVisibleItemIndex > 2 } }
 
-          FilledTonalButton(
-            onClick = onRefresh,
-            enabled = !uiState.isRefreshing,
-            shape = RoundedCornerShape(999.dp),
-            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 0.dp),
-            modifier = Modifier.height(42.dp).testTag("main_refresh_button"),
+  LaunchedEffect(uiState.selectedCategory, uiState.selectedSource) {
+    if (listState.firstVisibleItemIndex > 0) {
+      listState.scrollToItem(0)
+    }
+  }
+
+  Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
+    LazyColumn(
+      state = listState,
+      modifier = Modifier.fillMaxSize().widthIn(max = 720.dp).padding(horizontal = 14.dp),
+      verticalArrangement = Arrangement.spacedBy(12.dp),
+      contentPadding = PaddingValues(top = 8.dp, bottom = 76.dp),
+    ) {
+      // Scrollable header controls: disappears smoothly when scrolling down!
+      item(key = "feed_controls", contentType = "feed_controls") {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+          // Compact narrower search pill + Refresh + Favorites shortcut
+          Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
           ) {
-            if (uiState.isRefreshing) {
-              CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
-            } else {
-              Icon(
-                Icons.Default.Refresh,
-                contentDescription = strings.refreshAction,
-                modifier = Modifier.size(17.dp),
+            CompactSearchPill(
+              query = uiState.searchQuery,
+              hint = strings.searchHint,
+              clearDescription = strings.clearSearch,
+              onQueryChange = onSearchChange,
+              modifier = Modifier.weight(1f).widthIn(max = 220.dp),
+            )
+
+            FilledTonalButton(
+              onClick = onRefresh,
+              enabled = !uiState.isRefreshing,
+              shape = RoundedCornerShape(999.dp),
+              contentPadding = PaddingValues(horizontal = 12.dp, vertical = 0.dp),
+              modifier = Modifier.height(42.dp).testTag("main_refresh_button"),
+            ) {
+              if (uiState.isRefreshing) {
+                CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
+              } else {
+                Icon(
+                  Icons.Default.Refresh,
+                  contentDescription = strings.refreshAction,
+                  modifier = Modifier.size(17.dp),
+                )
+              }
+              Spacer(modifier = Modifier.width(4.dp))
+              Text(
+                text = if (uiState.isRefreshing) strings.refreshingPill else strings.refreshPill,
+                style = MaterialTheme.typography.labelMedium,
+                maxLines = 1,
               )
             }
-            Spacer(modifier = Modifier.width(4.dp))
-            Text(
-              text = if (uiState.isRefreshing) strings.refreshingPill else strings.refreshPill,
-              style = MaterialTheme.typography.labelMedium,
-              maxLines = 1,
-            )
-          }
 
-          Surface(
-            color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.75f),
-            shape = RoundedCornerShape(999.dp),
-            modifier =
-              Modifier.height(42.dp)
-                .clickable { onOpenFavoritesTab() }
-                .testTag("favorites_shortcut_btn"),
-          ) {
-            Row(
-              modifier = Modifier.padding(horizontal = 10.dp),
-              verticalAlignment = Alignment.CenterVertically,
-              horizontalArrangement = Arrangement.spacedBy(4.dp),
+            Surface(
+              color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.75f),
+              shape = RoundedCornerShape(999.dp),
+              modifier =
+                Modifier.height(42.dp)
+                  .clickable { onOpenFavoritesTab() }
+                  .testTag("favorites_shortcut_btn"),
             ) {
-              Icon(
-                Icons.Filled.Bookmark,
-                contentDescription = strings.navFavorites,
-                tint = MaterialTheme.colorScheme.onSecondaryContainer,
-                modifier = Modifier.size(16.dp),
-              )
-              if (favoriteCount > 0) {
-                Text(
-                  text = "$favoriteCount",
-                  style = MaterialTheme.typography.labelMedium,
-                  fontWeight = FontWeight.Bold,
-                  color = MaterialTheme.colorScheme.onSecondaryContainer,
+              Row(
+                modifier = Modifier.padding(horizontal = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+              ) {
+                Icon(
+                  Icons.Filled.Bookmark,
+                  contentDescription = strings.navFavorites,
+                  tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                  modifier = Modifier.size(16.dp),
                 )
+                if (favoriteCount > 0) {
+                  Text(
+                    text = "$favoriteCount",
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSecondaryContainer,
+                  )
+                }
               }
             }
           }
-        }
 
-        // Category strip (All / Iraq / Arab & World / International / X)
-        LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-          item {
-            FilterChip(
-              selected = uiState.selectedCategory == "all",
-              onClick = { onSelectCategory("all") },
-              label = {
-                Text(
-                  "${strings.allCategories} (${uiState.articles.size})",
-                  style = MaterialTheme.typography.labelMedium,
-                )
-              },
-            )
-          }
-          items(uiState.availableCategories, key = { it }) { cat ->
-            val catCount = remember(uiState.articles, cat) {
-              uiState.articles.count { it.category == cat }
+          // Category strip (All / Iraq / Arab & World / International / X)
+          LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            item {
+              FilterChip(
+                selected = uiState.selectedCategory == "all",
+                onClick = { onSelectCategory("all") },
+                label = {
+                  Text(
+                    "${strings.allCategories} (${uiState.articles.size})",
+                    style = MaterialTheme.typography.labelMedium,
+                  )
+                },
+              )
             }
-            FilterChip(
-              selected = uiState.selectedCategory == cat,
-              onClick = { onSelectCategory(cat) },
-              label = { Text("$cat ($catCount)", style = MaterialTheme.typography.labelMedium) },
+            items(uiState.availableCategories, key = { it }) { cat ->
+              val catCount = uiState.categoryCounts[cat] ?: 0
+              FilterChip(
+                selected = uiState.selectedCategory == cat,
+                onClick = { onSelectCategory(cat) },
+                label = { Text("$cat ($catCount)", style = MaterialTheme.typography.labelMedium) },
+              )
+            }
+          }
+
+          // Source filter strip scoped to active category
+          LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            item {
+              FilterChip(
+                selected = uiState.selectedSource == "all",
+                onClick = { onSelectSource("all") },
+                label = { Text(strings.allSources, style = MaterialTheme.typography.labelSmall) },
+              )
+            }
+            items(uiState.filteredSources, key = { it.username }) { src ->
+              val srcCount = uiState.sourceCounts[src.username] ?: 0
+              FilterChip(
+                selected = uiState.selectedSource == src.username,
+                onClick = { onSelectSource(src.username) },
+                label = { Text("${src.name} ($srcCount)", style = MaterialTheme.typography.labelSmall) },
+              )
+            }
+          }
+        }
+      }
+
+      if (uiState.filteredArticles.isEmpty()) {
+        item(key = "empty_news", contentType = "empty_state") {
+          Box(
+            modifier = Modifier.fillMaxWidth().padding(vertical = 64.dp),
+            contentAlignment = Alignment.Center,
+          ) {
+            Text(
+              text = uiState.errorMessage ?: strings.emptyNews,
+              style = MaterialTheme.typography.bodyLarge,
+              color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
           }
         }
-
-        // Source filter strip scoped to active category
-        LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-          item {
-            FilterChip(
-              selected = uiState.selectedSource == "all",
-              onClick = { onSelectSource("all") },
-              label = { Text(strings.allSources, style = MaterialTheme.typography.labelSmall) },
-            )
-          }
-          items(uiState.filteredSources, key = { it.username }) { src ->
-            val srcCount = remember(uiState.articles, src.username) {
-              uiState.articles.count { it.sourceUsername == src.username }
-            }
-            FilterChip(
-              selected = uiState.selectedSource == src.username,
-              onClick = { onSelectSource(src.username) },
-              label = { Text("${src.name} ($srcCount)", style = MaterialTheme.typography.labelSmall) },
-            )
-          }
+      } else {
+        items(
+          items = uiState.filteredArticles,
+          key = { it.id },
+          contentType = { "news_card" },
+        ) { article ->
+          NewsArticleCard(
+            article = article,
+            isFavorite = article.id in favoriteIds,
+            strings = strings,
+            language = uiState.settings.language,
+            activeVideoUrl = uiState.activeVideoUrl,
+            onTogglePlayVideo = onTogglePlayVideo,
+            onOpenFullscreen = { videoUrl ->
+              onOpenFullscreen(videoUrl, article.title.ifBlank { article.sourceName })
+            },
+            onToggleFavorite = { onToggleFavorite(article) },
+            onDownloadMedia = onDownloadMedia,
+            onOpenExternalUrl = onOpenExternalUrl,
+            onShareArticle = { onShareArticle(article) },
+            onCopyArticle = { onCopyArticle(article) },
+            onClick = { onArticleClick(article) },
+          )
         }
       }
     }
 
-    if (uiState.filteredArticles.isEmpty()) {
-      item(key = "empty_news") {
-        Box(
-          modifier = Modifier.fillMaxWidth().padding(vertical = 64.dp),
-          contentAlignment = Alignment.Center,
-        ) {
-          Text(
-            text = uiState.errorMessage ?: strings.emptyNews,
-            style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-          )
-        }
-      }
-    } else {
-      items(uiState.filteredArticles, key = { it.id }) { article ->
-        NewsArticleCard(
-          article = article,
-          isFavorite = article.id in favoriteIds,
-          strings = strings,
-          language = uiState.settings.language,
-          activeVideoUrl = uiState.activeVideoUrl,
-          onTogglePlayVideo = onTogglePlayVideo,
-          onOpenFullscreen = { videoUrl ->
-            onOpenFullscreen(videoUrl, article.title.ifBlank { article.sourceName })
-          },
-          onToggleFavorite = { onToggleFavorite(article) },
-          onDownloadMedia = onDownloadMedia,
-          onShareArticle = { onShareArticle(article) },
-          onCopyArticle = { onCopyArticle(article) },
-          onClick = { onArticleClick(article) },
+    AnimatedVisibility(
+      visible = showScrollToTop,
+      enter = fadeIn(),
+      exit = fadeOut(),
+      modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp),
+    ) {
+      SmallFloatingActionButton(
+        onClick = { coroutineScope.launch { listState.animateScrollToItem(0) } },
+        containerColor = MaterialTheme.colorScheme.primaryContainer,
+        contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+        modifier = Modifier.testTag("scroll_to_top_fab"),
+      ) {
+        Icon(
+          Icons.Default.ArrowUpward,
+          contentDescription = strings.scrollToTop,
         )
       }
     }
@@ -748,6 +810,7 @@ fun FavoritesScreen(
   onOpenFullscreen: (String, String) -> Unit,
   onToggleFavorite: (NewsArticle) -> Unit,
   onDownloadMedia: (String, Boolean, String) -> Unit,
+  onOpenExternalUrl: (String) -> Unit,
   onShareArticle: (NewsArticle) -> Unit,
   onCopyArticle: (NewsArticle) -> Unit,
   onArticleClick: (NewsArticle) -> Unit,
@@ -823,7 +886,7 @@ fun FavoritesScreen(
       }
     }
 
-    items(filtered, key = { it.id }) { article ->
+    items(filtered, key = { it.id }, contentType = { "news_card" }) { article ->
       NewsArticleCard(
         article = article,
         isFavorite = true,
@@ -836,6 +899,7 @@ fun FavoritesScreen(
         },
         onToggleFavorite = { onToggleFavorite(article) },
         onDownloadMedia = onDownloadMedia,
+        onOpenExternalUrl = onOpenExternalUrl,
         onShareArticle = { onShareArticle(article) },
         onCopyArticle = { onCopyArticle(article) },
         onClick = { onArticleClick(article) },
@@ -855,11 +919,11 @@ fun NewsArticleCard(
   onOpenFullscreen: (String) -> Unit,
   onToggleFavorite: () -> Unit,
   onDownloadMedia: (String, Boolean, String) -> Unit,
+  onOpenExternalUrl: (String) -> Unit,
   onShareArticle: () -> Unit,
   onCopyArticle: () -> Unit,
   onClick: () -> Unit,
 ) {
-  val context = LocalContext.current
   val videos = article.videos
   val photos = article.displayImages
   val formattedDate = remember(article.publishedAt, language) {
@@ -943,9 +1007,7 @@ fun NewsArticleCard(
           onTogglePlay = { onTogglePlayVideo(primaryVideo.url) },
           onFullscreen = { onOpenFullscreen(primaryVideo.url) },
           onDownload = { onDownloadMedia(primaryVideo.url, true, article.title) },
-          onOpenExternal = {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(primaryVideo.url)))
-          },
+          onOpenExternal = { onOpenExternalUrl(primaryVideo.url) },
         )
       }
 
@@ -1148,6 +1210,8 @@ fun InlineVideoAttachment(
   ) {
     if (isPlaying) {
       var videoViewRef by remember { mutableStateOf<VideoView?>(null) }
+      var hasPlaybackError by remember(video.url, isPlaying) { mutableStateOf(false) }
+
       DisposableEffect(video.url) {
         onDispose {
           try {
@@ -1155,49 +1219,96 @@ fun InlineVideoAttachment(
           } catch (_: Exception) {}
         }
       }
-      AndroidView(
-        factory = { ctx ->
-          VideoView(ctx).apply {
-            val controller = MediaController(ctx)
-            controller.setAnchorView(this)
-            setMediaController(controller)
-            setVideoURI(Uri.parse(video.url))
-            setOnPreparedListener { mp ->
-              mp.isLooping = false
-              start()
+      if (!hasPlaybackError) {
+        AndroidView(
+          factory = { ctx ->
+            VideoView(ctx).apply {
+              val controller = MediaController(ctx)
+              controller.setAnchorView(this)
+              setMediaController(controller)
+              setVideoURI(Uri.parse(video.url))
+              setOnPreparedListener { mp ->
+                mp.isLooping = false
+                start()
+              }
+              setOnErrorListener { _, _, _ ->
+                hasPlaybackError = true
+                true
+              }
+              videoViewRef = this
             }
-            videoViewRef = this
-          }
-        },
-        modifier = Modifier.fillMaxSize().align(Alignment.Center),
-      )
-
-      // Top-start: Prominent Fullscreen button during inline playback
-      Surface(
-        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.92f),
-        shape = RoundedCornerShape(999.dp),
-        modifier =
-          Modifier.align(Alignment.TopStart)
-            .padding(10.dp)
-            .clickable { onFullscreen() }
-            .testTag("fullscreen_video_playing_btn"),
-      ) {
-        Row(
-          modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
-          horizontalArrangement = Arrangement.spacedBy(4.dp),
-          verticalAlignment = Alignment.CenterVertically,
+          },
+          modifier = Modifier.fillMaxSize().align(Alignment.Center),
+        )
+      } else {
+        Column(
+          modifier = Modifier.fillMaxSize().padding(18.dp),
+          horizontalAlignment = Alignment.CenterHorizontally,
+          verticalArrangement = Arrangement.Center,
         ) {
           Icon(
-            Icons.Default.Fullscreen,
-            contentDescription = strings.fullscreenVideo,
-            tint = MaterialTheme.colorScheme.onPrimary,
-            modifier = Modifier.size(18.dp),
+            Icons.Default.ErrorOutline,
+            contentDescription = null,
+            tint = Color.White,
+            modifier = Modifier.size(32.dp),
           )
+          Spacer(modifier = Modifier.height(6.dp))
           Text(
-            text = strings.fullscreenVideo,
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onPrimary,
+            text = strings.videoPlayError,
+            style = MaterialTheme.typography.bodySmall,
+            color = Color.White,
+            textAlign = TextAlign.Center,
           )
+          Spacer(modifier = Modifier.height(10.dp))
+          Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            FilledTonalButton(
+              onClick = onOpenExternal,
+              contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+            ) {
+              Text(strings.openVideoExternal, style = MaterialTheme.typography.labelSmall)
+            }
+            OutlinedButton(
+              onClick = onDownload,
+              contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+            ) {
+              Text(
+                strings.downloadVideo,
+                style = MaterialTheme.typography.labelSmall,
+                color = Color.White,
+              )
+            }
+          }
+        }
+      }
+
+      // Top-start: Prominent Fullscreen button during inline playback
+      if (!hasPlaybackError) {
+        Surface(
+          color = MaterialTheme.colorScheme.primary.copy(alpha = 0.92f),
+          shape = RoundedCornerShape(999.dp),
+          modifier =
+            Modifier.align(Alignment.TopStart)
+              .padding(10.dp)
+              .clickable { onFullscreen() }
+              .testTag("fullscreen_video_playing_btn"),
+        ) {
+          Row(
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+          ) {
+            Icon(
+              Icons.Default.Fullscreen,
+              contentDescription = strings.fullscreenVideo,
+              tint = MaterialTheme.colorScheme.onPrimary,
+              modifier = Modifier.size(18.dp),
+            )
+            Text(
+              text = strings.fullscreenVideo,
+              style = MaterialTheme.typography.labelSmall,
+              color = MaterialTheme.colorScheme.onPrimary,
+            )
+          }
         }
       }
 
@@ -1356,6 +1467,7 @@ fun FullscreenVideoDialog(
   request: FullscreenVideoRequest,
   strings: AppStrings,
   onDownload: () -> Unit,
+  onOpenExternal: () -> Unit,
   onDismiss: () -> Unit,
 ) {
   Dialog(
@@ -1368,6 +1480,7 @@ fun FullscreenVideoDialog(
   ) {
     BackHandler { onDismiss() }
     var videoViewRef by remember { mutableStateOf<VideoView?>(null) }
+    var hasPlaybackError by remember(request.url) { mutableStateOf(false) }
 
     DisposableEffect(request.url) {
       onDispose {
@@ -1378,22 +1491,55 @@ fun FullscreenVideoDialog(
     }
 
     Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
-      AndroidView(
-        factory = { ctx ->
-          VideoView(ctx).apply {
-            val controller = MediaController(ctx)
-            controller.setAnchorView(this)
-            setMediaController(controller)
-            setVideoURI(Uri.parse(request.url))
-            setOnPreparedListener { mp ->
-              mp.isLooping = false
-              start()
+      if (!hasPlaybackError) {
+        AndroidView(
+          factory = { ctx ->
+            VideoView(ctx).apply {
+              val controller = MediaController(ctx)
+              controller.setAnchorView(this)
+              setMediaController(controller)
+              setVideoURI(Uri.parse(request.url))
+              setOnPreparedListener { mp ->
+                mp.isLooping = false
+                start()
+              }
+              setOnErrorListener { _, _, _ ->
+                hasPlaybackError = true
+                true
+              }
+              videoViewRef = this
             }
-            videoViewRef = this
+          },
+          modifier = Modifier.fillMaxSize().align(Alignment.Center),
+        )
+      } else {
+        Column(
+          modifier = Modifier.align(Alignment.Center).padding(24.dp),
+          horizontalAlignment = Alignment.CenterHorizontally,
+          verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+          Icon(
+            Icons.Default.ErrorOutline,
+            contentDescription = null,
+            tint = Color.White,
+            modifier = Modifier.size(44.dp),
+          )
+          Text(
+            text = strings.videoPlayError,
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color.White,
+            textAlign = TextAlign.Center,
+          )
+          Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            FilledTonalButton(onClick = onOpenExternal) {
+              Text(strings.openVideoExternal)
+            }
+            OutlinedButton(onClick = onDownload) {
+              Text(strings.downloadVideo, color = Color.White)
+            }
           }
-        },
-        modifier = Modifier.fillMaxSize().align(Alignment.Center),
-      )
+        }
+      }
 
       // Top overlay bar with title, download, and exit fullscreen
       Row(
@@ -1454,11 +1600,11 @@ fun ArticleDetailScreen(
   onOpenFullscreen: (String) -> Unit,
   onToggleFavorite: () -> Unit,
   onDownloadMedia: (String, Boolean, String) -> Unit,
+  onOpenExternalUrl: (String) -> Unit,
   onShareArticle: () -> Unit,
   onCopyArticle: () -> Unit,
   onBack: () -> Unit,
 ) {
-  val context = LocalContext.current
   val formattedDate = remember(article.publishedAt, language) {
     DateFormatter.formatBaghdadDateTime(article.publishedAt, language)
   }
@@ -1557,9 +1703,7 @@ fun ArticleDetailScreen(
           onTogglePlay = { onTogglePlayVideo(video.url) },
           onFullscreen = { onOpenFullscreen(video.url) },
           onDownload = { onDownloadMedia(video.url, true, article.title) },
-          onOpenExternal = {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(video.url)))
-          },
+          onOpenExternal = { onOpenExternalUrl(video.url) },
         )
       }
 
@@ -1650,9 +1794,7 @@ fun ArticleDetailScreen(
       }
 
       Button(
-        onClick = {
-          context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(article.originalUrl)))
-        },
+        onClick = { onOpenExternalUrl(article.originalUrl) },
         shape = RoundedCornerShape(14.dp),
         modifier =
           Modifier.fillMaxWidth()

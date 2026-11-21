@@ -7,6 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
 import org.json.JSONObject
+import java.io.File
 import java.util.concurrent.TimeUnit
 
 class NewsRepository(private val context: Context) {
@@ -16,6 +17,9 @@ class NewsRepository(private val context: Context) {
       .connectTimeout(15, TimeUnit.SECONDS)
       .readTimeout(25, TimeUnit.SECONDS)
       .build()
+
+  private val localCacheFile: File
+    get() = File(context.applicationContext.filesDir, "cached_news.json")
 
   suspend fun fetchNews(remoteJsonUrl: String): NewsFeedPayload =
     withContext(Dispatchers.IO) {
@@ -28,19 +32,55 @@ class NewsRepository(private val context: Context) {
             if (response.isSuccessful) {
               val body = response.body?.string()
               if (!body.isNullOrBlank()) {
-                return@withContext parsePayload(body, loadedFromRemote = true)
+                val parsed = parsePayload(body, loadedFromRemote = true)
+                saveCacheAtomically(body)
+                return@withContext parsed
               }
             }
           }
         } catch (_: Exception) {
-          // Fall back to bundled snapshot in assets
+          // Fall back to cached copy or bundled assets
         }
       }
 
-      val fallbackJson =
-        context.assets.open("news.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
-      parsePayload(fallbackJson, loadedFromRemote = false)
+      loadLocalCachedPayload()
+        ?: run {
+          val fallbackJson =
+            context.assets.open("news.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
+          parsePayload(fallbackJson, loadedFromRemote = false)
+        }
     }
+
+  suspend fun loadInstantSnapshot(): NewsFeedPayload? =
+    withContext(Dispatchers.IO) {
+      loadLocalCachedPayload()
+        ?: runCatching {
+          val assetJson =
+            context.assets.open("news.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
+          parsePayload(assetJson, loadedFromRemote = false)
+        }.getOrNull()
+    }
+
+  private fun loadLocalCachedPayload(): NewsFeedPayload? {
+    val file = localCacheFile
+    if (!file.exists()) return null
+    return runCatching {
+      val text = file.readText(Charsets.UTF_8)
+      if (text.isBlank()) null else parsePayload(text, loadedFromRemote = false)
+    }.getOrNull()
+  }
+
+  private fun saveCacheAtomically(rawJson: String) {
+    runCatching {
+      val target = localCacheFile
+      val tmp = File(target.parentFile, "${target.name}.tmp")
+      tmp.writeText(rawJson, Charsets.UTF_8)
+      if (!tmp.renameTo(target)) {
+        target.writeText(rawJson, Charsets.UTF_8)
+        tmp.delete()
+      }
+    }
+  }
 
   private fun parsePayload(rawJson: String, loadedFromRemote: Boolean): NewsFeedPayload {
     val root = JSONObject(rawJson)

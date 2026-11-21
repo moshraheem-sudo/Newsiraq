@@ -2,6 +2,7 @@ package com.example.util
 
 import android.app.DownloadManager
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Environment
 import android.webkit.MimeTypeMap
@@ -18,12 +19,16 @@ object MediaDownloader {
     language: AppLanguage,
   ): Result<Long> {
     return runCatching {
-      val uri = Uri.parse(url.trim())
+      val cleanUrl = url.trim()
+      require(cleanUrl.startsWith("http://") || cleanUrl.startsWith("https://")) {
+        "Invalid media URL"
+      }
+      val uri = Uri.parse(cleanUrl)
       val dm =
         context.getSystemService(Context.DOWNLOAD_SERVICE) as? DownloadManager
           ?: error("DownloadManager unavailable")
 
-      val urlExt = MimeTypeMap.getFileExtensionFromUrl(url).lowercase().takeIf { it.isNotBlank() }
+      val urlExt = MimeTypeMap.getFileExtensionFromUrl(cleanUrl).lowercase().takeIf { it.isNotBlank() }
       val ext = urlExt ?: if (isVideo) "mp4" else "jpg"
       val prefix = if (isVideo) "video" else "photo"
       val fileName = "IraqNews_${prefix}_${System.currentTimeMillis()}.$ext"
@@ -34,8 +39,8 @@ object MediaDownloader {
           if (language == AppLanguage.ARABIC) "وسائط أخبار العراق" else "Iraq News Media"
         }
 
-      val request =
-        DownloadManager.Request(uri)
+      fun buildRequest(publicDir: Boolean): DownloadManager.Request {
+        return DownloadManager.Request(uri)
           .setTitle(displayTitle)
           .setDescription(
             if (language == AppLanguage.ARABIC) "تنزيل عبر تطبيق أخبار العراق"
@@ -45,10 +50,44 @@ object MediaDownloader {
           .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
           .setAllowedOverMetered(true)
           .setAllowedOverRoaming(true)
-          .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "IraqNews/$fileName")
+          .apply {
+            if (publicDir) {
+              setDestinationInExternalPublicDir(
+                Environment.DIRECTORY_DOWNLOADS,
+                "IraqNews/$fileName",
+              )
+            } else {
+              setDestinationInExternalFilesDir(
+                context,
+                Environment.DIRECTORY_DOWNLOADS,
+                "IraqNews/$fileName",
+              )
+            }
+          }
+      }
 
-      dm.enqueue(request)
+      try {
+        dm.enqueue(buildRequest(publicDir = true))
+      } catch (_: SecurityException) {
+        // Fallback on legacy Android <= 8.1 / 9 devices if external public storage isn't writable
+        dm.enqueue(buildRequest(publicDir = false))
+      }
     }
+  }
+}
+
+object SafeIntentHelper {
+  fun openExternalUrl(context: Context, rawUrl: String): Boolean {
+    val cleaned = rawUrl.trim()
+    if (!cleaned.startsWith("http://") && !cleaned.startsWith("https://")) return false
+    return runCatching {
+      val intent =
+        Intent(Intent.ACTION_VIEW, Uri.parse(cleaned)).apply {
+          addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+      context.startActivity(intent)
+      true
+    }.getOrDefault(false)
   }
 }
 
