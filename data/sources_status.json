@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "last_run_at": "2026-11-21T05:15:51.954776Z",
-  "last_successful_update": "2026-11-21T05:15:50.810043Z",
+  "last_run_at": "2026-11-21T05:16:20.311083Z",
+  "last_successful_update": "2026-11-21T05:16:20.311083Z",
   "total_stored_news": 94,
   "last_merge": {
     "new": 0,
     "updated": 0,
-    "unchanged": 0
+    "unchanged": 88
   },
   "sources": {
     "ina": {
@@ -17,8 +17,8 @@
       "category": "أخبار رسمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-21T05:15:50.810043Z",
-      "last_success_at": "2026-11-21T05:15:50.810043Z",
+      "last_attempt_at": "2026-11-21T05:16:20.311083Z",
+      "last_success_at": "2026-11-21T05:16:20.311083Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 19
@@ -31,8 +31,8 @@
       "category": "أخبار عاجلة",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-21T05:15:50.810043Z",
-      "last_success_at": "2026-11-21T05:15:50.810043Z",
+      "last_attempt_at": "2026-11-21T05:16:20.311083Z",
+      "last_success_at": "2026-11-21T05:16:20.311083Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 19
@@ -45,8 +45,8 @@
       "category": "أخبار منوعة (X)",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-21T05:15:50.810043Z",
-      "last_success_at": "2026-11-21T05:15:50.810043Z",
+      "last_attempt_at": "2026-11-21T05:16:20.311083Z",
+      "last_success_at": "2026-11-21T05:16:20.311083Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
