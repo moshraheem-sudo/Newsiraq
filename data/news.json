@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "project": "Iraq News Hub",
-  "app_version": "1.0.0",
-  "generated_at": "2026-11-21T05:07:30.771299Z",
-  "last_successful_update": "2026-11-21T05:07:30.771299Z",
-  "total_count": 41,
+  "app_version": "1.1.0",
+  "generated_at": "2026-11-21T05:09:54.039240Z",
+  "last_successful_update": "2026-11-21T05:09:54.039240Z",
+  "total_count": 43,
   "sources": [
     {
       "id": "ina",
@@ -26,6 +26,44 @@
     }
   ],
   "items": [
+    {
+      "id": "SabrenNewss_232166",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232166,
+      "category": "أخبار عاجلة",
+      "title": "استمرار البحث عن الضحايا بحريق محطة كهرباء الهارثة في البصرة",
+      "content": "استمرار البحث عن الضحايا بحريق محطة كهرباء الهارثة في البصرة",
+      "published_at": "2026-11-21T05:09:02Z",
+      "fetched_at": "2026-11-21T05:09:54.039240Z",
+      "updated_at": "2026-11-21T05:09:54.039240Z",
+      "original_url": "https://t.me/SabrenNewss/232166",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "9cdd5779469c39463b21112d53f79ea13411f3ca3547894dcf20bc155920ff02"
+    },
+    {
+      "id": "SabrenNewss_232165",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232165,
+      "category": "أخبار عاجلة",
+      "title": "إصابات بشرية وأضرار مادية طالت عدداً من المنازل والسيارات جراء الحريق في محطة كهرباء الهارثة بمحافظة البصرة.",
+      "content": "إصابات بشرية وأضرار مادية طالت عدداً من المنازل والسيارات جراء الحريق في محطة كهرباء الهارثة بمحافظة البصرة.",
+      "published_at": "2026-11-21T05:07:53Z",
+      "fetched_at": "2026-11-21T05:09:54.039240Z",
+      "updated_at": "2026-11-21T05:09:54.039240Z",
+      "original_url": "https://t.me/SabrenNewss/232165",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "fc6a7dfae89c6c77bf0ea49b0385502fcedbb611220c4c73b844772001347ffc"
+    },
     {
       "id": "SabrenNewss_232164",
       "source_id": "sabereen",
