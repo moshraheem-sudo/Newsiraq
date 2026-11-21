@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "project": "Iraq News",
   "app_version": "1.4.0",
-  "generated_at": "2026-11-21T05:47:48.781636Z",
-  "last_successful_update": "2026-11-21T05:47:48.781636Z",
-  "total_count": 672,
+  "generated_at": "2026-11-21T05:51:59.881414Z",
+  "last_successful_update": "2026-11-21T05:51:59.881414Z",
+  "total_count": 673,
   "sources": [
     {
       "id": "ina",
@@ -126,6 +126,25 @@
   ],
   "items": [
     {
+      "id": "SabrenNewss_232173",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232173,
+      "category": "أخبار العراق",
+      "title": "ارتفاع حصيلة ضحايا حادثة حريق محطة الهارثة الى 4 وفيات",
+      "content": "ارتفاع حصيلة ضحايا حادثة حريق محطة الهارثة الى 4 وفيات",
+      "published_at": "2026-11-21T05:49:11Z",
+      "fetched_at": "2026-11-21T05:51:59.881414Z",
+      "updated_at": "2026-11-21T05:51:59.881414Z",
+      "original_url": "https://t.me/SabrenNewss/232173",
+      "images": [],
+      "media": [],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "ca0d4bae145602e312a4cee19848cdb048283f225d8cc626b5eb4b3cef593a50"
+    },
+    {
       "id": "list_1763642433328279733_2124016923482468855",
       "source_id": "x_news_list",
       "source_name": "قائمة أخبار X",
@@ -136,22 +155,22 @@
       "content": "@aljazeera_now (الجزيرة الآن)\n- حاكم دنيبروبيتروفسك: قتيلان و55 مصابا في هجمات روسية بالمسيرات استهدفت 5 مناطق في المقاطعة\n- هيئة الطوارئ الأوكرانية: 11 مصابا في هجمات روسية استهدفت مباني سكنية في مدينة خاركيف\n#عاجل",
       "published_at": "2026-11-21T05:47:51Z",
       "fetched_at": "2026-11-21T05:47:48.781636Z",
-      "updated_at": "2026-11-21T05:47:48.781636Z",
+      "updated_at": "2026-11-21T05:51:59.881414Z",
       "original_url": "https://x.com/aljazeera_now/status/2124016923482468855",
       "images": [
-        "https://pbs.twimg.com/amplify_video_thumb/2124016843039879168/img/ICKsya0NcKDwoA72.jpg"
+        "https://pbs.twimg.com/media/HXoGLKlagAA1XTR.jpg"
       ],
       "media": [
         {
           "type": "video",
           "url": "https://video.twimg.com/amplify_video/2124016843039879168/vid/avc1/2160x2700/tqV8nu9cfmO30xor.mp4",
-          "thumbnail": "https://pbs.twimg.com/amplify_video_thumb/2124016843039879168/img/ICKsya0NcKDwoA72.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoGLKlagAA1XTR.jpg",
           "title": ""
         }
       ],
       "links": [],
-      "is_edited": false,
-      "content_hash": "3c1da9761f0b13379daaea3ba40d7b82fdc7c50e1ed99802394789b381f2590b"
+      "is_edited": true,
+      "content_hash": "e13ff881aa04c4c4c74c29a1971a5c434ddd349d2eb4bdbab9d669411e1ea36b"
     },
     {
       "id": "list_1763642433328279733_2124016885713052047",
@@ -372,11 +391,11 @@
       "source_username": "RudawArabic",
       "message_id": 124632,
       "category": "أخبار العراق",
-      "title": "عدنان كريم: حفل قامشلو كان تاريخياً",
-      "content": "عدنان كريم: حفل قامشلو كان تاريخياً\nhttps://www.rudawarabia.net/arabic/categories/kurdistan/1369438",
+      "title": "الفنان الكوردي عدنان كريم: حفل قامشلو كان تاريخياً",
+      "content": "الفنان الكوردي عدنان كريم: حفل قامشلو كان تاريخياً\nhttps://www.rudawarabia.net/arabic/categories/kurdistan/1369438",
       "published_at": "2026-11-21T05:43:33Z",
       "fetched_at": "2026-11-21T05:47:48.781636Z",
-      "updated_at": "2026-11-21T05:47:48.781636Z",
+      "updated_at": "2026-11-21T05:51:59.881414Z",
       "original_url": "https://t.me/RudawArabic/124632",
       "images": [
         "https://cdn4.telesco.pe/file/clJPvpJhHtdMQnyUUo5Pwi8SGODB5hUYG0jd_jgfmAXULO9_xXiAAq1fRS3eIZ86rSfHho_96ahGdlI0iCj6KTNobXXZr67gjSxIop1vNMQn76puz5qQYyv3l0tnaSGrzuTyrzwwCNVPVArvEkBeThXoKIvLEhNTIt5rHMkER7bC29QirAe9pjnw7A3D-wqfuaO7L-z9EDHg55gYIrjXOtE7ituMcPiFxwZVmwmILk0gmh8g0AP7HahzT2eDZ91_P8c9Ae15LBGlfs-VLDpW5t5fYj_2yYeYEM4FYmHuAQUfpQJWT_5qhPVqqxP_5mvRg3GNP0ActtAJj9qCktWd4A.jpg"
@@ -392,8 +411,8 @@
       "links": [
         "https://www.rudawarabia.net/arabic/categories/kurdistan/1369438"
       ],
-      "is_edited": false,
-      "content_hash": "7f4984aca6d8d8df4f5331d56899b7195afc1aecd3859ae0e9880a240914dd5b"
+      "is_edited": true,
+      "content_hash": "4ca670839c84817989a3f5275df7be4d1dfb13a6630b11238c9f4948a1104004"
     },
     {
       "id": "list_1763642433328279733_2124015717930447308",
