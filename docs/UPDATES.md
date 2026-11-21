@@ -40,9 +40,9 @@
 • [اكتب الإصلاح الأول]
 
 🔗 الروابط:
-🌐 الموقع: https://USERNAME.github.io/iraq-news-hub/
-📡 ملف البيانات: https://USERNAME.github.io/iraq-news-hub/news.json
-💻 الإصدار على GitHub: https://github.com/USERNAME/iraq-news-hub/releases/tag/vX.Y.Z
+🌐 الموقع: https://moshraheem-sudo.github.io/Newsiraq/
+📡 ملف البيانات: https://moshraheem-sudo.github.io/Newsiraq/news.json
+💻 الإصدار على GitHub: https://github.com/moshraheem-sudo/Newsiraq/releases/tag/vX.Y.Z
 
 #IraqNewsHub #تحديث #OpenSource
 ```

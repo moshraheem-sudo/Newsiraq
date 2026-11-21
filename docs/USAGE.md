@@ -27,12 +27,12 @@ python -m scraper.main
 ```kotlin
 webView.settings.javaScriptEnabled = true
 webView.settings.domStorageEnabled = true
-webView.loadUrl("https://USERNAME.github.io/iraq-news-hub/")
+webView.loadUrl("https://moshraheem-sudo.github.io/Newsiraq/")
 ```
 
 ### ب. عبر HTTP لقراءة `news.json`:
 ```kotlin
-// GET https://USERNAME.github.io/iraq-news-hub/news.json
+// GET https://moshraheem-sudo.github.io/Newsiraq/news.json
 // يحتوي الجذر على الحقول:
 // schema_version, last_successful_update, total_count, sources, items
 ```
@@ -41,9 +41,9 @@ webView.loadUrl("https://USERNAME.github.io/iraq-news-hub/")
 
 ```csharp
 using var http = new HttpClient();
-var json = await http.GetStringAsync("https://USERNAME.github.io/iraq-news-hub/news.json");
+var json = await http.GetStringAsync("https://moshraheem-sudo.github.io/Newsiraq/news.json");
 // تحليل json عبر System.Text.Json لقراءة مصفوفة items
 ```
 
 أو استخدام `WebView2` لعرض الواجهة مباشرة على الرابط:
-`https://USERNAME.github.io/iraq-news-hub/`
+`https://moshraheem-sudo.github.io/Newsiraq/`

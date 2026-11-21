@@ -3,7 +3,7 @@
   "defaults": {
     "request_timeout_seconds": 20,
     "max_posts_per_fetch": 30,
-    "user_agent": "IraqNewsHubBot/1.0 (+https://github.com/iraq-news-hub)"
+    "user_agent": "IraqNewsHubBot/1.0 (+https://github.com/moshraheem-sudo/Newsiraq)"
   },
   "sources": [
     {

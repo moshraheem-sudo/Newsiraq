@@ -400,7 +400,7 @@ fun ArticleDetailScreen(article: NewsArticle, onBack: () -> Unit) {
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun WebPortalScreen(webUrl: String) {
-  if (webUrl.contains("USERNAME")) {
+  if (webUrl.isBlank() || webUrl.contains("USERNAME")) {
     Box(
       modifier = Modifier.fillMaxSize().padding(24.dp),
       contentAlignment = Alignment.Center,

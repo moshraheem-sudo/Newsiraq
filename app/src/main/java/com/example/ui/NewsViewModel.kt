@@ -40,8 +40,8 @@ data class NewsUiState(
     }
 
   companion object {
-    const val DEFAULT_WEB_URL = "https://USERNAME.github.io/iraq-news-hub/"
-    const val DEFAULT_JSON_URL = "https://USERNAME.github.io/iraq-news-hub/news.json"
+    const val DEFAULT_WEB_URL = "https://moshraheem-sudo.github.io/Newsiraq/"
+    const val DEFAULT_JSON_URL = "https://moshraheem-sudo.github.io/Newsiraq/news.json"
   }
 }
 

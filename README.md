@@ -125,8 +125,8 @@ python -m http.server 8080 --directory _site
 
 ## الربط مع تطبيقات أندرويد وويندوز
 
-- **رابط الموقع (WebView):** `https://USERNAME.github.io/iraq-news-hub/`
-- **رابط البيانات (HTTP JSON):** `https://USERNAME.github.io/iraq-news-hub/news.json`
+- **رابط الموقع (WebView):** `https://moshraheem-sudo.github.io/Newsiraq/`
+- **رابط البيانات (HTTP JSON):** `https://moshraheem-sudo.github.io/Newsiraq/news.json`
 - راجع ملف `docs/USAGE.md` للحصول على أمثلة جاهزة بلغة Kotlin (Android) و C# (Windows).
 
 ---

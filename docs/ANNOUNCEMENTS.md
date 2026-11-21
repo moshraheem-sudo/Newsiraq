@@ -1,7 +1,5 @@
 # منشور إطلاق مركز أخبار العراق | Launch Announcement
 
-> **ملاحظة:** استبدل `USERNAME` باسم حساب GitHub الفعلي عند النشر (يتم تحديثه تلقائياً بعد المصادقة والنشر).
-
 ---
 
 ## نسخة جاهزة للنشر على Telegram و Facebook
@@ -17,9 +15,9 @@
 • **جاهز للربط مع تطبيقاتك:** يوفر واجهة بيانات `JSON` منظمة يمكن لتطبيقات أندرويد وويندوز قراءتها مباشرة عبر HTTP.
 
 🔗 **الروابط الرسمية للمشروع:**
-🌐 **موقع الأخبار:** https://USERNAME.github.io/iraq-news-hub/
-📡 **واجهة بيانات JSON:** https://USERNAME.github.io/iraq-news-hub/news.json
-💻 **المستودع البرمجي على GitHub:** https://github.com/USERNAME/iraq-news-hub
+🌐 **موقع الأخبار:** https://moshraheem-sudo.github.io/Newsiraq/
+📡 **واجهة بيانات JSON:** https://moshraheem-sudo.github.io/Newsiraq/news.json
+💻 **المستودع البرمجي على GitHub:** https://github.com/moshraheem-sudo/Newsiraq
 🏷️ **رقم الإصدار الأول:** `v1.0.0`
 
 #IraqNewsHub #مركز_أخبار_العراق #أخبار_العراق #Python #GitHubActions #OpenSource

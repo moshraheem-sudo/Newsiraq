@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "project": "Iraq News Hub",
   "app_version": "1.0.0",
-  "generated_at": "2026-11-21T04:17:20.935375Z",
-  "last_successful_update": "2026-11-21T04:17:20.935375Z",
-  "total_count": 39,
+  "generated_at": "2026-11-21T04:39:31.318390Z",
+  "last_successful_update": "2026-11-21T04:39:31.318390Z",
+  "total_count": 40,
   "sources": [
     {
       "id": "ina",
@@ -26,6 +26,38 @@
     }
   ],
   "items": [
+    {
+      "id": "SabrenNewss_232162",
+      "source_id": "sabereen",
+      "source_name": "صابرين نيوز",
+      "source_username": "SabrenNewss",
+      "message_id": 232162,
+      "category": "أخبار عاجلة",
+      "title": "حريق في محطة كهرباء الهارثة في البصرة جنوب العراق",
+      "content": "حريق في محطة كهرباء الهارثة في البصرة جنوب العراق",
+      "published_at": "2026-11-21T04:19:56Z",
+      "fetched_at": "2026-11-21T04:39:31.318390Z",
+      "updated_at": "2026-11-21T04:39:31.318390Z",
+      "original_url": "https://t.me/SabrenNewss/232162",
+      "images": [],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://cdn4.telesco.pe/file/2a5f202eeb.mp4?token=HJrK5z_U4vW9_TdiSnVLjBqEwS8N5AO1D9Q0fCeCe4icVaQ5H_-qcxmyFi5IZ8hMI7uuwl_jxFGfrSve-oqUv32RYCFlzfXdroMMB7hz2kh7V4WAVTyT-2-MByCD3MHy1CKHEi18C7B5u3wFHTh9X6aRma5ddFa1BL6hW60TtuUTyeXalfNCYNQGGjDIVdTvlHeIrJoLqa6dIc-iC5RXOmQBYynl1P3YmtI0ERUghlUdtfWQ_VTgH9PxYEuGHUT0So6S10NZk2iKc9ARJ6aKNdk5Wr490kFmQ_00q-CmM0IamnVSk38BqGM1m158v7h0iWvaEj4t1pa8HOQQHgCNJQ",
+          "thumbnail": "",
+          "title": ""
+        },
+        {
+          "type": "video",
+          "url": "https://cdn4.telesco.pe/file/5661f5a57f.mp4?token=DlYrl50UYH34jMy_T8aN-J9yVObit9iXAUxGG0tTifPWs8QkbyCBZ5OE0SVFrivPAAyjuKQP-ScNzixYedZkPbZYzayQNhFRkugLHI4u9fUimxfLDcQsJpO125fkKVYGFXsiHtLVCuNtzln5QsuQwrfzjU3GW5nKwKOZ2NH3_2r5gmF_O5WR-3bYl5ipqadVfBxznPrQ3fOKul1aCOYihrCW8IbQsXgUofU-5u6RwtKIe2xfVknv1bQyRord8w95YoEBTbU9RFpACx2Q9DqRh7wgcVAsf00hSwKilr3l8utxbncITFFwitbTcwF-cuD4uAaNxkfDSPYhEw39zAyT0w",
+          "thumbnail": "",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "bf1e1785d093fd93cca2a4d0b49bc96148b9be16bdd76e88d21c23a1d8fea2a1"
+    },
     {
       "id": "SabrenNewss_232161",
       "source_id": "sabereen",

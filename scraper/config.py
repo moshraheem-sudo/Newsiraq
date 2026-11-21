@@ -28,7 +28,7 @@ class SourceConfig:
 class ScraperDefaults:
     request_timeout_seconds: int = 20
     max_posts_per_fetch: int = 30
-    user_agent: str = "IraqNewsHubBot/1.0 (+https://github.com/iraq-news-hub)"
+    user_agent: str = "IraqNewsHubBot/1.0 (+https://github.com/moshraheem-sudo/Newsiraq)"
 
 
 @dataclass(frozen=True)
