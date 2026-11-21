@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "project": "Iraq News",
   "app_version": "1.3.0",
-  "generated_at": "2026-11-21T05:32:52.343111Z",
-  "last_successful_update": "2026-11-21T05:32:52.343111Z",
-  "total_count": 200,
+  "generated_at": "2026-11-21T05:36:53.257697Z",
+  "last_successful_update": "2026-11-21T05:36:53.257697Z",
+  "total_count": 205,
   "sources": [
     {
       "id": "ina",
@@ -35,6 +35,146 @@
     }
   ],
   "items": [
+    {
+      "id": "list_1763642433328279733_2124013929466658942",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124013929466658942,
+      "category": "أخبار منوعة (X)",
+      "title": "#الشرق_عاجل الدفاع الروسية تعلن اعتراض وتدمير 275 مسيّرة أوكرانية خلال الليل",
+      "content": "@AsharqNewsBrk (الشرق عاجل Asharq Breaking)\n#الشرق_عاجل الدفاع الروسية تعلن اعتراض وتدمير 275 مسيّرة أوكرانية خلال الليل",
+      "published_at": "2026-11-21T05:35:57Z",
+      "fetched_at": "2026-11-21T05:36:53.257697Z",
+      "updated_at": "2026-11-21T05:36:53.257697Z",
+      "original_url": "https://x.com/AsharqNewsBrk/status/2124013929466658942",
+      "images": [
+        "https://pbs.twimg.com/media/HXoDadTWsAATIba.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoDadTWsAATIba.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoDadTWsAATIba.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "a9796968581c18c3110d52e5aeef98ef6bcb404218c66fdc5b3aa4c5808e36cf"
+    },
+    {
+      "id": "list_1763642433328279733_2124013691192394152",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124013691192394152,
+      "category": "أخبار منوعة (X)",
+      "title": "الخبير الاقتصادي مصطفى البازركان: الذهب يتراجع مع ارتفاع الدولار وتوقعات رفع أسعار الفائدة الأميركية.. والأسواق تشهد موجة تصحيح واسعة",
+      "content": "@AlArabiya (العربية)\nالخبير الاقتصادي مصطفى البازركان: الذهب يتراجع مع ارتفاع الدولار وتوقعات رفع أسعار الفائدة الأميركية.. والأسواق تشهد موجة تصحيح واسعة\n\n#العربية",
+      "published_at": "2026-11-21T05:35:00Z",
+      "fetched_at": "2026-11-21T05:36:53.257697Z",
+      "updated_at": "2026-11-21T05:36:53.257697Z",
+      "original_url": "https://x.com/AlArabiya/status/2124013691192394152",
+      "images": [
+        "https://pbs.twimg.com/media/HXm_lVFXUAA8Q5o.png"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2123939274856845312/vid/avc1/1080x1920/XJjGpiVtiDpLBqfp.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXm_lVFXUAA8Q5o.png",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "314313c4850b172255de12920863430990dac4551a95bc1de9b96e442ff44fb1"
+    },
+    {
+      "id": "list_1763642433328279733_2124013653502677281",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124013653502677281,
+      "category": "أخبار منوعة (X)",
+      "title": "مجمع ناصر الطبي: إصابة طفل وامرأة برصاص قوات الاحتلال الإسرائيلي خارج مناطق سيطرتها جنوبي مدينة خان يونس",
+      "content": "@SawtBeirut (Sawt Beirut International)\nمجمع ناصر الطبي: إصابة طفل وامرأة برصاص قوات الاحتلال الإسرائيلي خارج مناطق سيطرتها جنوبي مدينة خان يونس",
+      "published_at": "2026-11-21T05:34:51Z",
+      "fetched_at": "2026-11-21T05:36:53.257697Z",
+      "updated_at": "2026-11-21T05:36:53.257697Z",
+      "original_url": "https://x.com/SawtBeirut/status/2124013653502677281",
+      "images": [
+        "https://pbs.twimg.com/media/HXoDJYpWUAETSq6.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoDJYpWUAETSq6.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoDJYpWUAETSq6.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "cff23cd64a8062f48020683cf44193333f6be68ee0d2797c89841f41fa1898de"
+    },
+    {
+      "id": "list_1763642433328279733_2124013289059369112",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124013289059369112,
+      "category": "أخبار منوعة (X)",
+      "title": "فرق الدفاع المدني تسيطر على حريق اندلع في محطة كهرباء الهارثة شمالي البصرة",
+      "content": "@AlArabiya_Iraq (العربية العراق)\nفرق الدفاع المدني تسيطر على حريق اندلع في محطة كهرباء الهارثة شمالي البصرة",
+      "published_at": "2026-11-21T05:33:25Z",
+      "fetched_at": "2026-11-21T05:36:53.257697Z",
+      "updated_at": "2026-11-21T05:36:53.257697Z",
+      "original_url": "https://x.com/AlArabiya_Iraq/status/2124013289059369112",
+      "images": [
+        "https://pbs.twimg.com/media/HXoC1CgWAAAEsZk.jpg"
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HXoC1CgWAAAEsZk.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoC1CgWAAAEsZk.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "276838360610023842412d50eb05dfca3c49cec998e541a089096da6140e8372"
+    },
+    {
+      "id": "list_1763642433328279733_2124013164761059838",
+      "source_id": "x_news_list",
+      "source_name": "قائمة أخبار X",
+      "source_username": "list_1763642433328279733",
+      "message_id": 2124013164761059838,
+      "category": "أخبار منوعة (X)",
+      "title": "موجز الأخبار.. تصاعد التوتر الأمريكي الإيراني إثر إسقاط طائرة مسيرة، وتصعيد باليمن، تزامنا مع انتشار أمني بالعراق، وتواصل تصعيد الاحتلال…",
+      "content": "@AJArabic (قناة الجزيرة)\nموجز الأخبار.. تصاعد التوتر الأمريكي الإيراني إثر إسقاط طائرة مسيرة، وتصعيد باليمن، تزامنا مع انتشار أمني بالعراق، وتواصل تصعيد الاحتلال بغزة والضفة الغربية\n#الأخبار\n#الجزيرة",
+      "published_at": "2026-11-21T05:32:55Z",
+      "fetched_at": "2026-11-21T05:36:53.257697Z",
+      "updated_at": "2026-11-21T05:36:53.257697Z",
+      "original_url": "https://x.com/AJArabic/status/2124013164761059838",
+      "images": [
+        "https://pbs.twimg.com/media/HXoCtzVX0AAG2ov.jpg"
+      ],
+      "media": [
+        {
+          "type": "video",
+          "url": "https://video.twimg.com/amplify_video/2124012886842322944/vid/avc1/608x1080/ysxj6vkvYVwmeQ3j.mp4?tag=16",
+          "thumbnail": "https://pbs.twimg.com/media/HXoCtzVX0AAG2ov.jpg",
+          "title": ""
+        }
+      ],
+      "links": [],
+      "is_edited": false,
+      "content_hash": "fdcd8680a7d3d6517fdc76383e29a2e71c9e8fc001e4d79e79f78785425693d5"
+    },
     {
       "id": "list_1763642433328279733_2124013090920435721",
       "source_id": "x_news_list",
@@ -123,22 +263,22 @@
       "content": "@aljazeera_now (الجزيرة الآن)\nوزير الخارجية الإيراني عباس عراقجي يقول إن تنفيذ مقترح بلاده ممكن خلال يومين إذا أبدت واشنطن جدية مؤكدا أن فتح مضيق هرمز مرتبط بتنفيذ الشروط الإيرانية\n#الأخبار",
       "published_at": "2026-11-21T05:31:35Z",
       "fetched_at": "2026-11-21T05:32:52.343111Z",
-      "updated_at": "2026-11-21T05:32:52.343111Z",
+      "updated_at": "2026-11-21T05:36:53.257697Z",
       "original_url": "https://x.com/aljazeera_now/status/2124012827874558153",
       "images": [
-        "https://pbs.twimg.com/media/HXoCaLHWkAA7OT6.jpg"
+        "https://pbs.twimg.com/media/HXoC1O3XgAE7ULR.jpg"
       ],
       "media": [
         {
           "type": "video",
           "url": "https://video.twimg.com/amplify_video/2124012609519116288/vid/avc1/608x1080/WmQ_nUvqgKcp8mAl.mp4?tag=16",
-          "thumbnail": "https://pbs.twimg.com/media/HXoCaLHWkAA7OT6.jpg",
+          "thumbnail": "https://pbs.twimg.com/media/HXoC1O3XgAE7ULR.jpg",
           "title": ""
         }
       ],
       "links": [],
-      "is_edited": false,
-      "content_hash": "97fb8fe38ff7bcb9cca50c066460d3b513b3e9d0ef8423a5190fbd60dc5338a6"
+      "is_edited": true,
+      "content_hash": "84eff47b75cb6ec7f070989c7fa38e2fae3e6f7052b67d64a6817319796607b3"
     },
     {
       "id": "list_1763642433328279733_2124012757892616531",
