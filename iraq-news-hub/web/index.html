@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f3d2e" />
+  <meta name="description" content="مركز أخبار العراق — منصة تجميع الأخبار العراقية تلقائياً من المصادر العامة مع واجهة عربية وواجهة JSON للتطبيقات." />
+  <title>مركز أخبار العراق | Iraq News Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#/" class="brand" aria-label="العودة إلى الرئيسية">
+        <span class="brand-badge" aria-hidden="true">ع</span>
+        <div class="brand-text">
+          <h1>مركز أخبار العراق</h1>
+          <span class="brand-subtitle">Iraq News Hub</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="#/" class="nav-link" data-route="home">الأخبار</a>
+        <a href="#/updates" class="nav-link" data-route="updates">الإصدارات</a>
+        <a href="#/about" class="nav-link" data-route="about">عن المشروع و API</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="refreshBtn" class="icon-btn" type="button" title="تحديث الأخبار" aria-label="تحديث الأخبار">
+          ↻
+        </button>
+        <button id="themeToggleBtn" class="icon-btn" type="button" title="تبديل المظهر" aria-label="تبديل المظهر">
+          ☾
+        </button>
+      </div>
+    </div>
+
+    <div class="status-strip">
+      <div class="container status-strip-inner">
+        <div class="status-pill">
+          <span class="pulse-dot" id="statusDot"></span>
+          <span>آخر تحديث ناجح:</span>
+          <strong id="lastSuccessText">جاري التحميل...</strong>
+        </div>
+        <div class="status-meta">
+          <span id="totalNewsBadge">0 خبر</span>
+          <span class="sep">•</span>
+          <span id="activeSourcesBadge">0 مصادر نشطة</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="appRoot" class="container main-content" aria-live="polite">
+    <div class="loading-box">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>جاري تحميل أحدث الأخبار العراقية...</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Iraq News Hub</strong> — مجمع إخباري عراقي مستقل ومفتوح المصدر
+      </div>
+      <div class="footer-links">
+        <a href="./news.json" target="_blank" rel="noopener noreferrer">ملف news.json</a>
+        <a href="./sources_status.json" target="_blank" rel="noopener noreferrer">حالة المصادر</a>
+        <a href="#/updates">سجل الإصدارات <span id="footerVersion">v1.0.0</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

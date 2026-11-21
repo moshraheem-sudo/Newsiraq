@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "defaults": {
+    "request_timeout_seconds": 20,
+    "max_posts_per_fetch": 30,
+    "user_agent": "IraqNewsHubBot/1.0 (+https://github.com/iraq-news-hub)"
+  },
+  "sources": [
+    {
+      "id": "ina",
+      "name": "وكالة الأنباء العراقية (واع)",
+      "username": "inainaiq",
+      "url": "https://t.me/s/inainaiq",
+      "category": "أخبار رسمية",
+      "language": "ar",
+      "enabled": true,
+      "notes": "المصدر الرسمي لوكالة الأنباء العراقية عبر العرض العام على الويب"
+    },
+    {
+      "id": "sabereen",
+      "name": "صابرين نيوز",
+      "username": "SabrenNewss",
+      "url": "https://t.me/s/SabrenNewss",
+      "category": "أخبار عاجلة",
+      "language": "ar",
+      "enabled": true,
+      "notes": "قناة صابرين نيوز الإخبارية عبر العرض العام على الويب"
+    }
+  ]
+}

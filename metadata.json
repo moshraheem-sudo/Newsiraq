@@ -1,0 +1,6 @@
+{
+  "name": "Iraq News Hub",
+  "description": "Automated Iraqi News Aggregator from Telegram public web channels with Python, GitHub Actions, GitHub Pages, and Android JSON/WebView client.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

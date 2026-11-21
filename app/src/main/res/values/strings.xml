@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Iraq News Hub</string>
+    <string name="nav_feed">الأخبار</string>
+    <string name="nav_webview">الموقع</string>
+    <string name="nav_about">حول</string>
+    <string name="search_hint">ابحث في الأخبار العراقية...</string>
+    <string name="open_original">فتح المنشور الأصلي</string>
+    <string name="refresh">تحديث</string>
+</resources>
