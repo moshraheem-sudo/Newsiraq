@@ -21,6 +21,7 @@ from scraper.storage import (
     write_json_atomic,
 )
 from scraper.x_list import fetch_and_parse_x_list
+from scraper.rss_feed import fetch_and_parse_rss_feed
 
 logging.basicConfig(
     level=logging.INFO,
@@ -98,6 +99,10 @@ def run_scrape(
             try:
                 if source.source_type == "x_list":
                     posts = fetch_and_parse_x_list(
+                        source, app_config.defaults, session=session, max_posts=max_posts
+                    )
+                elif source.source_type == "rss":
+                    posts = fetch_and_parse_rss_feed(
                         source, app_config.defaults, session=session, max_posts=max_posts
                     )
                 else:

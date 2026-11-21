@@ -10,12 +10,26 @@ import com.example.data.NewsRepository
 import com.example.data.NewsSourceInfo
 import com.example.data.SettingsPreferences
 import com.example.data.ThemeMode
+import com.example.data.local.AppDatabase
+import com.example.data.local.FavoritesRepository
 import com.example.notifications.NewsNotificationHelper
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+
+data class FullscreenVideoRequest(
+  val url: String,
+  val title: String,
+)
+
+data class FavoriteFeedbackEvent(
+  val id: Long,
+  val added: Boolean,
+)
 
 data class NewsUiState(
   val isLoading: Boolean = true,
@@ -23,19 +37,39 @@ data class NewsUiState(
   val errorMessage: String? = null,
   val articles: List<NewsArticle> = emptyList(),
   val sources: List<NewsSourceInfo> = emptyList(),
+  val selectedCategory: String = "all",
   val selectedSource: String = "all",
   val searchQuery: String = "",
   val lastSuccessfulUpdate: String = "",
   val loadedFromRemote: Boolean = false,
   val activeVideoUrl: String? = null,
+  val fullscreenVideo: FullscreenVideoRequest? = null,
   val newArticlesAlertCount: Int? = null,
+  val favoriteFeedback: FavoriteFeedbackEvent? = null,
   val pendingArticleId: String? = null,
   val settings: AppSettings = AppSettings(),
 ) {
+  val availableCategories: List<String>
+    get() =
+      (sources.map { it.category } + articles.map { it.category })
+        .map { it.trim() }
+        .filter { it.isNotBlank() }
+        .distinct()
+
+  val filteredSources: List<NewsSourceInfo>
+    get() =
+      if (selectedCategory == "all") {
+        sources
+      } else {
+        sources.filter { it.category == selectedCategory }
+      }
+
   val filteredArticles: List<NewsArticle>
     get() {
       val q = searchQuery.trim().lowercase()
       return articles.filter { article ->
+        val matchesCategory =
+          selectedCategory == "all" || article.category == selectedCategory
         val matchesSource =
           selectedSource == "all" || article.sourceUsername == selectedSource
         val matchesQuery =
@@ -43,7 +77,7 @@ data class NewsUiState(
             article.title.lowercase().contains(q) ||
             article.content.lowercase().contains(q) ||
             article.sourceName.lowercase().contains(q)
-        matchesSource && matchesQuery
+        matchesCategory && matchesSource && matchesQuery
       }
     }
 
@@ -55,9 +89,25 @@ data class NewsUiState(
 class NewsViewModel(application: Application) : AndroidViewModel(application) {
   private val repository = NewsRepository(application.applicationContext)
   private val settingsPrefs = SettingsPreferences(application.applicationContext)
+  private val favoritesRepo =
+    FavoritesRepository(AppDatabase.getInstance(application.applicationContext).favoriteArticleDao())
 
   private val _uiState = MutableStateFlow(NewsUiState(settings = settingsPrefs.load()))
   val uiState: StateFlow<NewsUiState> = _uiState.asStateFlow()
+
+  val favoriteArticles: StateFlow<List<NewsArticle>> =
+    favoritesRepo.favorites.stateIn(
+      scope = viewModelScope,
+      started = SharingStarted.WhileSubscribed(5000),
+      initialValue = emptyList(),
+    )
+
+  val favoriteIds: StateFlow<Set<String>> =
+    favoritesRepo.favoriteIds.stateIn(
+      scope = viewModelScope,
+      started = SharingStarted.WhileSubscribed(5000),
+      initialValue = emptySet(),
+    )
 
   init {
     refresh()
@@ -111,6 +161,22 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
     }
   }
 
+  fun toggleFavorite(article: NewsArticle) {
+    viewModelScope.launch {
+      val currentlyFav = article.id in favoriteIds.value
+      val added = favoritesRepo.toggleFavorite(article, currentlyFav)
+      _uiState.update {
+        it.copy(
+          favoriteFeedback = FavoriteFeedbackEvent(System.currentTimeMillis(), added),
+        )
+      }
+    }
+  }
+
+  fun dismissFavoriteFeedback() {
+    _uiState.update { it.copy(favoriteFeedback = null) }
+  }
+
   fun openArticleFromNotification(articleId: String?) {
     if (!articleId.isNullOrBlank()) {
       _uiState.update { it.copy(pendingArticleId = articleId) }
@@ -129,6 +195,19 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
     _uiState.update { it.copy(searchQuery = query) }
   }
 
+  fun selectCategory(category: String) {
+    _uiState.update { state ->
+      val validSource =
+        category == "all" ||
+          state.selectedSource == "all" ||
+          state.sources.any { it.username == state.selectedSource && it.category == category }
+      state.copy(
+        selectedCategory = category,
+        selectedSource = if (validSource) state.selectedSource else "all",
+      )
+    }
+  }
+
   fun selectSource(username: String) {
     _uiState.update { it.copy(selectedSource = username) }
   }
@@ -138,6 +217,19 @@ class NewsViewModel(application: Application) : AndroidViewModel(application) {
       val next = if (state.activeVideoUrl == videoUrl) null else videoUrl
       state.copy(activeVideoUrl = next)
     }
+  }
+
+  fun openFullscreenVideo(url: String, title: String) {
+    _uiState.update {
+      it.copy(
+        activeVideoUrl = null,
+        fullscreenVideo = FullscreenVideoRequest(url = url, title = title),
+      )
+    }
+  }
+
+  fun closeFullscreenVideo() {
+    _uiState.update { it.copy(fullscreenVideo = null) }
   }
 
   fun setMuteNotifications(muted: Boolean) {

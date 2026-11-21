@@ -237,6 +237,50 @@ class ScraperTests(unittest.TestCase):
         posts = parse_channel_pages([page1, page2], self.source, max_posts=2)
         self.assertEqual([p.message_id for p in posts], [102, 103])
 
+    def test_rss_validation_and_parsing(self) -> None:
+        from scraper.config import validate_rss_url
+        from scraper.rss_feed import parse_rss_xml
+
+        self.assertEqual(
+            validate_rss_url("https://www.skynewsarabia.com/rss.xml"),
+            "https://www.skynewsarabia.com/rss.xml",
+        )
+        with self.assertRaises(ValueError):
+            validate_rss_url("http://insecure.example.com/rss.xml")
+
+        rss_source = SourceConfig(
+            id="sky_test",
+            name="سكاي نيوز عربية",
+            username="skynewsarabia_rss",
+            url="https://www.skynewsarabia.com/rss.xml",
+            category="أخبار عربية وعالمية",
+            language="ar",
+            enabled=True,
+            source_type="rss",
+        )
+        sample_xml = """<?xml version="1.0" encoding="UTF-8"?>
+        <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+          <channel>
+            <item>
+              <title>تغطية مباشرة لأهم التطورات</title>
+              <link>https://www.skynewsarabia.com/world/1000</link>
+              <guid>sky-1000</guid>
+              <pubDate>Sat, 21 Nov 2026 05:25:07 GMT</pubDate>
+              <description>تفاصيل موسعة للخبر العاجل.</description>
+              <enclosure type="image/jpeg" url="https://cdn.example.com/sky.jpg"/>
+              <media:content type="video/mp4" url="https://cdn.example.com/sky.mp4"/>
+            </item>
+          </channel>
+        </rss>
+        """
+        posts = parse_rss_xml(sample_xml, rss_source, max_posts=10)
+        self.assertEqual(len(posts), 1)
+        self.assertEqual(posts[0].title, "تغطية مباشرة لأهم التطورات")
+        self.assertEqual(posts[0].images, ["https://cdn.example.com/sky.jpg"])
+        self.assertEqual(posts[0].media[0]["type"], "video")
+        self.assertEqual(posts[0].media[0]["url"], "https://cdn.example.com/sky.mp4")
+        self.assertEqual(posts[0].media[0]["thumbnail"], "https://cdn.example.com/sky.jpg")
+
 
 if __name__ == "__main__":
     unittest.main()

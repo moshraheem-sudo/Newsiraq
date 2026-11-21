@@ -65,6 +65,15 @@ def validate_x_list_url(url: str) -> str:
     return f"https://x.com/i/lists/{match.group(1)}"
 
 
+def validate_rss_url(url: str) -> str:
+    """Ensure RSS feed URL uses HTTPS and a valid host."""
+    cleaned = url.strip()
+    parsed = urlparse(cleaned)
+    if parsed.scheme != "https" or not parsed.netloc:
+        raise ValueError(f"RSS URL must use https:// with valid domain, got: {url}")
+    return cleaned
+
+
 def load_config(config_path: Path) -> AppConfig:
     if not config_path.exists():
         raise FileNotFoundError(f"Sources configuration file not found: {config_path}")
@@ -104,6 +113,9 @@ def load_config(config_path: Path) -> AppConfig:
         elif source_type == "x_list":
             raw_url = str(item.get("url") or "").strip()
             normalized_url = validate_x_list_url(raw_url)
+        elif source_type == "rss":
+            raw_url = str(item.get("url") or "").strip()
+            normalized_url = validate_rss_url(raw_url)
         else:
             raise ValueError(f"Unsupported source type {source_type!r} for {source_id}")
 

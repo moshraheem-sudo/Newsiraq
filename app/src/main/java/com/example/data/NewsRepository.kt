@@ -13,8 +13,8 @@ class NewsRepository(private val context: Context) {
 
   private val client =
     OkHttpClient.Builder()
-      .connectTimeout(12, TimeUnit.SECONDS)
-      .readTimeout(15, TimeUnit.SECONDS)
+      .connectTimeout(15, TimeUnit.SECONDS)
+      .readTimeout(25, TimeUnit.SECONDS)
       .build()
 
   suspend fun fetchNews(remoteJsonUrl: String): NewsFeedPayload =

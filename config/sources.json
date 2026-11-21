@@ -3,7 +3,7 @@
   "defaults": {
     "request_timeout_seconds": 20,
     "max_posts_per_fetch": 50,
-    "user_agent": "IraqNewsBot/1.3 (+https://github.com/moshraheem-sudo/Newsiraq)"
+    "user_agent": "IraqNewsBot/1.4 (+https://github.com/moshraheem-sudo/Newsiraq)"
   },
   "sources": [
     {
@@ -12,12 +12,12 @@
       "name": "وكالة الأنباء العراقية (واع)",
       "username": "inainaiq",
       "url": "https://t.me/s/inainaiq",
-      "category": "أخبار رسمية",
+      "category": "أخبار العراق",
       "language": "ar",
       "enabled": true,
       "max_posts": 50,
       "fetch_interval_minutes": 10,
-      "notes": "سحب ما يقارب 50 خبراً كل 10 دقائق من وكالة الأنباء العراقية عبر العرض العام على الويب"
+      "notes": "المصدر الرسمي لوكالة الأنباء العراقية عبر العرض العام"
     },
     {
       "id": "sabereen",
@@ -25,12 +25,142 @@
       "name": "صابرين نيوز",
       "username": "SabrenNewss",
       "url": "https://t.me/s/SabrenNewss",
-      "category": "أخبار عاجلة",
+      "category": "أخبار العراق",
       "language": "ar",
       "enabled": true,
       "max_posts": 50,
       "fetch_interval_minutes": 10,
-      "notes": "سحب ما يقارب 50 خبراً كل 10 دقائق من قناة صابرين نيوز عبر العرض العام على الويب"
+      "notes": "أخبار عراقية عاجلة وفيديوهات ميدانية عبر تلغرام العام"
+    },
+    {
+      "id": "alsumariatv",
+      "type": "telegram_web",
+      "name": "السومرية نيوز",
+      "username": "alsumariatv",
+      "url": "https://t.me/s/alsumariatv",
+      "category": "أخبار العراق",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "أخبار العراق من قناة السومرية بالصور"
+    },
+    {
+      "id": "baghdadtoday",
+      "type": "telegram_web",
+      "name": "بغداد اليوم",
+      "username": "baghdadtoday",
+      "url": "https://t.me/s/baghdadtoday",
+      "category": "أخبار العراق",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "وكالة بغداد اليوم الإخبارية عبر العرض العام"
+    },
+    {
+      "id": "rudaw_ar",
+      "type": "telegram_web",
+      "name": "رووداو عربية",
+      "username": "RudawArabic",
+      "url": "https://t.me/s/RudawArabic",
+      "category": "أخبار العراق",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "تغطية إخبارية مصورة وفيديوهات للعراق وكردستان والمنطقة"
+    },
+    {
+      "id": "skynews_rss",
+      "type": "rss",
+      "name": "سكاي نيوز عربية",
+      "username": "skynewsarabia_rss",
+      "url": "https://www.skynewsarabia.com/rss.xml",
+      "category": "أخبار عربية وعالمية",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "أخبار عربية وعالمية على مدار الساعة مع الصور والفيديو"
+    },
+    {
+      "id": "aljazeera_rss",
+      "type": "rss",
+      "name": "الجزيرة نت",
+      "username": "aljazeera_rss",
+      "url": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9",
+      "category": "أخبار عربية وعالمية",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "التغطية الإخبارية الشاملة من الجزيرة نت"
+    },
+    {
+      "id": "alarabiya_tg",
+      "type": "telegram_web",
+      "name": "العربية",
+      "username": "AlArabiya",
+      "url": "https://t.me/s/AlArabiya",
+      "category": "أخبار عربية وعالمية",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "أخبار عربية ودولية عاجلة من قناة العربية"
+    },
+    {
+      "id": "independent_ar_rss",
+      "type": "rss",
+      "name": "إندبندنت عربية",
+      "username": "independent_ar_rss",
+      "url": "https://www.independentarabia.com/rss.xml",
+      "category": "أخبار عربية وعالمية",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "تقارير وتحليلات عربية وعالمية بصور عالية الدقة"
+    },
+    {
+      "id": "bbc_arabic_rss",
+      "type": "rss",
+      "name": "BBC عربي",
+      "username": "bbc_arabic_rss",
+      "url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+      "category": "أخبار عالمية",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "أخبار العالم والشرق الأوسط من بي بي سي عربي"
+    },
+    {
+      "id": "france24_ar",
+      "type": "telegram_web",
+      "name": "فرانس 24 عربي",
+      "username": "France24_ar",
+      "url": "https://t.me/s/France24_ar",
+      "category": "أخبار عالمية",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "أخبار دولية مصورة على مدار الساعة من فرانس 24"
+    },
+    {
+      "id": "rt_arabic_rss",
+      "type": "rss",
+      "name": "RT عربي",
+      "username": "rt_arabic_rss",
+      "url": "https://arabic.rt.com/rss/",
+      "category": "أخبار عالمية",
+      "language": "ar",
+      "enabled": true,
+      "max_posts": 50,
+      "fetch_interval_minutes": 10,
+      "notes": "أخبار دولية عاجلة وصور على مدار الساعة"
     },
     {
       "id": "x_news_list",
@@ -43,7 +173,7 @@
       "enabled": true,
       "max_posts": 100,
       "fetch_interval_minutes": 10,
-      "notes": "سحب مجاني كل 10 دقائق لأحدث 100 خبر من قائمة X العامة فقط عبر نقطة التضمين الرسمية"
+      "notes": "سحب مجاني كل 10 دقائق لأحدث 100 خبر من قائمة X مع الصور والفيديو"
     }
   ]
 }
