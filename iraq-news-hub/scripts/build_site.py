@@ -39,5 +39,7 @@ def build_site(root: Path = Path(".")) -> Path:
 
 
 if __name__ == "__main__":
-    out = build_site()
+    import sys
+    base_dir = Path(__file__).resolve().parent.parent if not Path("web").exists() else Path(".")
+    out = build_site(base_dir)
     print(f"Built static site at {out.resolve()}")
