@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "last_run_at": "2026-11-25T08:50:38.382000Z",
-  "last_successful_update": "2026-11-25T08:50:38.382000Z",
+  "last_run_at": "2026-11-25T18:52:50.142455Z",
+  "last_successful_update": "2026-11-25T18:52:50.142455Z",
   "total_stored_news": 1600,
   "last_merge": {
-    "new": 743,
-    "updated": 37,
-    "unchanged": 274
+    "new": 827,
+    "updated": 68,
+    "unchanged": 149
   },
   "sources": {
     "ina": {
@@ -17,8 +17,8 @@
       "category": "أخبار العراق",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -31,8 +31,8 @@
       "category": "أخبار العراق",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -45,11 +45,11 @@
       "category": "أخبار منوعة (X)",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
-      "posts_extracted": 99
+      "posts_extracted": 94
     },
     "alsumariatv": {
       "id": "alsumariatv",
@@ -59,8 +59,8 @@
       "category": "أخبار العراق",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -73,8 +73,8 @@
       "category": "أخبار العراق",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -87,8 +87,8 @@
       "category": "أخبار العراق",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -101,8 +101,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -115,8 +115,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 25
@@ -129,8 +129,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -143,8 +143,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -157,8 +157,8 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 25
@@ -171,8 +171,8 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -185,8 +185,8 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -199,8 +199,8 @@
       "category": "أخبار العراق",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -213,8 +213,8 @@
       "category": "أخبار العراق",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -227,8 +227,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 20
@@ -241,8 +241,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 20
@@ -255,8 +255,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -269,11 +269,11 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
-      "posts_extracted": 26
+      "posts_extracted": 28
     },
     "almonitor_rss": {
       "id": "almonitor_rss",
@@ -283,8 +283,8 @@
       "category": "أخبار عربية وعالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 14
@@ -297,8 +297,8 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 50
@@ -311,11 +311,11 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
-      "posts_extracted": 35
+      "posts_extracted": 28
     },
     "aljazeera_en_rss": {
       "id": "aljazeera_en_rss",
@@ -325,8 +325,8 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 25
@@ -339,8 +339,8 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 45
@@ -353,8 +353,8 @@
       "category": "أخبار عالمية",
       "enabled": true,
       "status": "ok",
-      "last_attempt_at": "2026-11-25T08:50:38.382000Z",
-      "last_success_at": "2026-11-25T08:50:38.382000Z",
+      "last_attempt_at": "2026-11-25T18:52:50.142455Z",
+      "last_success_at": "2026-11-25T18:52:50.142455Z",
       "last_error": null,
       "last_error_at": null,
       "posts_extracted": 20
